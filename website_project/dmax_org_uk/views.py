@@ -1,10 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
-
 def landing(request):
-    return HttpResponse("landing")
+    return render(request, template_name='dmax_org_uk/base.html')
 
 def me(request):
     return HttpResponse("me")
