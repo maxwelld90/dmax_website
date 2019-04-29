@@ -131,7 +131,7 @@ STATICFILES_FINDERS = (
 
 COMPRESS_ENABLED = True
 COMPRESS_ROOT = STATIC_DIR
-COMPRESS_OUTPUT_DIR = 'minified'
+COMPRESS_OUTPUT_DIR = 'compiled'
 
 COMPRESS_PRECOMPILERS = (
     ('text/less', 'lessc {infile} {outfile}'),
