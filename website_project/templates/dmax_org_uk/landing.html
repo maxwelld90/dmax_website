@@ -5,20 +5,35 @@
                 
                 <div class="flex-item three-fifths">
                     <div class="headertag-container">
-                        <h1>Main Title</h1>
-                        <div id="subtitle">Page Subtitle</div>
+                        <h1>Hello, World!</h1>
+                        <div id="subtitle">Welcome to my place on the WWW</div>
                         <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
                     </div>
                     
                     <article>
-							<p>I've just finished my PhD at the <a href="http://www.gla.ac.uk">University of Glasgow</a>, working in the School of Computing Science. My PhD thesis focused on Information Retrieval. More specifically, I looked at how people interact with search engines, focusing on their stopping behaviours (how many results should I examine before I stop?).</p>
-                            <p>I've just finished my PhD at the <a href="http://www.gla.ac.uk">University of Glasgow</a>, working in the School of Computing Science. My PhD thesis focused on Information Retrieval. More specifically, I looked at how people interact with search engines, focusing on their stopping behaviours (how many results should I examine before I stop?).</p>
-                            <p>I've just finished my PhD at the <a href="http://www.gla.ac.uk">University of Glasgow</a>, working in the School of Computing Science. My PhD thesis focused on Information Retrieval. More specifically, I looked at how people interact with search engines, focusing on their stopping behaviours (how many results should I examine before I stop?).</p>
+							<p>I've just finished my PhD at the <a href="http://www.gla.ac.uk">University of Glasgow</a>, working in the School of Computing Science. My <a href="{% url 'dmax_org_uk:thesis' %}">PhD thesis</a> focused on Information Retrieval. More specifically, I looked at how people interact with search engines, focusing on their stopping behaviours (how many results should I examine before I stop?).</p>
+                            <p>While most of my time has been taken up by my PhD research, I'm also super interested in motorsports, and have developed a renewed interest in music. Photography is something else I am super keen on - maybe you can see this from the pretty pictures on this website. There's a lot going on!</p>
+                            <p>If you want to know more, why not have a look around? You can have a look at my <a href="{% url 'dmax_org_uk:publications' %}">research publications</a>, learn more about <a href="{% url 'dmax_org_uk:me' %}">me and what I can do</a>, check out what I'm <a href="{% url 'dmax_org_uk:projects' %}">currently working on</a>, or get in touch with me if you'd like to have a chat.</p>
                     </article>
                     
                 </div>
 
-                <div class="flex-item two-fifths">2</div>
+                <div class="flex-item two-fifths right">
+                    <div class="container">
+                        <h2>Say Hello</h2>
+                        <div>
+                            <p>If you want to get in touch, have a look at the different means offered below. Send me a Tweet, Skype me, or give me a call! You can also find out more about me on the <a href="{% url 'dmax_org_uk:me' %}">About Me</a> page.</p>
+                            
+                            <ul>
+                                <li class="with-image"><span class="image sprite-icon-skype"></span><span class="text-multi"><span><strong>Skype</strong></span><span>maxwelld90</span></span></li>
+                                <li class="with-image"><span class="image sprite-icon-twitter"></span><span class="text-multi"><span><strong>Twitter</strong></span><span>@maxwelld90</span></span></li>
+                                <li class="with-image"><span class="image sprite-icon-email"></span><span class="text-multi"><span><strong>E-Mail</strong></span><span>maxwelld90 at acm . org</span></span></li>
+                                <li class="with-image"><span class="image sprite-icon-phone"></span><span class="text-multi"><span><strong>Phone</strong></span><span>+44 (0)141 330 1642</span></span></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
 
             </div>
 {% endblock %}

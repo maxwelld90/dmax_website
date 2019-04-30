@@ -1,0 +1,102 @@
+@import 'global';
+
+.right div.container {
+    padding: 10px;
+    background-color: @right-container-background-colour;
+}
+
+.right div.container > div {
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12pt;
+    color: @dmax-onbackground-text;
+    background-color: @dmax-darkblue;
+}
+
+.right p {
+    line-height: 24px;
+}
+
+.right p a {
+    color: @dmax-onbackground-text;
+}
+
+.right h2 {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 10px;
+    font-weight: normal;
+    text-align: center;
+    color: @dmax-onbackground-text;
+    background-color: transparent;
+}
+
+.right ul {
+    list-style-type: none;
+}
+
+.right ul li {
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: @dmax-lightblue;
+}
+
+.right ul li:last-child {
+    margin-bottom: 0;
+}
+
+    .right ul li.noback {
+        background-color: transparent;
+    }
+
+.right ul li.header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.right ul li.with-image {
+    display: flex;
+    align-items: stretch;
+}
+
+.right ul li span.image {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 5px;
+    margin-right: 10px;
+    line-height: 0;
+    font-size: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 48px 48px;
+}
+
+.right ul li span.text {
+    display: block;
+    width: 100%;
+    flex: 1;
+    line-height: 58px;
+}
+
+.right ul li span.text-multi {
+    display: flex;
+    flex-direction: column;
+}
+
+.right ul li span.text-multi span {
+    line-height: 29px;
+}
+
+.right ul li span.text-multi span ul li {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 1050px) {
+    .right div.container {
+        background-color: @right-container-background-colour-small;
+    }
+}
