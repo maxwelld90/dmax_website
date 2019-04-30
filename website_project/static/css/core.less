@@ -68,3 +68,21 @@ a:hover {
 .flex-container > .flex-item.two-fifths {
     flex: 0.4;
 }
+
+@media screen and (max-width: 1050px) {
+    .flex-container {
+        display: block;
+    }
+    
+    .flex-container > .flex-item {
+        margin: 10px 0 10px 0;
+    }
+    
+    .flex-container > .flex-item:first-child {
+        margin-top: 0;
+    }
+    
+    .flex-container > .flex-item:last-child {
+        margin-bottom: 0;
+    }
+}

@@ -101,14 +101,119 @@ header ul#header-links-nav li a:hover {
     opacity: @header-nav-link-hover-opacity;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1050px) {
+    header div#header-content-container {
+        display: flex;
+    }
     
+    header div#header-links {
+        bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    header {
+        min-height: 167px;
+    }
+    
+    header div.coloured-box {
+        top: 20px;
+        height: 127px;
+        opacity: none;
+    }
+    
+    header div#header-logo-container {
+        top: 84px;
+    }
+    
+    header div#header-logo-container a img {
+        max-width: 100px;
+    }
+    
+    header div#header-links {
+        bottom: 0;
+    }
+    
+    header ul#header-links-ribbons {
+        top: 10px;
+    }
+    
+    header ul#header-links-nav {
+        top: 38px;
+    }
+    
+        header ul#header-links-nav li {
+            font-size: 14pt;
+        }
 }
 
 @media screen and (max-width: 780px) {
+    header ul#header-links-ribbons {
+        display: none;
+    }
     
+    header ul#header-links-nav {
+        top: 29px;
+        font-size: 0;
+        float: right;
+        width: 75%;
+    }
+    
+    header ul#header-links-nav li {
+        display: inline;
+        margin: 0;
+
+    }
+    
+    header ul#header-links-nav li a {
+        padding: 5px;
+        background: #003052;
+        font-size: 16pt;
+        line-height: 45px;
+        margin-left: 10px;
+    }
+    
+    header ul#header-links-nav li a:hover {
+        background: #00477A;
+    }
 }
 
 @media screen and (max-width: 568px) {
+    header {
+        background: #0072C6;
+        padding-bottom: 50px;
+    }
     
+    header div#header-content-container {
+        display: block;
+    }
+    
+    header div.coloured-box {
+        display: none;
+    }
+    
+    header div#header-logo-container {
+        top: 92px;
+        text-align: center;
+        -webkit-transform: translate(0%, 0%);
+        -moz-transform: translate(0%, 0%);
+        -ms-transform: translate(0%, 0%);
+        -o-transform: translate(0%, 0%);
+        transform: translate(0%, 0%);
+    }
+    
+    header div#header-logo-container a img {
+        width: 200px;
+        height: auto;
+    }
+    
+    header div#header-links ul {
+        top: 40px;
+        text-align: center;
+    }
+    
+    header ul#header-links-nav {
+        width: 100%;
+        float: none;
+    }
 }
