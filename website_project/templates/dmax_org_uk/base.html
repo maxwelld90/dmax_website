@@ -3,16 +3,103 @@
 {% load staticfiles %}
 {% load compress %}
 
-<html>
+<!--
+dmax.org.uk 2019 Redesign
 
-<head>
-    {% compress css %}
-    <link rel="stylesheet" type="text/less" href="{% static 'css/test.less' %}" charset="utf-8" />
-    {% endcompress %}
-</head>
+Author: David Maxwell
+Date: 2019-04-30
+-->
 
-<body>
-    <h1>dmax.org.uk</h1>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        
+        {% compress css %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/normalize.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}" />
+        <link rel="stylesheet" type="text/less" href="{% static 'css/sprites.less' %}" />
+        <link rel="stylesheet" type="text/less" href="{% static 'css/core.less' %}" />
+        <link rel="stylesheet" type="text/less" href="{% static 'css/header.less' %}" />
+        {% endcompress %}
+        
+        {% compress js %}
+        <script src="{% static 'js/analytics.js' %}"></script>
+        {% endcompress %}
+        
+        <meta property="og:image" content="http://www.dmax.org.uk{% static 'img/dmax-thumb.png' %}" />
+        <meta property="og:title" content="http://www.dmax.org.uk" />
+        <meta property="og:title" content="David Maxwell" />
+        <meta property="og:description" content="I've just finished my PhD in Computing Science at the University of Glasgow, Scotland. Check out dmax.org.uk - it's my own personal, hand-built website!" />
+        
+        {% block includetags %}{% endblock %}
+        
+        <title>dmax.org.uk</title>
+    </head>
+    
+    <body>
+        
+        <header>
+            <div class="coloured-box"></div>
+            
+            <div class="flex-container variable-height">
+                
+                <div id="header-logo-container" class="flex-item two-fifths">
+                    <a href="{% url 'dmax_org_uk:landing' %}">
+                        <img src="{% static 'img/dmax-banner.svg' %}" alt="David Maxwell" />
+                    </a>
+                </div>
+                
+                <div id="header-links" class="flex-item three-fifths">
+                    <ul id="header-links-ribbons">
+                        <li>
+                            <a href="https://www.github.com/maxwelld90" target="_blank">
+                                <span class="sprite-header-links-ribbons-github"></span>GitHub
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/maxwelld90" target="_blank">
+                                <span class="sprite-header-links-ribbons-linkedin"></span>LinkedIn
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com/maxwelld90" target="_blank">
+                                <span class="sprite-header-links-ribbons-twitter"></span>Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/maxwelld90" target="_blank">
+                                <span class="sprite-header-links-ribbons-instagram"></span>Instagram
+                            </a>
+                        </li>
+                    </ul>
+                    <ul id="header-links-nav">
+                        <li><a href="{% url 'dmax_org_uk:me' %}">Me</a></li>
+                        <li><a href="{% url 'dmax_org_uk:projects' %}">Projects</a></li>
+                        <li><a href="{% url 'dmax_org_uk:publications' %}">Publications</a></li>
+                        <li><a href="{% url 'dmax_org_uk:thesis' %}">Thesis</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </header>
+        
+        <main>
+            
+            Start of the main section
+            
+            <!-- <div class="flex-container variable-height">
 
+                <div class="flex-item two-fifths">1<br />2<br />3</div>
+
+                <div class="flex-item three-fifths">2</div>
+
+            </div> -->
+            
+        </main>
+        
+    </body>
+    
 </html>

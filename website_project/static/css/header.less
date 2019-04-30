@@ -1,0 +1,114 @@
+@import 'global';
+
+header {
+    width: 100%;
+    min-height: 215px;
+}
+
+/* The coloured box, off from the top, for large-screen devices. */
+header div.coloured-box {
+    position: absolute;
+    top: 40px;
+    z-index: @header-zindex-base;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: @dmax-lightblue;
+}
+
+header div#header-logo-container {
+    position: relative;
+    top: 117px;
+    z-index: (@header-zindex-base + 1);
+}
+
+header div#header-logo-container a img {
+    width: 100%;
+    max-width: 389px;
+    min-width: 280px;
+    -webkit-transform: translate(0%, -50%);
+    -moz-transform: translate(0%, -50%);
+    -ms-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+}
+
+header div#header-logo-container a:hover {
+    opacity: @header-logo-opacity;
+}
+
+header div#header-links {
+    position: relative;
+    z-index: (@header-zindex-base + 1);
+}
+
+header div#header-links ul {
+    position: relative;
+    list-style-type: none;
+    text-align: right;
+}
+
+header ul#header-links-ribbons {
+    top: 40px;
+}
+
+header ul#header-links-ribbons li {
+    display: inline-block;
+    width: 41px;
+    height: 53px;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+}
+
+header ul#header-links-ribbons li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/sprites/header-links-ribbon.svg');
+    background-size: 100% 100%;
+}
+
+header ul#header-links-ribbons li a span {
+    position: relative;
+    top: 6px;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+}
+
+header ul#header-links-nav {
+    top: 91px;
+}
+
+header ul#header-links-nav li {
+    display: inline;
+    margin-left: 10px;
+    font-size: 18pt;
+    font-family: 'Raleway', sans-serif;
+}
+
+header ul#header-links-nav li a {
+    color: @header-nav-link-colour;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+header ul#header-links-nav li a:hover {
+    color: @header-nav-link-hover-colour;
+    opacity: @header-nav-link-hover-opacity;
+}
+
+@media screen and (max-width: 940px) {
+    
+}
+
+@media screen and (max-width: 780px) {
+    
+}
+
+@media screen and (max-width: 568px) {
+    
+}

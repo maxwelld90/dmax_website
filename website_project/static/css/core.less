@@ -1,0 +1,70 @@
+@import 'global';
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 14pt;
+    min-height: 100vh;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: underline;
+    -o-transition:.2s; /* TIME */
+    -ms-transition:.2s; /* TIME */
+    -moz-transition:.2s; /* TIME */
+    -webkit-transition:.2s; /* TIME */
+    transition:.2s; /* TIME */
+    color: @dmax-lightblue; /* COLOUR */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+    -o-transition: @hyperlink-hover-duration;
+    -ms-transition: @hyperlink-hover-duration;
+    -moz-transition: @hyperlink-hover-duration;
+    -webkit-transition: @hyperlink-hover-duration;
+    transition: @hyperlink-hover-duration;
+    opacity: @hyperlink-hover-opacity;
+}
+
+/***********************/
+/* Basic layout styles */
+/***********************/
+
+.flex-container {
+    display: flex;
+    margin: 0 25px 0 25px;
+}
+
+.flex-container.variable-height {
+    align-items: flex-start;
+}
+
+.flex-container > div {
+}
+
+.flex-container > .flex-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    .flex-container > .flex-item:first-child {
+        margin-left: 0;
+    }
+
+    .flex-container > .flex-item:last-child {
+        margin-right: 0;
+    }
+
+.flex-container > .flex-item.three-fifths {
+    flex: 0.6;
+}
+
+.flex-container > .flex-item.two-fifths {
+    flex: 0.4;
+}
