@@ -1,0 +1,28 @@
+@import 'global';
+
+ul.grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+}
+
+ul.grid-container li {
+    display: block;
+    background-color: @dmax-lightblue;
+    min-height: 230px;
+}
+
+@media (max-width: 1130px) {
+    ul.grid-container {
+        display: block;
+    }
+    
+    ul.grid-container li {
+        margin-bottom: 10px;
+    }
+    
+    ul.grid-container li.last-child {
+        margin-bottom: 0;
+    }
+}
