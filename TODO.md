@@ -16,7 +16,7 @@
     * Add the necessary icons to the sprite.
 * Add the thesis page.
     * Add the thesis icons for the right-hand side
-    * Add the abstract text and header <h2> tag.
+    * Add the abstract text and header h2 tag.
 * Add the project page.
     * Grid layout
     * Publication style template.
