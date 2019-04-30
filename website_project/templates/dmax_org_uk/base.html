@@ -43,7 +43,7 @@ Date: 2019-04-30
     <body>
         
         <header>
-            <div class="coloured-box transparent"></div>
+            <div class="coloured-box {% if background %}transparent{% endif %}"></div>
             
             <div id="header-content-container" class="flex-container variable-height">
                 
@@ -76,8 +76,12 @@ Date: 2019-04-30
             
         </header>
         
-        {% block main %}{% endblock %}
+        <main{% if background %} class="image"{% endif %}>
+            {% if background %}<div id="main-image-background" class="{{ background }}"></div>{% endif %}
+            
+            {% block main %}{% endblock %}
         
+        </main>
     </body>
     
 </html>

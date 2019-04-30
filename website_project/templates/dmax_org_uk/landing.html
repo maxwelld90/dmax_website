@@ -1,16 +1,13 @@
 {% extends 'dmax_org_uk/base.html' %}
 
 {% block main %}
-        <main class="image">
-            <div id="main-image-background" class="shinjuku"></div>
-            
             <div class="flex-container variable-height">
                 
                 <div class="flex-item three-fifths">
                     <div class="headertag-container">
                         <h1>Main Title</h1>
                         <div id="subtitle">Page Subtitle</div>
-                        <div id="main-image-background-identifier" class="left">Shinjuku, Tokyo, Japan, August 2017</div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
                     </div>
                     
                     <article>
@@ -24,6 +21,4 @@
                 <div class="flex-item two-fifths">2</div>
 
             </div>
-            
-        </main>
 {% endblock %}

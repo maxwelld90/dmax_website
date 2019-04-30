@@ -1,3 +1,5 @@
+@import 'global';
+
 #main-image-background {
     position: absolute;
     top: 0;
@@ -8,7 +10,74 @@
     background: #333;
 }
 
+#main-image-background-identifier {
+    position: relative;
+    bottom: 12px;
+    font-size: 11px;
+    min-height: 10px;
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    color: @main-image-background-identifier-colour;
+}
+
+    #main-image-background-identifier.left {
+        text-align: left;
+    }
+
+/* Definitions of background images */
+
+/* Canberra, ACT, Australia - September 2016 */
+#main-background.canberra {
+    background: url('../img/backgrounds/canberra.jpg');
+    background-size: cover;
+}
+
+/* Clashnessie Bay, Highland, Scotland - July 2014 */
+#main-background.clashnessie {
+    background: url('../img/backgrounds/clashnessie.jpg');
+    background-size: cover;
+}
+
+/* PhD Writeup Hell - August 2018 */
+#main-background.diagram {
+    background: url('../img/backgrounds/diagram.jpg');
+    background-size: cover;
+}
+
+/* Heraklion, Crete, Greece - July 2014 */
+#main-background.heraklion {
+    background: url('../img/backgrounds/heraklion.jpg');
+    background-size: cover;
+}
+
+/* Jeir, NSW, Australia - December 2016 */
+#main-background.jeir {
+    background: url('../img/backgrounds/jeir.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+/* Lilybank Gardens, Glasgow, Scotland - May 2018 */
+#main-background.lilybank {
+    background: url('../img/backgrounds/lilybank.jpg');
+    background-size: cover;
+    background-position: 0% 100%;
+}
+
+/* Sandwood Bay, Highland, Scotland - July 2014 */
+#main-background.sandwood {
+    background: url('../img/backgrounds/sandwood.jpg');
+    background-size: cover;
+}
+
+/* Shinjuku, Tokyo, Japan - August 2017 */
 #main-image-background.shinjuku {
     background: url('../img/backgrounds/shinjuku.jpg');
+    background-size: cover;
+}
+
+/* Whitelee Windfarm, East Renfrewshire, Scotland - April 2015 */
+#main-background.whitelee {
+    background: url('../img/backgrounds/whitelee.jpg');
     background-size: cover;
 }
