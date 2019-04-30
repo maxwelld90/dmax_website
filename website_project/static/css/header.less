@@ -16,6 +16,10 @@ header div.coloured-box {
     background: @dmax-lightblue;
 }
 
+    header div.coloured-box.transparent {
+        opacity: @header-coloured-box-opacity;
+    }
+
 header div#header-logo-container {
     position: relative;
     top: 117px;
@@ -167,20 +171,20 @@ header ul#header-links-nav li a:hover {
     
     header ul#header-links-nav li a {
         padding: 5px;
-        background: #003052;
+        background: @header-nav-link-small-background;
         font-size: 16pt;
         line-height: 45px;
         margin-left: 10px;
     }
     
     header ul#header-links-nav li a:hover {
-        background: #00477A;
+        background: @header-nav-link-small-hover-background;
     }
 }
 
 @media screen and (max-width: 568px) {
     header {
-        background: #0072C6;
+        background: @dmax-lightblue;
         padding-bottom: 50px;
     }
     

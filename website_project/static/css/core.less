@@ -11,6 +11,24 @@ ul {
     margin: 0;
 }
 
+p {
+    text-align: justify;
+    line-height: 30px;
+}
+
+    p:first-child {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
 a {
     text-decoration: underline;
     -o-transition:.2s; /* TIME */
@@ -60,6 +78,10 @@ a:hover {
     .flex-container > .flex-item:last-child {
         margin-right: 0;
     }
+
+.flex-container > .flex-item.whole {
+    flex: 1;
+}
 
 .flex-container > .flex-item.three-fifths {
     flex: 0.6;

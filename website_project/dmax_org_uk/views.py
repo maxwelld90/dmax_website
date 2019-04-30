@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def landing(request):
-    return render(request, template_name='dmax_org_uk/base.html')
+    return render(request, template_name='dmax_org_uk/landing.html')
 
 def me(request):
     return HttpResponse("me")

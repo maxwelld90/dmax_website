@@ -22,6 +22,8 @@ Date: 2019-04-30
         <link rel="stylesheet" type="text/less" href="{% static 'css/sprites.less' %}" />
         <link rel="stylesheet" type="text/less" href="{% static 'css/core.less' %}" />
         <link rel="stylesheet" type="text/less" href="{% static 'css/header.less' %}" />
+        <link rel="stylesheet" type="text/less" href="{% static 'css/background-image.less' %}" />
+        <link rel="stylesheet" type="text/less" href="{% static 'css/main.less' %}" />
         {% endcompress %}
         
         {% compress js %}
@@ -41,7 +43,7 @@ Date: 2019-04-30
     <body>
         
         <header>
-            <div class="coloured-box"></div>
+            <div class="coloured-box transparent"></div>
             
             <div id="header-content-container" class="flex-container variable-height">
                 
@@ -74,19 +76,7 @@ Date: 2019-04-30
             
         </header>
         
-        <main>
-            
-            Start of the main section
-            
-            <div class="flex-container variable-height">
-
-                <div class="flex-item two-fifths" style="background: red;">1<br />2<br />3</div>
-
-                <div class="flex-item three-fifths" style="background: black;">2</div>
-
-            </div>
-            
-        </main>
+        {% block main %}{% endblock %}
         
     </body>
     

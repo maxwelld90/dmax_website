@@ -1,0 +1,53 @@
+@import 'global';
+
+div.headertag-container {
+    position: relative;
+    top: 6px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    display: inline;
+    font-size: 36pt;
+    padding: 5px;
+    background: @dmax-lightblue;
+    color: @htag-textcolour;
+}
+
+    h1:after {
+        content: "\a";
+        white-space: pre;
+    }
+
+#subtitle {
+    display: inline-block;
+    padding: 5px;
+    margin-bottom: 20px;
+    font-size: 20pt;
+    line-height: 20pt;
+    font-family: 'Raleway', sans-serif;
+    background: @dmax-lightblue;
+    color: @htag-textcolour;
+}
+
+#main-image-background-identifier {
+    position: relative;
+    bottom: 12px;
+    font-size: 11px;
+    min-height: 10px;
+    font-family: 'Raleway', sans-serif;
+    text-align: right;
+    color: @main-image-background-identifier-colour;
+}
+
+    #main-image-background-identifier.left {
+        text-align: left;
+    }
+
+main {
+    margin-top: 15px;
+}
+
+main.image {
+    margin-top: 113px;
+}
