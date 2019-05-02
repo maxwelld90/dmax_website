@@ -1,0 +1,216 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/me.less' %}">
+        {% endcompress %}
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item three-fifths">
+                    <div class="headertag-container">
+                        <h1>About David</h1>
+                        <div id="subtitle">What do you want to know?</div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
+                    </div>
+                    
+                    <article>
+                        <p>I was born in Glasgow, Scotland, and hold both British and Irish citizenship. I can therefore proudly say I'm also a European citizen, and I am grateful that I will be able to continue to call myself that, regardless of whatever happens next to Scotland.</p>
+                        <p><strong>Computers have from a young age fascinated me</strong>, and they still do. I decided to educate myself, became a Computing Scientist, and I recently submitted and defended my <a href="{% url 'dmax_org_uk:thesis' %}">PhD thesis at the University of Glasgow, Scotland</a>. Call me Dr David! 😉 <strong>Besides making computers do things, I like making what they do look good, too.</strong> So, what do you want to know?</p>
+                        <p>On this page, I tried to <strong>summarise all the key things you'll want to know about me into a series of blocks</strong>. Have a look around. If you're interested in reaching out, you can get in touch by using the contact details presented on <a href="{% url 'dmax_org_uk:landing' %}">my site's homepage</a>.</p>
+                        
+                        <ul id="education-boxes" class="boxes">
+                            <li>
+                                <a href="#" class="whole">
+                                    <span>
+                                        <span class="big">PhD</span>
+                                        <span class="underhang">Computing Science</span>
+                                        <span class="underhang">UofG</span>
+                                        <span class="br">2013-2019</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="whole">
+                                    <span>
+                                        <span class="big">MSci</span>
+                                        <span class="underhang">Computing Science</span>
+                                        <span class="underhang">UofG</span>
+                                        <span class="br">2008-2013</span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="whole" id="education-crest"></a>
+                            </li>
+                        </ul>
+                        
+                        <p>My undergraduate and postgraduate degrees were both undertaken at the <a href="https://www.gla.ac.uk/" target="_blank">University of Glasgow</a>. Studying <a href="https://www.gla.ac.uk/schools/computing/" target="_blank">Computing Science</a>, I undertook a number of different projects - both individually, and as part of a team. One of the highlights was my fourth year Honours project, <a href="{% url 'dmax_org_uk:projects' %}">Crisees</a>. Using Python and the Django framework, I developed a pipeline architecture for capturing, analysing and presenting social media content in near-real time, with an emphasis on crisis management. The project was well received, with me <a href="https://twitter.com/ICT_Echo/status/459662202652618752" target="_blank">presenting talks on it</a> long after the project concluded. It even won me the <strong>best Software Product Prize</strong> from the School in 2012!</p>
+                        
+                        <p>I then veered more towards <a href="https://en.wikipedia.org/wiki/Information_retrieval" target="_blank">Information Retrieval</a>. My MSci project involved looking at how clickthrough data could be used to improve the ranking of documents, and thus the overall quality of a retrieval system's performance. This was done through a complex series of simulations. My interest grew, which is what led me to <a href="{% url 'dmax_org_uk:thesis' %}">doing a PhD</a>, supervised by <a href="https://www.strath.ac.uk/staff/azzopardileifdr/" target="_blank">Dr Leif Azzopardi</a>.</p>
+                        
+                        <p>It's not just Python and Information Retrieval that I've learnt about during my time as a student. I've picked up plenty of knowledge in different areas of Computing Science over the years. I have gained knowledge in many areas, including:</p>
+                        
+                        <ul class="standard">
+                            <li><strong>research methods and techniques</strong>, encompassing the basics on conducting a research project;</li>
+                            <li><strong>professional Issues</strong>, making me think about various legal and ethical issues in computing science;</li>
+                            <li><strong>various programming courses</strong>, including <strong>systems and network programming</strong> (in C), <strong>Python</strong> and <strong>object-orientated languages</strong>;</li>
+                            <li><strong>software engineering</strong>, such as how to design software through the use of software design patterns, and <strong>software project management</strong>;</li>
+                            <li><strong>algorithms and data structures</strong>, introducing me to the world of algorithmic complexity, allowing me to come up with faster, more space efficient solutions to problems;</li>
+                            <li><strong>databases</strong>, primarily considering relational database systems (although I'm knowledgeable on NoSQL technologies too);</li>
+                            <li><strong>Human-Computer Interaction</strong>, considering how to conduct HCI-based experimentation and consideration on software/hardware design; and of course</li>
+                            <li><strong>web development</strong>, something (that I hope you can see!) I have a passion for!</li>
+                        </ul>
+                        
+                        <ul id="experience-boxes" class="boxes">
+                            <li id="microsoft-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Microsoft Australia</span>
+                                    <span class="underhang">Data Scientist Intern</span>
+                                    <span class="underhang">Canberra, ACT, Australia</span>
+                                    <span class="br">2016</span>
+                                </a>
+                            </li>
+                            <li id="ati-pic-box"></li>
+                            <li id="ati-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Alan Turing Institute</span>
+                                    <span class="underhang">Summer 2017 Intern</span>
+                                    <span class="underhang">London, England</span>
+                                    <span class="br">2017</span>
+                                </a>
+                            </li>
+                            <li id="publications-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Publications</span>
+                                    <span class="underhang">xx listed</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <p>I've had the good fortune to travel to some far flung places during my time. From travelling, I've met some wonderful people who have given me so many opportunities.</p>
+                        
+                        <p>I interned at Microsoft Australia in 2016, as part of the Bing Relevance Sciences team. I worked on:</p>
+                        
+                        <ul class="standard">
+                            <li><strong>software development</strong>, developing a prototype system;</li>
+                            <li><strong>experimentation</strong>, where the prototype system was then utilised to conduct a series of scientific experiments; followed by</li>
+                            <li><strong>research</strong>, where we <a href="{% url 'dmax_org_uk:publications' %}">published a research paper</a> on our findings.</li>
+                        </ul>
+                        
+                        <p>My project at Microsoft was to assist in the advancement of state-of-the-art generative <a href="https://dl.acm.org/citation.cfm?id=3099948" target="_blank">query autocompletion</a>. My prototype system was developed using a series of internal Microsoft technologies. I created a pipeline architecture, once again presenting results in a web application. Microsoft's <strong>.NET technologies</strong> and <strong>C#</strong> were primarily used. As the system needed to interact with bleeding-edge technologies, I had to overcome a number of technical challenges, especially with the limited amount of documentation available.</p>
+                        
+                        <p>My development skills were furthered in 2017 when I interned at the <a href="https://www.turing.ac.uk/" target="_blank">Alan Turing Institute</a>, London, England. Working with <a href="https://www.maths.ox.ac.uk/people/terry.lyons" target="_blank">Professor Terry Lyons</a>, <a href="https://www.maths.ox.ac.uk/people/hao.ni" target="_blank">Dr Hao Ni</a>, <a href="https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/reizenstein/" target="_blank">Dr Jeremy Reizenstein</a>, Alex Cioba and <a href="https://www.ucl.ac.uk/geospatial-analytics/people/radoslaw-kowalski" target="_blank">Rados&#322;aw Kowalski</a>, we worked on extending the <code>libalgebra</code> C++ software, and implementing a Python wrapper for the software. The software is called <a href="https://esig.readthedocs.io/en/latest/" target="_blank"><code>esig</code></a>, and is available on the Python package repository, <a href="https://pypi.org/" target="_blank">PyPi</a>. Providing a Python package instantly made the software accessible to many more individuals. During this internship, I learnt a lot about how Python packages work, as well as how to compile software across different platforms successfully.</p>
+                        
+                        <ul id="communication-boxes" class="boxes">
+                            <li id="communication-title-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Communication</span>
+                                    <span class="underhang">Presenting Research and More</span>
+                                </a>
+                            </li>
+                            <li id="presentation-box"></li>
+                            <li id="slide-box"></li>
+                        </ul>
+                        
+                        <p>I've presented a number of talks around the world at international conferences, mainly about the <a href="{% url 'dmax_org_uk:publications' %}">research publications</a> I've been involved with. I like to think that the more presentations that I've done, the better my communication skills have become. In particular, creating visually appealing, engaging presentation slides has become a bit of a thing for me; I'm really happy to say that this has been noticed by several people in my field! This success has led to me being invited to present guest talks at numerous institutions. One of the recent talks I presented was <a href="https://www.facebook.com/photo.php?fbid=10156870246710210&set=pcb.343363699637274&type=3&theater&ifg=1" target="_blank">about my PhD experience</a> - something different to what I normally talk about!</p>
+                        
+                        <ul id="twd-boxes" class="boxes">
+                            <li id="twd-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Tango with Django</span>
+                                    <span class="underhang">Book Writing</span>
+                                    <span class="underhang">Teaching</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <p>I've also been a tutor since 2011, all the way back as an undergraduate! Starting with tutoring Python and Java programming, I then moved to my forte - web development. I've been involved in the tutoring of web development courses at the University of Glasgow since 2013 - indeed, with my supervisor, we wrote a book called <a href="https://www.tangowithdjango.com/" target="_blank">Tango with Django</a>! Tutoring has been nothing but beneficial. Explaining complex problems to students has become so much easier, and I've found that this skill has applications in other walks of life, too.</p>
+                        
+                        <ul id="other-boxes" class="boxes">
+                            <li id="design-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Designing Things</span>
+                                    <span class="underhang">Websites, Presentations, Printed Material...</span>
+                                </a>
+                            </li>
+                            <li id="arts-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Arts</span>
+                                    <span class="underhang">Singing and Drawing</span>
+                                </a>
+                            </li>
+                            <li id="motorsports-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Motorsports</span>
+                                    <span class="underhang">Watching and Participating</span>
+                                </a>
+                            </li>
+                            <li id="volunteering-box">
+                                <a href="#" class="whole">
+                                    <span class="big">Volunteering</span>
+                                    <span class="underhang">At UofG and More</span>
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <p>Besides my mainstay of software development and computing science things, I've also got lots of interests elsewhere.</p>
+                        
+                        <a name="motorsport"></a>
+                        <p>Perhaps one of my passions is <strong>motorsport</strong>. I follow several racing series religiously, primarily <a href="https://www.formula1.com/" target="_blank">Formula One</a>. It's a shame that paywalls make it hard to access coverage of this sport (and so many others today), reducing their influence on society. Not only do I follow the sport and take a key interest in it (perhaps due to the advanced, cutting-edge technologies that are used!), I also absolutely love <strong>participating in racing</strong>, too. Although I haven't actively participated in races for a while (with my studies taking priority), I have always said that if given the opportunity to develop my skills as an amateur racing driver, I'd jump at the chance. The adrenaline rush, the feeling of being in complete control, is like nothing else!</p>
+                        
+                        <a name="arts"></a>
+                        <p>I'm also keen on the <strong>arts</strong>. I like drawing, and was at one stage very musical, although, again, studies took priority. I have taken singing lessons for several years, and I really enjoyed them! I've also got a ukelele, but more practice is required.</p>
+                        
+                        <a name="volunteering"></a>
+                        <p>I'm a keen <strong>volunteer</strong>, too. I love to help out where I can. I'm acutely aware I'm very fortunate to have what I have, and to be where I am today. I've volunteered at the <a href="https://www.glasgowstudent.net/" target="_blank">Students Representative Council</a> at the University of Glasgow, helping out foreign students who want to improve their conversational English. Within the School of Computing Science, I also helped during the exam season by running around campus collecting exams and sorting them.</p>
+                        
+                        <a name="design"></a>
+                        <p>One thing I'm super keen on however is <strong>design</strong>. I think I've always had a brain orientated towards making things look good as well as functional, and I've been able to exercise that part of me over the past few years with some awesome results. Hopefully you'll agree this website is testament to that - or if you want to see more, check out my <a href="{% url 'dmax_org_uk:thesis' %}">PhD thesis</a>. That's enough showing off.</p>
+                        
+                        <p><strong>Want to learn more? <a href="{% url 'dmax_org_uk:landing' %}">Get in touch!</a></strong></p>
+                        
+                    </article>
+                    
+                </div>
+
+                <div class="flex-item two-fifths right">
+                    <div class="container opaque">
+                        <h2>The Basics</h2>
+                        <div>
+                            <ul>
+                                <li class="noback with-image"><span class="image sprite-icon-skype"></span><span class="text-multi"><span><strong>Skype</strong></span><span>maxwelld90</span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-twitter"></span><span class="text-multi"><span><strong>Twitter</strong></span><span>@maxwelld90</span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-email"></span><span class="text-multi"><span><strong>E-Mail</strong></span><span>maxwelld90 at acm . org</span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="container opaque">
+                        <h2>Things I Know</h2>
+                        <div>
+                            <ul>
+                                <li class="noback with-image"><span class="image sprite-icon-skype"></span><span class="text-multi"><span><strong>Skype</strong></span><span>maxwelld90</span></span></li>
+                                <li class="header"><strong>Languages</strong></li>
+                                <li class="noback with-image"><span class="image sprite-icon-email"></span><span class="text-multi"><span><strong>E-Mail</strong></span><span>maxwelld90 at acm . org</span></span></li>
+                                <li class="header"><strong>Technologies/Frameworks</strong></li>
+                                <li class="noback with-image"><span class="image sprite-icon-email"></span><span class="text-multi"><span><strong>E-Mail</strong></span><span>maxwelld90 at acm . org</span></span></li>
+                                <li class="header"><strong>On the Horizon</strong></li>
+                            </ul>
+                            <p>I'm acutely aware that there are many things I still have to learn. I'm trying to catch up with the field of machine learning right now! Hopefully I'll be able to add some more technologies soon.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="attribution">
+                        Illustrations above from <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC 4.0 Attribution</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+{% endblock %}

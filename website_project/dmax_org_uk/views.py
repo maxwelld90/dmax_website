@@ -1,22 +1,25 @@
+from . import utils
 from django.shortcuts import render
 from django.http import HttpResponse
 
 def landing(request):
-    context_dict = {
-        'background': 'shinjuku',
-        'background_identifier': 'Shinjuku, Tokyo, Japan - August 2017'}
+    context_dict = {}
+    utils.apply_background_to_context(context_dict, 'shinjuku')
     
     return render(request, template_name='dmax_org_uk/landing.html', context=context_dict)
 
 def me(request):
-    return HttpResponse("me")
+    context_dict = {}
+    utils.apply_background_to_context(context_dict, 'whitelee')
+    
+    return render(request, template_name='dmax_org_uk/me.html', context=context_dict)
 
 def publications(request):
     return render(request, template_name='dmax_org_uk/publications.html')
 
 def publications_entry(request, publication_slug):
-    context_dict = {
-        'background': 'publication',}
+    context_dict = {}
+    utils.apply_background_to_context(context_dict, 'publication')
     
     return render(request, template_name='dmax_org_uk/publications-entry.html', context=context_dict)
 

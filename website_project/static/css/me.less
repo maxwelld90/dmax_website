@@ -1,0 +1,276 @@
+@import 'global';
+
+ul.boxes {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    list-style-type: none;
+}
+
+ul.boxes li {
+    position: relative;
+    min-height: 150px;
+}
+
+ul.boxes li span.big {
+    display: block;
+    padding: 10px 10px 0 10px;
+    font-size: 28pt;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul.boxes li span.underhang {
+    display: block;
+    padding: 5px 10px 0 10px;
+    line-height: 16pt;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul.boxes li span.br {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+@media screen and (max-width: 760px) {
+    ul.boxes {
+        display: block;
+    }
+    
+    ul.boxes li {
+        margin-bottom: 10px;
+    }
+    
+    ul.boxes li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*******************/
+/* Education boxes */
+/*******************/
+
+ul#education-boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+ul#education-boxes li {
+    height: 180px;
+}
+
+ul#education-boxes li a {
+    color: @dmax-onbackground-text;
+    background-color: @dmax-darkblue;
+}
+
+ul#education-boxes li a#education-crest {
+    background-image: url('../img/me/glasgow-crest.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 760px) {
+    ul#education-boxes li a#education-crest {
+        background-position: center top;
+    }
+}
+
+/********************/
+/* Experience boxes */
+/********************/
+
+ul#experience-boxes {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+ul#experience-boxes li a {
+    color: @dmax-onbackground-text;
+    background-color: @dmax-green-dark;
+}
+
+li#microsoft-box {
+    grid-column: 1 / span 5;
+    height: 270px;
+}
+
+li#microsoft-box a {
+    background-image: url('../img/me/australia.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li#ati-pic-box {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 2;
+    background-image: url('../img/me/ati-talk.jpg');
+    background-position: 30% center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li#ati-box {
+    grid-column: 3 / span 3;
+    height: 220px;
+}
+
+li#publications-box {
+    grid-column: 3 / span 3;
+    height: 220px;
+}
+
+li#publications-box a {
+    background-image: url('../img/me/publications.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #000 !important;
+}
+
+@media screen and (max-width: 760px) {
+    li#ati-pic-box {
+        height: 230px;
+    }
+}
+
+/***********************/
+/* Communication boxes */
+/***********************/
+
+ul#communication-boxes {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+ul#communication-boxes li a {
+    color: @dmax-onbackground-text;
+    background-color: @dmax-brown-dark;
+}
+
+li#communication-title-box {
+    grid-column: 1 / span 3;
+    height: 200px;
+}
+
+li#presentation-box {
+    grid-column: 4 / span 2;
+    grid-row: 1 / span 2;
+    background-image: url('../img/me/presentation.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li#slide-box {
+    grid-column: 1 / span 3;
+    background-image: url('../img/me/slide.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 760px) {
+    li#presentation-box {
+        height: 200px;
+        background-position: 85% center;
+    }
+    
+    li#slide-box {
+        height: 200px;
+    }
+}
+
+/***************************/
+/* Tango with Django boxes */
+/***************************/
+
+ul#twd-boxes {
+    display: block;
+}
+
+ul#twd-boxes li a {
+    color: @dmax-onbackground-text;
+    background-color: @dmax-brown-dark;
+}
+
+li#twd-box a {
+    height: 240px;
+    background-image: url('../img/me/twd.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+}
+
+@media screen and (max-width: 760px) {
+    li#twd-box a {
+        height: 200px;
+        background-image: none;
+        text-align: left;
+    }
+}
+
+/***************/
+/* Other boxes */
+/***************/
+
+ul#other-boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+ul#other-boxes li a {
+    color: @dmax-onbackground-text;
+    background-color: @dmax-purple-dark;
+}
+
+li#design-box {
+    height: 250px;
+    grid-column: 1 / span 3;
+}
+
+li#design-box a {
+    background-image: url('../img/me/design.jpg');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li#arts-box {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 2;
+}
+
+li#arts-box a {
+    background-image: url('../img/me/arts.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li#motorsports-box {
+    height: 230px;
+    grid-column: 2 / span 2;
+}
+
+li#motorsports-box a {
+    background-image: url('../img/me/motorsports.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+li#volunteering-box {
+    height: 200px;
+    grid-column: 2 / span 2;
+}
+
+@media screen and (max-width: 760px) {
+    li#arts-box a {
+        height: 180px;
+    }
+}
