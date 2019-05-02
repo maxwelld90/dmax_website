@@ -1,8 +1,21 @@
 @import 'global';
 
+.right {
+    position: relative;
+}
+
 .right div.container {
     padding: 10px;
+    margin-bottom: 15px;
     background-color: @right-container-background-colour;
+}
+
+.right div.container.opaque {
+    background-color: @right-container-background-colour-opaque;
+}
+
+.right div.container:last-child {
+    margin-bottom: 0;
 }
 
 .right div.container > div {
@@ -42,6 +55,11 @@
     background-color: @dmax-lightblue;
 }
 
+.right ul li a {
+    font-weight: normal;
+    color: @dmax-onbackground-text;
+}
+
 .right ul li:last-child {
     margin-bottom: 0;
 }
@@ -49,13 +67,17 @@
     .right ul li.noback {
         background-color: transparent;
     }
+    
+    .right ul li.red {
+        background-color: @dmax-red;
+    }
 
 .right ul li.header {
     text-align: center;
     font-weight: bold;
 }
 
-.right ul li.with-image {
+.right ul li.with-image, .right ul li.with-image a {
     display: flex;
     align-items: stretch;
 }
@@ -74,6 +96,10 @@
     background-size: 48px 48px;
 }
 
+    .right ul li.noback span.image {
+        background-color: transparent;
+    }
+
 .right ul li span.text {
     display: block;
     width: 100%;
@@ -86,6 +112,10 @@
     flex-direction: column;
 }
 
+.right ul li span.text-multi a {
+    display: inline;
+}
+
 .right ul li span.text-multi span {
     line-height: 29px;
 }
@@ -93,6 +123,7 @@
 .right ul li span.text-multi span ul li {
     margin: 0;
     padding: 0;
+    background: transparent;
 }
 
 @media screen and (max-width: 1050px) {

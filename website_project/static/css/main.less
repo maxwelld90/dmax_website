@@ -38,6 +38,23 @@ h2 {
     color: @htag-textcolour;
 }
 
+article h2 {
+    display: inline;
+    position: relative;
+    left: 5px;
+    font-size: 26pt;
+    padding: 5px 0 5px 0;
+    line-height: 45px;
+    background-color: @dmax-lightblue;
+    color: @htag-textcolour;
+    box-shadow: 5px 0 0 @dmax-lightblue, -5px 0 0 @dmax-lightblue;
+    box-decoration-break: clone;
+}
+
+article h2 span {
+    position: relative;
+}
+
 main {
     margin: 15px 0 15px 0;
 }
@@ -57,6 +74,16 @@ main.image {
         display: block;
         text-align: center;
         margin-bottom: 20px;
+    }
+    
+    article h2 {
+        display: block;
+        position: static;
+        font-size: 22pt;
+        text-align: center;
+        box-shadow: none;
+        box-decoration-break: slice;
+        padding: 5px;
     }
     
     main.image {

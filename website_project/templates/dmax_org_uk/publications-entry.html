@@ -1,3 +1,71 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/publications.less' %}">
+        {% endcompress %}
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item three-fifths">
+                    <div class="headertag-container">
+                        <h1>Publications</h1>
+                        <div id="subtitle">View details on a specific publication.</div>
+                        <div id="main-image-background-identifier" class="left"></div>
+                    </div>
+                    
+                    <article>
+                        <h2><span>Modelling Search and Stopping in Interactive Information Retrieval</span></h2>
+                        <p>Current models and measures of the Interactive Information Retrieval (IIR) process typically assume that a searcher will always examine the first snippet in a given Search Engine Results Page (SERP), and then with some probability or cutoff, he or she will stop examining snippets and/or documents in the ranked list (snippet level stopping). Prior work has however shown that searchers will form an initial impression of the SERP, and will often abandon a page without clicking on or inspecting in detail any snippets or documents. That is, the information scent affects their decision to continue.</p>
+                        <p>In this work, we examine whether considering the information scent of a page leads to better predictions of stopping behaviour. In a simulated analysis, grounded with data from a prior user study, we show that introducing a SERP level stopping strategy can improve the performance attained by simulated users, resulting in an increase in gain across most snippet level stopping strategies. When compared to actual search and stopping behaviour, incorporating SERP level stopping offers a closer approximation than without. These findings show that models and measures that naïvely assume snippets and documents in a ranked list are actually examined in detail are less accurate, and that modelling SERP level stopping is required to create more realistic models of the search process.</p>
+                    </article>
+                    
+                </div>
+
+                <div class="flex-item two-fifths right">
+                    <div id="backbutton"><a class="whole" href="{% url 'dmax_org_uk:publications' %}">Back to Publications</a></div>
+                    <div class="container">
+                        <h2>Metadata</h2>
+                        <div>
+                            <ul>
+                                <li class="noback publication-year-2018"><span class="text-year">2018<span class="publication-type">Doctoral Consortium</span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-book"></span><span class="text-multi"><span><strong>Publication</strong></span><span>Proceedings of ECIR 2018</span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-pen"></span><span class="text-multi"><span><strong>Authors</strong></span><span>
+                                    <ul>
+                                        <li>David Maxwell</li>
+                                        <li>Leif Azzopardi</li>
+                                        <li>Yashar Moshfeghi</li>
+                                    </ul>
+                                </span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-calendar"></span><span class="text-multi"><span><strong>Publication Date</strong></span><span>March 27, 2018</span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-fingerprint"></span><span class="text-multi"><span><strong>DOI</strong></span><span><a href="#" tarrget="_blank"><code>10.1007/978-3-319-76941-7_16</code></a></span></span></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="container opaque">
+                        <h2>Resources</h2>
+                        <div>
+                            <ul>
+                                <li class="red with-image"><a href="#" class="whole"><span class="image sprite-icon-pdf"></span><span class="text-multi"><span><strong>Download PDF</strong></span><span>Click/tap here to download</span></span></a></li>
+                                <li class="noback with-image"><a href="#" class="whole"><span class="image sprite-icon-cite"></span><span class="text-multi"><span><strong>Get BibTeX</strong></span><span>Click/tap here to cite</span></span></a></li>
+                                <li class="noback with-image"><a href="#" class="whole"><span class="image sprite-icon-slides"></span><span class="text-multi"><span><strong>Slides/Poster</strong></span><span>Click/tap here to download</span></span></a></li>
+                                <li class="noback with-image"><a href="#" class="whole"><span class="image sprite-icon-link"></span><span class="text-multi"><span><strong>External Resource</strong></span><span><code>google.com</code></span></span></a></li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+{% endblock %}
+
 <!-- Sample HTML for rights-side component with multiline blocks (including lists) -->
 <ul>
     <li><strong>Element One</strong></li>

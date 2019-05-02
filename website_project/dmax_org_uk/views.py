@@ -15,7 +15,10 @@ def publications(request):
     return render(request, template_name='dmax_org_uk/publications.html')
 
 def publications_entry(request, publication_slug):
-    return HttpResponse("publications entry - " + publication_slug)
+    context_dict = {
+        'background': 'publication',}
+    
+    return render(request, template_name='dmax_org_uk/publications-entry.html', context=context_dict)
 
 def publications_bibtex(request, publication_slug):
     return HttpResponse("publication bibtex for " + publication_slug)
