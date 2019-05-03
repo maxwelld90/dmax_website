@@ -26,7 +26,7 @@
                         
                         <ul id="education-boxes" class="boxes">
                             <li>
-                                <a href="#" class="whole">
+                                <a href="{% url 'dmax_org_uk:thesis' %}" class="whole">
                                     <span>
                                         <span class="big">PhD</span>
                                         <span class="underhang">Computing Science</span>
@@ -36,7 +36,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="whole">
+                                <a href="#msci" class="whole">
                                     <span>
                                         <span class="big">MSci</span>
                                         <span class="underhang">Computing Science</span>
@@ -46,13 +46,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="whole" id="education-crest"></a>
+                                <a href="https://www.gla.ac.uk/schools/computing/" target="_blank" class="whole" id="education-crest"></a>
                             </li>
                         </ul>
                         
                         <p>My undergraduate and postgraduate degrees were both undertaken at the <a href="https://www.gla.ac.uk/" target="_blank">University of Glasgow</a>. Studying <a href="https://www.gla.ac.uk/schools/computing/" target="_blank">Computing Science</a>, I undertook a number of different projects - both individually, and as part of a team. One of the highlights was my fourth year Honours project, <a href="{% url 'dmax_org_uk:projects' %}">Crisees</a>. Using Python and the Django framework, I developed a pipeline architecture for capturing, analysing and presenting social media content in near-real time, with an emphasis on crisis management. The project was well received, with me <a href="https://twitter.com/ICT_Echo/status/459662202652618752" target="_blank">presenting talks on it</a> long after the project concluded. It even won me the <strong>best Software Product Prize</strong> from the School in 2012!</p>
                         
-                        <p>I then veered more towards <a href="https://en.wikipedia.org/wiki/Information_retrieval" target="_blank">Information Retrieval</a>. My MSci project involved looking at how clickthrough data could be used to improve the ranking of documents, and thus the overall quality of a retrieval system's performance. This was done through a complex series of simulations. My interest grew, which is what led me to <a href="{% url 'dmax_org_uk:thesis' %}">doing a PhD</a>, supervised by <a href="https://www.strath.ac.uk/staff/azzopardileifdr/" target="_blank">Dr Leif Azzopardi</a>.</p>
+                        <p id="msci">I then veered more towards <a href="https://en.wikipedia.org/wiki/Information_retrieval" target="_blank">Information Retrieval</a>. My MSci project involved looking at how clickthrough data could be used to improve the ranking of documents, and thus the overall quality of a retrieval system's performance. This was done through a complex series of simulations. My interest grew, which is what led me to <a href="{% url 'dmax_org_uk:thesis' %}">doing a PhD</a>, supervised by <a href="https://www.strath.ac.uk/staff/azzopardileifdr/" target="_blank">Dr Leif Azzopardi</a>.</p>
                         
                         <p>It's not just Python and Information Retrieval that I've learnt about during my time as a student. I've picked up plenty of knowledge in different areas of Computing Science over the years. I have gained knowledge in many areas, including:</p>
                         
@@ -69,7 +69,7 @@
                         
                         <ul id="experience-boxes" class="boxes">
                             <li id="microsoft-box">
-                                <a href="#" class="whole">
+                                <a href="#microsoft" class="whole">
                                     <span class="big">Microsoft Australia</span>
                                     <span class="underhang">Data Scientist Intern</span>
                                     <span class="underhang">Canberra, ACT, Australia</span>
@@ -78,7 +78,7 @@
                             </li>
                             <li id="ati-pic-box"></li>
                             <li id="ati-box">
-                                <a href="#" class="whole">
+                                <a href="#ati" class="whole">
                                     <span class="big">Alan Turing Institute</span>
                                     <span class="underhang">Summer 2017 Intern</span>
                                     <span class="underhang">London, England</span>
@@ -86,7 +86,7 @@
                                 </a>
                             </li>
                             <li id="publications-box">
-                                <a href="#" class="whole">
+                                <a href="{% url 'dmax_org_uk:publications' %}" class="whole">
                                     <span class="big">Publications</span>
                                     <span class="underhang">xx listed</span>
                                 </a>
@@ -95,7 +95,7 @@
                         
                         <p>I've had the good fortune to travel to some far flung places during my time. From travelling, I've met some wonderful people who have given me so many opportunities.</p>
                         
-                        <p>I interned at Microsoft Australia in 2016, as part of the Bing Relevance Sciences team. I worked on:</p>
+                        <p id="microsoft">I interned at Microsoft Australia in 2016, as part of the Bing Relevance Sciences team. I worked on:</p>
                         
                         <ul class="standard">
                             <li><strong>software development</strong>, developing a prototype system;</li>
@@ -105,11 +105,11 @@
                         
                         <p>My project at Microsoft was to assist in the advancement of state-of-the-art generative <a href="https://dl.acm.org/citation.cfm?id=3099948" target="_blank">query autocompletion</a>. My prototype system was developed using a series of internal Microsoft technologies. I created a pipeline architecture, once again presenting results in a web application. Microsoft's <strong>.NET technologies</strong> and <strong>C#</strong> were primarily used. As the system needed to interact with bleeding-edge technologies, I had to overcome a number of technical challenges, especially with the limited amount of documentation available.</p>
                         
-                        <p>My development skills were furthered in 2017 when I interned at the <a href="https://www.turing.ac.uk/" target="_blank">Alan Turing Institute</a>, London, England. Working with <a href="https://www.maths.ox.ac.uk/people/terry.lyons" target="_blank">Professor Terry Lyons</a>, <a href="https://www.maths.ox.ac.uk/people/hao.ni" target="_blank">Dr Hao Ni</a>, <a href="https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/reizenstein/" target="_blank">Dr Jeremy Reizenstein</a>, Alex Cioba and <a href="https://www.ucl.ac.uk/geospatial-analytics/people/radoslaw-kowalski" target="_blank">Rados&#322;aw Kowalski</a>, we worked on extending the <code>libalgebra</code> C++ software, and implementing a Python wrapper for the software. The software is called <a href="https://esig.readthedocs.io/en/latest/" target="_blank"><code>esig</code></a>, and is available on the Python package repository, <a href="https://pypi.org/" target="_blank">PyPi</a>. Providing a Python package instantly made the software accessible to many more individuals. During this internship, I learnt a lot about how Python packages work, as well as how to compile software across different platforms successfully.</p>
+                        <p id="ati">My development skills were furthered in 2017 when I interned at the <a href="https://www.turing.ac.uk/" target="_blank">Alan Turing Institute</a>, London, England. Working with <a href="https://www.maths.ox.ac.uk/people/terry.lyons" target="_blank">Professor Terry Lyons</a>, <a href="https://www.maths.ox.ac.uk/people/hao.ni" target="_blank">Dr Hao Ni</a>, <a href="https://warwick.ac.uk/fac/cross_fac/complexity/people/students/dtc/students2013/reizenstein/" target="_blank">Dr Jeremy Reizenstein</a>, Alex Cioba and <a href="https://www.ucl.ac.uk/geospatial-analytics/people/radoslaw-kowalski" target="_blank">Rados&#322;aw Kowalski</a>, we worked on extending the <code>libalgebra</code> C++ software, and implementing a Python wrapper for the software. The software is called <a href="https://esig.readthedocs.io/en/latest/" target="_blank"><code>esig</code></a>, and is available on the Python package repository, <a href="https://pypi.org/" target="_blank">PyPi</a>. Providing a Python package instantly made the software accessible to many more individuals. During this internship, I learnt a lot about how Python packages work, as well as how to compile software across different platforms successfully.</p>
                         
                         <ul id="communication-boxes" class="boxes">
                             <li id="communication-title-box">
-                                <a href="#" class="whole">
+                                <a href="#communication" class="whole">
                                     <span class="big">Communication</span>
                                     <span class="underhang">Presenting Research and More</span>
                                 </a>
@@ -118,11 +118,11 @@
                             <li id="slide-box"></li>
                         </ul>
                         
-                        <p>I've presented a number of talks around the world at international conferences, mainly about the <a href="{% url 'dmax_org_uk:publications' %}">research publications</a> I've been involved with. I like to think that the more presentations that I've done, the better my communication skills have become. In particular, creating visually appealing, engaging presentation slides has become a bit of a thing for me; I'm really happy to say that this has been noticed by several people in my field! This success has led to me being invited to present guest talks at numerous institutions. One of the recent talks I presented was <a href="https://www.facebook.com/photo.php?fbid=10156870246710210&set=pcb.343363699637274&type=3&theater&ifg=1" target="_blank">about my PhD experience</a> - something different to what I normally talk about!</p>
+                        <p id="communication">I've presented a number of talks around the world at international conferences, mainly about the <a href="{% url 'dmax_org_uk:publications' %}">research publications</a> I've been involved with. I like to think that the more presentations that I've done, the better my communication skills have become. In particular, creating visually appealing, engaging presentation slides has become a bit of a thing for me; I'm really happy to say that this has been noticed by several people in my field! This success has led to me being invited to present guest talks at numerous institutions. One of the recent talks I presented was <a href="https://www.facebook.com/photo.php?fbid=10156870246710210&set=pcb.343363699637274&type=3&theater&ifg=1" target="_blank">about my PhD experience</a> - something different to what I normally talk about!</p>
                         
                         <ul id="twd-boxes" class="boxes">
                             <li id="twd-box">
-                                <a href="#" class="whole">
+                                <a href="#twd" class="whole">
                                     <span class="big">Tango with Django</span>
                                     <span class="underhang">Book Writing</span>
                                     <span class="underhang">Teaching</span>
@@ -130,29 +130,29 @@
                             </li>
                         </ul>
                         
-                        <p>I've also been a tutor since 2011, all the way back as an undergraduate! Starting with tutoring Python and Java programming, I then moved to my forte - web development. I've been involved in the tutoring of web development courses at the University of Glasgow since 2013 - indeed, with my supervisor, we wrote a book called <a href="https://www.tangowithdjango.com/" target="_blank">Tango with Django</a>! Tutoring has been nothing but beneficial. Explaining complex problems to students has become so much easier, and I've found that this skill has applications in other walks of life, too.</p>
+                        <p id="twd">I've also been a tutor since 2011, all the way back as an undergraduate! Starting with tutoring Python and Java programming, I then moved to my forte - web development. I've been involved in the tutoring of web development courses at the University of Glasgow since 2013 - indeed, with my supervisor, we wrote a book called <a href="https://www.tangowithdjango.com/" target="_blank">Tango with Django</a>! Tutoring has been nothing but beneficial. Explaining complex problems to students has become so much easier, and I've found that this skill has applications in other walks of life, too.</p>
                         
                         <ul id="other-boxes" class="boxes">
                             <li id="design-box">
-                                <a href="#" class="whole">
+                                <a href="#design" class="whole">
                                     <span class="big">Designing Things</span>
                                     <span class="underhang">Websites, Presentations, Printed Material...</span>
                                 </a>
                             </li>
                             <li id="arts-box">
-                                <a href="#" class="whole">
+                                <a href="#arts" class="whole">
                                     <span class="big">Arts</span>
                                     <span class="underhang">Singing and Drawing</span>
                                 </a>
                             </li>
                             <li id="motorsports-box">
-                                <a href="#" class="whole">
+                                <a href="#motorsport" class="whole">
                                     <span class="big">Motorsports</span>
                                     <span class="underhang">Watching and Participating</span>
                                 </a>
                             </li>
                             <li id="volunteering-box">
-                                <a href="#" class="whole">
+                                <a href="#volunteering" class="whole">
                                     <span class="big">Volunteering</span>
                                     <span class="underhang">At UofG and More</span>
                                 </a>
@@ -161,17 +161,13 @@
                         
                         <p>Besides my mainstay of software development and computing science things, I've also got lots of interests elsewhere.</p>
                         
-                        <a name="motorsport"></a>
-                        <p>Perhaps one of my passions is <strong>motorsport</strong>. I follow several racing series religiously, primarily <a href="https://www.formula1.com/" target="_blank">Formula One</a>. It's a shame that paywalls make it hard to access coverage of this sport (and so many others today), reducing their influence on society. Not only do I follow the sport and take a key interest in it (perhaps due to the advanced, cutting-edge technologies that are used!), I also absolutely love <strong>participating in racing</strong>, too. Although I haven't actively participated in races for a while (with my studies taking priority), I have always said that if given the opportunity to develop my skills as an amateur racing driver, I'd jump at the chance. The adrenaline rush, the feeling of being in complete control, is like nothing else!</p>
+                        <p id="motorsport">Perhaps one of my passions is <strong>motorsport</strong>. I follow several racing series religiously, primarily <a href="https://www.formula1.com/" target="_blank">Formula One</a>. It's a shame that paywalls make it hard to access coverage of this sport (and so many others today), reducing their influence on society. Not only do I follow the sport and take a key interest in it (perhaps due to the advanced, cutting-edge technologies that are used!), I also absolutely love <strong>participating in racing</strong>, too. Although I haven't actively participated in races for a while (with my studies taking priority), I have always said that if given the opportunity to develop my skills as an amateur racing driver, I'd jump at the chance. The adrenaline rush, the feeling of being in complete control, is like nothing else!</p>
                         
-                        <a name="arts"></a>
-                        <p>I'm also keen on the <strong>arts</strong>. I like drawing, and was at one stage very musical, although, again, studies took priority. I have taken singing lessons for several years, and I really enjoyed them! I've also got a ukelele, but more practice is required.</p>
+                        <p id="arts">I'm also keen on the <strong>arts</strong>. I like drawing, and was at one stage very musical, although, again, studies took priority. I have taken singing lessons for several years, and I really enjoyed them! I've also got a ukelele, but more practice is required.</p>
                         
-                        <a name="volunteering"></a>
-                        <p>I'm a keen <strong>volunteer</strong>, too. I love to help out where I can. I'm acutely aware I'm very fortunate to have what I have, and to be where I am today. I've volunteered at the <a href="https://www.glasgowstudent.net/" target="_blank">Students Representative Council</a> at the University of Glasgow, helping out foreign students who want to improve their conversational English. Within the School of Computing Science, I also helped during the exam season by running around campus collecting exams and sorting them.</p>
+                        <p id="volunteering">I'm a keen <strong>volunteer</strong>, too. I love to help out where I can. I'm acutely aware I'm very fortunate to have what I have, and to be where I am today. I've volunteered at the <a href="https://www.glasgowstudent.net/" target="_blank">Students Representative Council</a> at the University of Glasgow, helping out foreign students who want to improve their conversational English. Within the School of Computing Science, I also helped during the exam season by running around campus collecting exams and sorting them.</p>
                         
-                        <a name="design"></a>
-                        <p>One thing I'm super keen on however is <strong>design</strong>. I think I've always had a brain orientated towards making things look good as well as functional, and I've been able to exercise that part of me over the past few years with some awesome results. Hopefully you'll agree this website is testament to that - or if you want to see more, check out my <a href="{% url 'dmax_org_uk:thesis' %}">PhD thesis</a>. That's enough showing off.</p>
+                        <p id="design">One thing I'm super keen on however is <strong>design</strong>. I think I've always had a brain orientated towards making things look good as well as functional, and I've been able to exercise that part of me over the past few years with some awesome results. Hopefully you'll agree this website is testament to that - or if you want to see more, check out my <a href="{% url 'dmax_org_uk:thesis' %}">PhD thesis</a>. That's enough showing off.</p>
                         
                         <p><strong>Want to learn more? <a href="{% url 'dmax_org_uk:landing' %}">Get in touch!</a></strong></p>
                         
@@ -186,8 +182,8 @@
                             <ul>
                                 <li class="noback with-image"><span class="image sprite-icon-baby"></span><span class="text-multi"><span><strong>Born</strong></span><span>Sometime in 1990</span></span></li>
                                 <li class="noback with-image"><span class="image sprite-icon-home"></span><span class="text-multi"><span><strong>Hometown</strong></span><span>Glasgow <em>(<a href="https://glaschu.net/" class="help" target="_blank">Glaschu</a>)</em></span></span></li>
-                                <li class="noback with-image"><span class="image sprite-icon-passport"></span><span class="text-multi"><span><strong>Nationality</strong></span><span>Scottish (<a href="https://theweek.com/articles/828452/brexit-disaster-could-destroy-united-kingdom" class="help" target="_blank">British 🤔</a>) &amp; Irish</span></span><span class="flags"><img src="{% static 'img/me/saltire.svg' %}" alt="Scottish Saltire" /><img src="{% static 'img/me/eire.svg' %}" alt="Trídhathach na hÉireann" /></li>
-                                <li class="red with-image"><span class="image sprite-icon-cv"></span><span class="text-multi"><span><strong>Want my CV/Résumé?</strong></span><span><a href="{% url 'dmax_org_uk:landing' %}">Get in touch!</a></span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-passport"></span><span class="text-multi"><span><strong>Nationality</strong></span><span>Scottish (<a href="https://theweek.com/articles/828452/brexit-disaster-could-destroy-united-kingdom" class="help" target="_blank">British 🤔</a>) &amp; Irish</span></span><span class="flags"><img src="{% static 'img/me/saltire.svg' %}" alt="Scottish Saltire" /><img src="{% static 'img/me/eire.svg' %}" alt="Trídhathach na hÉireann" /></span></li>
+                                <li class="red with-image"><a href="{% url 'dmax_org_uk:landing' %}" class="whole"><span class="image sprite-icon-cv"></span><span class="text-multi"><span><strong>Want my CV/Résumé?</strong></span><span>Get in touch!</span></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -198,9 +194,187 @@
                             <ul>
                                 <li class="noback with-image"><span class="image sprite-icon-language"></span><span class="text-multi"><span><strong>Spoken Languages</strong></span><span>English (native), <a href="https://www.scotslanguage.com/Glesca/The_Invisible_Language" target="_blank" class="help">Scots English (belter!)</a></span></span></li>
                                 <li class="header"><strong>Programming Languages</strong></li>
-                                <li class="noback">Language</li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Python</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p10"><span>Fluent!</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>JavaScript</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p10"><span>Pro!</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>CSS/LESS</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p10"><span>Designer!</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>C#</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p9"><span>❤ MSFT</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Java</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p9"><span>I get it!</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Bash</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p8"><span>Pipelines!</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>PHP</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p7"><span>Plenty of practice</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>SQL</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p6"><span>Mindset</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>C++</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p5"><span>Relearning</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>C</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p5"><span>Used to be pro</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>BASIC</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p4"><span>BASIC</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>MSFT CMD</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p4"><span>Seldom</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>PowerShell</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p3"><span>Practice...</span></span>
+                                    </span>
+                                </li>
                                 <li class="header"><strong>Technologies/Frameworks</strong></li>
-                                <li class="noback">Tech</li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Illustrator</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p10"><span>Favourite app ❤</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Django</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p10"><span>Favourite framework ❤</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Web</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p10"><span>Understand the concepts</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>TeX</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p9"><span>\textbf{Awesome!}</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Markdown</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p9"><span>__**Love it**__</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Git VCS</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p8"><span>git push</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>MATLAB</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p7"><span>And Octave</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Pandas</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p7"><span>On the up</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Jupyter</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p7"><span>One cell at a time</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>Postgres</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p6"><span>Pretty good</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>T-SQL</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p6"><span>Seldom used</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>NumPy</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p6"><span>Lots to explore</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>R</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p4"><span>Seldom</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>MapReduce</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p4"><span>Limited</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>MongoDB</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p4"><span>Seldom</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>SpaCy</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p4"><span>Newbie</span></span>
+                                    </span>
+                                </li>
+                                <li class="noback tech">
+                                    <span class="name"><span>TensorFlow</span></span>
+                                    <span class="competence">
+                                        <span class="percentage p2"><span>Wat</span></span>
+                                    </span>
+                                </li>
                                 <li class="header"><strong>On the Horizon</strong></li>
                             </ul>
                             <p>I'm acutely aware that there are many things I still have to learn. I'm trying to catch up with the field of machine learning right now! Hopefully I'll be able to add some more technologies soon.</p>

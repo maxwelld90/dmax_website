@@ -80,6 +80,112 @@ ul.boxes li span.br {
     }
 }
 
+/* Rightbox tech competency styles */
+.right ul li.tech {
+    overflow: hidden;
+}
+
+@keyframes techSlide {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.right ul li.tech span.name {
+    display: block;
+    float: left;
+    line-height: 20px;
+    width: 110px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.right ul li.tech span.name span {
+    padding-right: 10px;
+}
+
+.right ul li.tech span.competence {
+    display: block;
+    line-height: 29px;
+    overflow: hidden;
+}
+
+.right ul li.tech span.competence span.percentage {
+    display: block;
+    animation: 0.75s ease-out 0s 1 techSlide;
+    animation-fill-mode: both;
+    animation-delay: 0.5s;
+    margin-top: 2px;
+    height: 15px;
+    background-color: #FFF;
+    text-align: right;
+}
+
+.right ul li.tech span.competence span.percentage span {
+    display: block;
+    height: 100%;
+    padding-right: 5px;
+    line-height: 15px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #000;
+}
+
+.right ul li.tech span.competence span.p10 {
+    width: 100%;
+    background-color: #54B340;
+}
+
+.right ul li.tech span.competence span.p9 {
+    width: 90%;
+    background-color: #73AE42;
+}
+
+.right ul li.tech span.competence span.p8 {
+    width: 80%;
+    background-color: #87A642;
+}
+
+.right ul li.tech span.competence span.p7 {
+    width: 70%;
+    background-color: #989D42;
+}
+
+.right ul li.tech span.competence span.p6 {
+    width: 60%;
+    background-color: #A79242;
+}
+
+.right ul li.tech span.competence span.p5 {
+    width: 50%;
+    background-color: #B38641;
+}
+
+.right ul li.tech span.competence span.p4 {
+    width: 40%;
+    background-color: #BD7840;
+}
+
+.right ul li.tech span.competence span.p3 {
+    width: 30%;
+    background-color: #D0573D;
+}
+
+.right ul li.tech span.competence span.p2 {
+    width: 20%;
+    background-color: #D7413B;
+}
+
+.right ul li.tech span.competence span.p1 {
+    width: 10%;
+    background-color: #DD2338;
+}
+
 /*******************/
 /* Education boxes */
 /*******************/
