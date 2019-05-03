@@ -50,6 +50,11 @@ a:hover {
     opacity: @hyperlink-hover-opacity;
 }
 
+a.help {
+    text-decoration: underline !important;
+    cursor: help;
+}
+
 a.whole {
     display: block;
     width: 100%;
@@ -67,6 +72,22 @@ ul.standard li {
     margin: 0;
     padding: 0;
     line-height: 30px;
+}
+
+span.highlight {
+    display: inline;
+    position: relative;
+    left: 5px;
+    padding: 5px 0 5px 0;
+    margin-right: 10px;
+    background-color: @dmax-lightblue;
+    color: @htag-textcolour;
+    box-shadow: 5px 0 0 @dmax-lightblue, -5px 0 0 @dmax-lightblue;
+    box-decoration-break: clone;
+}
+
+span.highlight span {
+    display: relative;
 }
 
 /***********************/

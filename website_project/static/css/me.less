@@ -51,6 +51,35 @@ ul.boxes li span.br {
     }
 }
 
+/* Rightbox flags container */
+.right ul li span.flags {
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+    .right ul li span.flags img {
+        width: auto;
+        height: 28px;
+        padding-left: 10px;
+    }
+
+@media screen and (max-width: 1170px) {
+    .right ul li span.flags {
+        top: 24px;
+    }
+    
+    .right ul li span.flags img {
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .right ul li span.flags {
+        display: none;
+    }
+}
+
 /*******************/
 /* Education boxes */
 /*******************/
