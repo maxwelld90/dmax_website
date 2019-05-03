@@ -1,0 +1,65 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/thesis.less' %}">
+        {% endcompress %}
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item three-fifths">
+                    <div class="headertag-container">
+                        <h1>My PhD Thesis</h1>
+                        <div id="subtitle">Download it and have a wee look!</div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
+                    </div>
+                    
+                    <article>
+                        <h2><span>Modelling Search and Stopping in Interactive Information Retrieval</span></h2>
+                        
+                        <strong>2 column design here, name/date/uni on left, uni logo on right</strong>
+                        
+                        <p>Searching for information when using a computerised retrieval system is a complex and inherently interactive process. Individuals during a search session may issue multiple queries, and examine a varying number of result summaries and documents per query. Searchers must also decide when to stop assessing content for relevance – or decide when to stop their search session altogether. Despite being such a fundamental activity, only a limited number of studies have explored stopping behaviours in detail, with a majority reporting that searchers stop because they decide that what they have found feels <em>"good enough".</em> Notwithstanding the limited exploration of stopping during search, the phenomenon is central to the study of <em>Information Retrieval,</em> playing a role in the models and measures that we employ. However, the current <em>de facto</em> assumption considers that searchers will examine <em>k</em> documents – examining up to a <em>fixed depth.</em></p>
+                        
+                        <p>In this thesis, we examine searcher stopping behaviours under a number of different search contexts. We conduct and report on two user studies, examining how result summary lengths and a variation of search tasks and goals affect such behaviours. Interaction data from these studies are then used to ground extensive <em>simulations of interaction,</em> exploring a number of different <em>stopping heuristics</em> (operationalised as twelve <em>stopping strategies</em>). We consider how well the proposed strategies perform and match up with real-world stopping behaviours. As part of our contribution, we also propose the <strong><a href="#csm">Complex Searcher Model</a></strong> (see below), a high-level conceptual searcher model that encodes stopping behaviours at different points throughout the search process. Within the Complex Searcher Model, we also propose a new results page stopping decision point. From this new stopping decision point, searchers can obtain an impression of the page before deciding to <em>enter</em> or <em>abandon</em> it.</p>
+                        
+                        <p>Results presented and discussed demonstrate that searchers employ a range of different stopping strategies, with no strategy standing out in terms of performance and approximations offered. Stopping behaviours are clearly not fixed, but are rather <em>adaptive</em> in nature. This complex picture reinforces the idea that modelling stopping behaviour is difficult. However, simplistic stopping strategies do offer good performance and approximations, such as the <em>frustration</em>-based stopping strategy. This strategy considers a searcher's tolerance to non-relevance. We also find that <em>combination</em> strategies – such as those combining a searcher's <em>satisfaction</em> with finding relevant material, and their frustration towards observing non-relevant material – also consistently offer good approximations and performance. In addition, we also demonstrate that the inclusion of the additional stopping decision point within the Complex Searcher Model provides significant improvements to performance over our baseline implementation. It also offers improvements to the approximations of real-world searcher stopping behaviours.</p>
+                        
+                        <p>This work motivates a revision of how we currently model the search process and demonstrates that different stopping heuristics need to be considered within the models and measures that we use in Information Retrieval. Measures should be reformed according to the stopping behaviours of searchers. A number of potential avenues for future exploration can also be considered, such as modelling the stopping behaviours of searchers individually (rather than as a population), and to explore and consider a wider variety of different stopping heuristics under different search contexts. Despite the inherently difficult task that understanding and modelling the stopping behaviours of searchers represents, potential benefits of further exploration in this area will undoubtedly aid the searchers of future retrieval systems – with further work bringing about improved interfaces and experiences.</p>
+                        
+                    </article>
+                    
+                </div>
+
+                <div class="flex-item two-fifths right">
+                    <div class="container opaque">
+                        <h2>Links and Facts</h2>
+                        <div>
+                            <ul>
+                                <li class="noback with-image"><span class="image sprite-icon-baby"></span><span class="text-multi"><span><strong>Born</strong></span><span>Sometime in 1990</span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="container opaque">
+                        <h2>Copyright &amp; Attribution</h2>
+                        <div>
+                            <ul>
+                                <li class="noback with-image"><span class="image sprite-icon-baby"></span><span class="text-multi"><span><strong>Born</strong></span><span>Sometime in 1990</span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="attribution">
+                        Illustrations above from <a href="https://fontawesome.com/" target="_blank">Font Awesome</a> under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC 4.0 Attribution</a>
+                    </div>
+                    
+                </div>
+
+            </div>
+{% endblock %}

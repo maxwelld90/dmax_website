@@ -27,7 +27,10 @@ def publications_bibtex(request, publication_slug):
     return HttpResponse("publication bibtex for " + publication_slug)
 
 def thesis(request):
-    return HttpResponse("thesis")
+    context_dict = {}
+    utils.apply_background_to_context(context_dict, 'lilybank')
+    
+    return render(request, template_name='dmax_org_uk/thesis.html', context=context_dict)
 
 def projects(request):
     return HttpResponse("projects")
