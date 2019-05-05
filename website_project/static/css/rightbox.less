@@ -145,7 +145,23 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+/* Adjusting rightbox font sizes for different screen sizes */
+
+@media screen and (max-width: 600px) {
+    .right ul li span.text {
+        font-size: 10pt;
+    }
+    
+    .right ul li span.text-multi span {
+        font-size: 10pt;
+    }
+    
+    .right ul li span.text-multi span ul li {
+        font-size: 10pt;
+    }
+}
+
+@media screen and (min-width: 1050px) and (max-width: 1200px) {
     .right ul li span.text {
         font-size: 10pt;
     }
