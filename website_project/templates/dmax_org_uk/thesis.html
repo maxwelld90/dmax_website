@@ -32,6 +32,11 @@
                             </span>
                         </span>
                         
+                        <span class="mobile-download-container">
+                            <a href="http://bit.ly/modelling-search-and-stopping" class="dl" target="_blank">Download PDF Here</a>
+                            <span>Or click/tap <a href="#structure">here</a> for a chapter summary</span>
+                        </span>
+                        
                         <p>Searching for information when using a computerised retrieval system is a complex and inherently interactive process. Individuals during a search session may issue multiple queries, and examine a varying number of result summaries and documents per query. Searchers must also decide when to stop assessing content for relevance – or decide when to stop their search session altogether. Despite being such a fundamental activity, only a limited number of studies have explored stopping behaviours in detail, with a majority reporting that searchers stop because they decide that what they have found feels <em>"good enough".</em> Notwithstanding the limited exploration of stopping during search, the phenomenon is central to the study of <em>Information Retrieval,</em> playing a role in the models and measures that we employ. However, the current <em>de facto</em> assumption considers that searchers will examine <em>k</em> documents – examining up to a <em>fixed depth.</em></p>
                         
                         <p>In this thesis, we examine searcher stopping behaviours under a number of different search contexts. We conduct and report on two user studies, examining how result summary lengths and a variation of search tasks and goals affect such behaviours. Interaction data from these studies are then used to ground extensive <em>simulations of interaction,</em> exploring a number of different <em>stopping heuristics</em> (operationalised as twelve <em>stopping strategies</em>). We consider how well the proposed strategies perform and match up with real-world stopping behaviours. As part of our contribution, we also propose the <strong><a href="#csm">Complex Searcher Model</a></strong> (see below), a high-level conceptual searcher model that encodes stopping behaviours at different points throughout the search process. Within the Complex Searcher Model, we also propose a new results page stopping decision point. From this new stopping decision point, searchers can obtain an impression of the page before deciding to <em>enter</em> or <em>abandon</em> it.</p>
@@ -54,40 +59,40 @@
                         <h2>Links and Facts</h2>
                         <div>
                             <ul>
-                                <li class="red with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-pdf"></span><span class="text"><strong>Download Complete PDF</strong></span></a></li>
-                                <li class="with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-book"></span><span class="text"><strong>Library Record</strong></span></a></li>
-                                <li class="noback with-image"><span class="image sprite-icon-people"></span><span class="text-multi"><span><strong>Supervised By</strong></span><span><a href="#" target="_blank">Dr Leif Azzopardi</a></span></span></li>
-                                <li class="noback with-image"><span class="image sprite-icon-people_shield"></span><span class="text-multi"><span><strong>Examined By</strong></span><span><a href="#" target="_blank"><strong>Prof. Iadh Ounis</strong></a> and <a href="#" target="_blank"><strong>Dr Suzan Verberne</strong></a></span></span></li>
+                                <li class="red with-image"><a href="http://bit.ly/modelling-search-and-stopping" class="whole" target="_blank"><span class="image sprite-icon-pdf"></span><span class="text"><strong>Download Complete PDF</strong></span></a></li>
+                                <li class="with-image"><a href="http://theses.gla.ac.uk/41132/" class="whole" target="_blank"><span class="image sprite-icon-book"></span><span class="text"><strong>Library Record</strong></span></a></li>
+                                <li class="noback with-image"><span class="image sprite-icon-people"></span><span class="text-multi"><span><strong>Supervised By</strong></span><span><a href="https://www.strath.ac.uk/staff/azzopardileifdr/" target="_blank">Dr Leif Azzopardi</a></span></span></li>
+                                <li class="noback with-image"><span class="image sprite-icon-people_shield"></span><span class="text-multi"><span><strong>Examined By</strong></span><span><a href="http://www.dcs.gla.ac.uk/~ounis/" target="_blank"><strong>Prof. Iadh Ounis</strong></a> and <a href="http://liacs.leidenuniv.nl/~verbernes/" target="_blank"><strong>Dr Suzan Verberne</strong></a></span></span></li>
                                 <li class="noback with-image"><span class="image sprite-icon-stats"></span><span class="text-multi"><span><strong>Basic Stats</strong></span><span>10 chapters, 465 pages, 79,605 words</span></span></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-cite"></span><span class="text-multi"><span><strong>BibTeX</strong></span><span>Click here to get the citation!</span></span></a></li>
+                                <li class="noback with-image"><a href="{% url 'dmax_org_uk:publications-bibtex' 'thesis' %}" class="whole" target="_blank"><span class="image sprite-icon-cite"></span><span class="text-multi"><span><strong>BibTeX</strong></span><span>Click here to get the citation!</span></span></a></li>
                             </ul>
                         </div>
                     </div>
                     
                     <div class="container opaque">
-                        <h2>Thesis Structure</h2>
+                        <h2 id="structure">Thesis Structure</h2>
                         <div>
                             <ul>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-hiking"></span><span class="text-multi"><span><strong>The PhD Journey</strong></span><span>The story of my PhD</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/phd-journey" class="whole" target="_blank"><span class="image sprite-icon-hiking"></span><span class="text-multi"><span><strong>The PhD Journey</strong></span><span>The story of my PhD</span></span></a></li>
                                 
                                 <li class="header">Part I - Introduction</li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-idea"></span><span class="text-multi"><span><strong>Introduction</strong></span><span>What's the big idea?</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-back"></span><span class="text-multi"><span><strong>IR Background</strong></span><span>A survey of the IR basics</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-back"></span><span class="text-multi"><span><strong>Stopping and Search</strong></span><span>What's been found out before?</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-introduction" class="whole" target="_blank"><span class="image sprite-icon-idea"></span><span class="text-multi"><span><strong>Introduction</strong></span><span>What's the big idea?</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-ir" class="whole" target="_blank"><span class="image sprite-icon-back"></span><span class="text-multi"><span><strong>IR Background</strong></span><span>A survey of the IR basics</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-survey" class="whole" target="_blank"><span class="image sprite-icon-back"></span><span class="text-multi"><span><strong>Stopping and Search</strong></span><span>What's been found out before?</span></span></a></li>
                                 
                                 <li class="header">Part II - Model and Method</li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-csm"></span><span class="text-multi"><span><strong>The CSM</strong></span><span>Introducing the searcher model</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-stop"></span><span class="text-multi"><span><strong>Stopping Strategies</strong></span><span>The twelve stopping strategies</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-science"></span><span class="text-multi"><span><strong>Methodology</strong></span><span>How did I science?</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-csm" class="whole" target="_blank"><span class="image sprite-icon-csm"></span><span class="text-multi"><span><strong>The CSM</strong></span><span>Introducing the searcher model</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-strategies" class="whole" target="_blank"><span class="image sprite-icon-stop"></span><span class="text-multi"><span><strong>Stopping Strategies</strong></span><span>The twelve stopping strategies</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-methodology" class="whole" target="_blank"><span class="image sprite-icon-science"></span><span class="text-multi"><span><strong>Methodology</strong></span><span>How did I science?</span></span></a></li>
                                 
                                 <li class="header">Part III - The Science</li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-ruler"></span><span class="text-multi"><span><strong>Snippet Lengths</strong></span><span>Summary lengths and stopping</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-diversification"></span><span class="text-multi"><span><strong>Diversification</strong></span><span>Diversification and stopping</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-serp"></span><span class="text-multi"><span><strong>SERP Stopping</strong></span><span>Improving user modelling</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-snippets" class="whole" target="_blank"><span class="image sprite-icon-ruler"></span><span class="text-multi"><span><strong>Snippet Lengths</strong></span><span>Summary lengths and stopping</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-diversification" class="whole" target="_blank"><span class="image sprite-icon-diversification"></span><span class="text-multi"><span><strong>Diversification</strong></span><span>Diversification and stopping</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-serp-level" class="whole" target="_blank"><span class="image sprite-icon-serp"></span><span class="text-multi"><span><strong>SERP Stopping</strong></span><span>Improving user modelling</span></span></a></li>
                                 
                                 <li class="header">Part IV - Wrapping Up</li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-list"></span><span class="text-multi"><span><strong>Conclusions</strong></span><span>A thesis summary</span></span></a></li>
-                                <li class="noback with-image"><a href="#" class="whole" target="_blank"><span class="image sprite-icon-book"></span><span class="text-multi"><span><strong>Bibliography</strong></span><span>Who did I cite?</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-conclusions" class="whole" target="_blank"><span class="image sprite-icon-list"></span><span class="text-multi"><span><strong>Conclusions</strong></span><span>A thesis summary</span></span></a></li>
+                                <li class="noback with-image"><a href="http://bit.ly/modelling-search-and-stopping-bibliography" class="whole" target="_blank"><span class="image sprite-icon-book"></span><span class="text-multi"><span><strong>Bibliography</strong></span><span>Who did I cite?</span></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -100,13 +105,13 @@
                                 <li class="header">Artwork, Images &amp; Fonts</li>
                             </ul>
                             
-                            <p>Several illustrations within this thesis (and the footer image of this page) incorporate artworks from <a href="#" target="_blank">freepik.com</a>. These assist in explaining concepts.</p>
+                            <p>Several illustrations within this thesis (and the footer image of this page) incorporate artworks from <a href="https://www.freepik.com" target="_blank">freepik.com</a>. These assist in explaining concepts.</p>
                             
-                            <p>The IKEA assembly man introduced Part II of this thesis. Permission from <a href="#" target="_blank">Inter IKEA Holding S.A.</a> was granted to incorporate the image. Thanks, IKEA!</p>
+                            <p>The IKEA assembly man introduced Part II of this thesis. Permission from <a href="https://www.inter.ikea.com/" target="_blank">Inter IKEA Holding S.A.</a> was granted to incorporate the image. Thanks, IKEA!</p>
                             
-                            <p>The typeface <a href="#" target="_blank">Foundry Sterling</a> was used for titles, headers and illustrations within this thesis. A licence permitting use of this typeface was acquired by the author.</p>
+                            <p>The typeface <a href="http://www.foundrytypes.co.uk/home" target="_blank">Foundry Sterling</a> was used for titles, headers and illustrations within this thesis. A licence permitting use of this typeface was acquired by the author.</p>
                             
-                            <p>Finally, permission was sought from everyone in Picture 1 in <a href="#" target="_blank">The PhD Journey</a>. Thanks, everybody — I love you all!</p>
+                            <p>Finally, permission was sought from everyone in Picture 1 in <a href="http://bit.ly/phd-journey" target="_blank">The PhD Journey</a>. Thanks, everybody — I love you all!</p>
                             
                         </div>
                     </div>

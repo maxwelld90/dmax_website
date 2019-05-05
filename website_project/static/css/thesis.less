@@ -29,6 +29,10 @@ span.thesis-header-twocol span.text a {
     color: #000;
 }
 
+span.mobile-download-container {
+    display: none;
+}
+
 @media screen and (max-width: 568px) {
     span.thesis-header-twocol {
         display: block;
@@ -45,5 +49,35 @@ span.thesis-header-twocol span.text a {
     span.thesis-header-twocol span.text {
         display: block;
         margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    span.mobile-download-container {
+        display: block;
+        margin: 15px 0 15px 0;
+        padding: 10px;
+        background: @dmax-red;
+        color: @dmax-onbackground-text;
+        text-align: center;
+        line-height: 30px;
+    }
+
+    span.mobile-download-container a {
+        color: @dmax-onbackground-text;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    span.mobile-download-container a.dl {
+        font-size: 20pt;
+    }
+
+    span.mobile-download-container span {
+        display: block;
+    }
+    
+    span.mobile-download-container span a {
+        font-weight: bold;
     }
 }
