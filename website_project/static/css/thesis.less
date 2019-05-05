@@ -33,6 +33,21 @@ span.mobile-download-container {
     display: none;
 }
 
+/* Remove margin-bottom for footer; replace when the image is removed. */
+main {
+    margin: 15px 0 0 0;
+}
+
+div#thesis-bottom {
+    z-index: -100;
+    width: 100%;
+    height: 300px;
+    background: url('../img/thesis/footer.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 @media screen and (max-width: 568px) {
     span.thesis-header-twocol {
         display: block;
@@ -79,5 +94,13 @@ span.mobile-download-container {
     
     span.mobile-download-container span a {
         font-weight: bold;
+    }
+    
+    main {
+        margin: 15px 0 15px 0;
+    }
+
+    div#thesis-bottom {
+        display: none;
     }
 }
