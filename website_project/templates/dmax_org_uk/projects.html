@@ -1,0 +1,33 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/projects.less' %}">
+        {% endcompress %}
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item whole">
+                    <div class="headertag-container">
+                        <h1>Projects</h1>
+                        <div id="subtitle">What have I been working on?</div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
+                    </div>
+                    
+                    <ul id="projects-grid-container" class="grid-container">
+                        <li>
+                            <a class="whole" href="#">
+                                A project entry
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+{% endblock %}

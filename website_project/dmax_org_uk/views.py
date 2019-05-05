@@ -55,7 +55,10 @@ def thesis(request):
     return render(request, template_name='dmax_org_uk/thesis.html', context=context_dict)
 
 def projects(request):
-    return HttpResponse("projects")
+    context_dict = {}
+    utils.apply_background_to_context(context_dict, 'heraklion')
+    
+    return render(request, template_name='dmax_org_uk/projects.html', context=context_dict)
 
 def projects_entry(request, project_slug):
     return HttpResponse("project " + project_slug)
