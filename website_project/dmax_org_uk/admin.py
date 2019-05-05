@@ -9,3 +9,10 @@ class PublicationAdmin(admin.ModelAdmin):
     published_date = 'year'
     empty_value_display = '(Blank)'
     list_display = ('title', 'publication_type', 'published_date')
+
+@admin.register(models.PublicationResource)
+class PublicationResourceAdmin(admin.ModelAdmin):
+    """
+    An admin interface class for the PublicationResource model.
+    """
+    list_display = ['publication', 'resource_type']

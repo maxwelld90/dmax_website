@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import date
 
 class Publication(models.Model):
     PUBLICATION_TYPE_FULLPAPER = 'FP'
@@ -39,6 +40,10 @@ class Publication(models.Model):
                            max_length=50,
                            verbose_name='DOI',
                            help_text="If the document has a DOI, enter this here. This can be left blank.")
+    
+    published_in = models.TextField(blank=True,
+                               verbose_name='Published in...',
+                               help_text="What publication was the publication in? This is HTML friendly.")
     
     publication_type = models.CharField(blank=False,
                                         verbose_name='Publication Type',
@@ -95,7 +100,125 @@ class Publication(models.Model):
         Returns a list of authors - splitting at a ', '.
         """
         return self.authors.split(', ')
+    
+    def has_been_published(self):
+        """
+        Returns True iif the publication date is before or equal to the current date.
+        Returns False iif the publication date is in the future.
+        """
+        current_date = date.today()
+        
+        if self.published_date > current_date:
+            return False
+        
+        return True
+    
+    ##################################
+    # Helper functions for resources #
+    ##################################
+    
+    def has_resources(self):
+        """
+        Returns True if at least one resource is present.
+        """
+        resources = PublicationResource.objects.all().filter(publication=self)
+        
+        if len(resources) > 0:
+            return True
+        
+        return False
+    
+    def get_pdf_resource(self):
+        """
+        Returns a PublicationResource PDF object for the publication.
+        Returns None if no object is present.
+        """
+        pdf = PublicationResource.objects.all().get(publication=self, resource_type=PublicationResource.RESOURCE_TYPE_PDF)
+        return pdf
+    
+    def get_bibtex_resource(self):
+        """
+        Returns a PublicationResource BibTeX object for the publication.
+        Returns None if no object is present.
+        """
+        bibtex = PublicationResource.objects.all().get(publication=self, resource_type=PublicationResource.RESOURCE_TYPE_BIBTEX)
+        return bibtex
+    
+    def get_slides_resource(self):
+        """
+        Returns a PublicationResource slides object for the publication.
+        Returns None if no object is present.
+        """
+        slides = PublicationResource.objects.all().get(publication=self, resource_type=PublicationResource.RESOURCE_TYPE_SLIDES)
+        return slides
+    
+    def get_url_resources(self):
+        """
+        Returns a list of PublicationResource URL objects for the publication.
+        Returns an empty list if none are present.
+        """
+        urls = PublicationResource.objects.all().filter(publication=self, resource_type=PublicationResource.RESOURCE_TYPE_URL)
+        return urls
+    
+    ########
+    # Meta #
+    ########
+    def __unicode__(self):
+        return '({0}) {1}'.format(self.publication_year(), self.title)
+    
+    class Meta:
+        """
+        Meta class for the admin interface.
+        """
+        ordering = ['-published_date']
+        verbose_name = 'publication'
+        verbose_name_plural = 'publications'
 
 
 class PublicationResource(models.Model):
-    pass
+    RESOURCE_TYPE_BIBTEX = 'BIB'
+    RESOURCE_TYPE_PDF = 'PDF'
+    RESOURCE_TYPE_SLIDES = 'SLI'
+    RESOURCE_TYPE_URL = 'URL'
+    
+    RESOURCE_TYPE_CHOICES = (
+        (RESOURCE_TYPE_BIBTEX, 'BibTeX'),
+        (RESOURCE_TYPE_PDF, 'PDF of Publication'),
+        (RESOURCE_TYPE_SLIDES, 'Slides'),
+        (RESOURCE_TYPE_URL, 'Link to resource'),
+    )
+    
+    publication = models.ForeignKey(Publication,
+                                    verbose_name='Associated Publication',
+                                    help_text='Which publication is the resource associated with?',
+                                    on_delete=models.CASCADE)
+    
+    resource_type = models.CharField(blank=False,
+                                     verbose_name='Resource Type',
+                                     max_length=3,
+                                     choices=RESOURCE_TYPE_CHOICES,
+                                     default=RESOURCE_TYPE_PDF,
+                                     help_text="What kind of resource? This affects what fields below are considered.")
+    
+    bibtex = models.TextField(blank=True,
+                              verbose_name='BiBTeX Source',
+                              help_text="Enter the BiBTeX code for this publication.")
+    
+    pdf = models.FileField(blank=True,
+                           upload_to=lambda instance, filename: 'publications/pdf/{slug}.pdf'.format(slug=instance.publication.slug),
+                           verbose_name='PDF of Publication',
+                           help_text="Select a PDF file to upload for this publication.")
+    
+    slides = models.FileField(blank=True,
+                              upload_to=lambda instance, filename: 'publications/slides/{slug}.pdf'.format(slug=instance.publication.slug),
+                              verbose_name='Slides of Publication',
+                              help_text="Select PDF slides for the publication. Make sure fonts are removed!")
+    
+    external_url = models.URLField(blank=True,
+                              verbose_name='URL to external resource',
+                              help_text="Enter a URL to an external resource.")
+    
+    url_text = models.CharField(blank=True,
+                                max_length=200,
+                                verbose_name='Hyperlink text',
+                                help_text="Enter text for the hyperlink. Leave blank to display the URL.")

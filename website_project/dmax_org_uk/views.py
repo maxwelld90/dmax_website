@@ -1,6 +1,6 @@
 from . import utils
 from . import models
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 def landing(request):
@@ -26,10 +26,27 @@ def publications_entry(request, publication_slug):
     context_dict = {}
     utils.apply_background_to_context(context_dict, 'publication')
     
+    try:
+        publication = models.Publication.objects.get(slug=publication_slug)
+    except models.Publication.DoesNotExist:
+        return redirect('dmax_org_uk:publications')
+    
+    context_dict['publication'] = publication
+    
     return render(request, template_name='dmax_org_uk/publications-entry.html', context=context_dict)
 
 def publications_bibtex(request, publication_slug):
-    return HttpResponse("publication bibtex for " + publication_slug)
+    try:
+        publication = models.Publication.objects.get(slug=publication_slug)
+    except models.Publication.DoesNotExist:
+        return redirect('dmax_org_uk:publications')
+    
+    try:
+        bibtex_resource = publication.get_bibtex_resource()
+    except models.PublicationResource.DoesNotExist:
+        return redirect('dmax_org_uk:publications-entry', publication_slug)
+    
+    return HttpResponse(bibtex_resource.bibtex, content_type='text/plain')
 
 def thesis(request):
     context_dict = {}
