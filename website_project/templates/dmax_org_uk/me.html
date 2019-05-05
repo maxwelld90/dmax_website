@@ -88,7 +88,7 @@
                             <li id="publications-box">
                                 <a href="{% url 'dmax_org_uk:publications' %}" class="whole">
                                     <span class="big">Publications</span>
-                                    <span class="underhang">xx listed</span>
+                                    <span class="underhang">{{ publications|length }} listed publications</span>
                                 </a>
                             </li>
                         </ul>

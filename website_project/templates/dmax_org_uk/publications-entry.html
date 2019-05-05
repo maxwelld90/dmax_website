@@ -8,6 +8,15 @@
         {% compress css %}
         <link rel="stylesheet" type="text/less" href="{% static 'css/publications.less' %}">
         {% endcompress %}
+        {% if publication.background %}
+        <style type="text/css">
+            #main-image-background.custom-background {
+                background: url('{{ publication.background.url }}');
+                background-size: cover;
+                background-position: center center;
+            }
+        </style>
+        {% endif %}
 {% endblock %}
 
 {% block main %}

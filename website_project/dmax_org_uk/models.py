@@ -75,7 +75,7 @@ class Publication(models.Model):
     # Background image
     
     background = models.FileField(blank=True,
-                                  upload_to='publications/backgrounds/',
+                                  upload_to=lambda instance, filename: 'publications/backgrounds/{slug}.jpg'.format(slug=instance.slug),
                                   verbose_name='Background image',
                                   help_text="Select a JPG background image, typically 1500x500px.")
     

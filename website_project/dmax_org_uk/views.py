@@ -11,6 +11,7 @@ def landing(request):
 
 def me(request):
     context_dict = {}
+    context_dict['publications'] = models.Publication.objects.all()
     utils.apply_background_to_context(context_dict, 'whitelee')
     
     return render(request, template_name='dmax_org_uk/me.html', context=context_dict)
@@ -32,6 +33,9 @@ def publications_entry(request, publication_slug):
         return redirect('dmax_org_uk:publications')
     
     context_dict['publication'] = publication
+    
+    if publication.background:
+        utils.apply_background_to_context(context_dict, 'custom-background')
     
     return render(request, template_name='dmax_org_uk/publications-entry.html', context=context_dict)
 
