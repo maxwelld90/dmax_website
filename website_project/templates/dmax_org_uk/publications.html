@@ -2,6 +2,7 @@
 
 {% load static %}
 {% load compress %}
+{% load dmax_org_uk_templatetags %}
 
 {% block includetags %}
         {% compress css %}
@@ -18,26 +19,35 @@
                         <div id="subtitle">Click/tap a publication for more information.</div>
                     </div>
                     
+                    {% if publications %}
                     <ul id="publications-grid-container" class="grid-container">
-                        <li class="publication-year-2019">
-                            <a class="whole" href="{% url 'dmax_org_uk:publications-entry' 'some_entry' %}">
-                                <span class="year">2019</span>
-                                <span class="publication-type">PhD Thesis</span>
-                                <h2>Modelling Search and Stopping in Interactive Information Retrieval</h2>
-                                <span class="authors">David Maxwell, Leif Azzopardi, Yashar Moshfeghi</span>
-                                <span class="attribution">Appeared at <strong>ECIR 2018</strong></span>
+                        {% for publication in publications %}
+                        <li class="publication-year-{{ publication.publication_year }}">
+                            {% if publication.external_url %}
+                            <a class="whole" target="_blank" href="{{ publication.external_url }}">
+                            {% else %}
+                            <a class="whole" href="{% url 'dmax_org_uk:publications-entry' publication.slug %}">
+                            {% endif %}
+                                <span class="year">{{ publication.publication_year }}</span>
+                                <span class="publication-type">{{ publication.get_verbose_type }}</span>
+                                <h2>{{ publication.title }}</h2>
+                                <span class="authors">
+                                {% for author in publication.get_authors_list %}
+                                {% autoescape off %}
+                                {% if forloop.last %}
+                                {{ author|bold:'David Maxwell' }}
+                                {% else %}
+                                {{ author|bold:'David Maxwell' }}, 
+                                {% endif %}
+                                {% endautoescape %}
+                                {% endfor %}
+                                </span>
+                                <span class="attribution">{% autoescape off %}{{ publication.tagline }}{% endautoescape %}</span>
                             </a>
                         </li>
-                        <li>
-                            <a class="whole" href="{% url 'dmax_org_uk:publications-entry' 'some_entry' %}">
-                                <span class="year">2018</span>
-                                <span class="publication-type">Journal Article</span>
-                                <h2>Modelling Search and Stopping in Interactive Information Retrieval</h2>
-                                <span class="authors">David Maxwell, Leif Azzopardi, Yashar Moshfeghi</span>
-                                <span class="attribution">Appeared at <strong>ECIR 2018</strong></span>
-                            </a>
-                        </li>
+                        {% endfor %}
                     </ul>
+                    {% endif %}
                     
                 </div>
             </div>

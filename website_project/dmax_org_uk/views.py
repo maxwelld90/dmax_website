@@ -1,4 +1,5 @@
 from . import utils
+from . import models
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -15,7 +16,11 @@ def me(request):
     return render(request, template_name='dmax_org_uk/me.html', context=context_dict)
 
 def publications(request):
-    return render(request, template_name='dmax_org_uk/publications.html')
+    context_dict = {
+        'publications': models.Publication.objects.all().order_by('-published_date')
+    }
+    
+    return render(request, template_name='dmax_org_uk/publications.html', context=context_dict)
 
 def publications_entry(request, publication_slug):
     context_dict = {}
