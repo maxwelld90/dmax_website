@@ -22,11 +22,24 @@
                     <article>
                         <h2><span>Modelling Search and Stopping in Interactive Information Retrieval</span></h2>
                         
-                        <strong>2 column design here, name/date/uni on left, uni logo on right</strong>
+                        <span class="thesis-header-twocol">
+                            <span class="crest"><img src="{% static 'img/thesis/university-crest.svg' %}" alt="University of Glasgow Crest" /></span>
+                            <span class="text">
+                                <strong>David Martin Maxwell</strong><br />
+                                <a href="https://www.gla.ac.uk/schools/computing/" target="_blank">School of Computing Science</a><br />
+                                <a href="https://www.gla.ac.uk/" target="_blank">University of Glasgow</a><br />
+                                March 2019
+                            </span>
+                        </span>
                         
                         <p>Searching for information when using a computerised retrieval system is a complex and inherently interactive process. Individuals during a search session may issue multiple queries, and examine a varying number of result summaries and documents per query. Searchers must also decide when to stop assessing content for relevance – or decide when to stop their search session altogether. Despite being such a fundamental activity, only a limited number of studies have explored stopping behaviours in detail, with a majority reporting that searchers stop because they decide that what they have found feels <em>"good enough".</em> Notwithstanding the limited exploration of stopping during search, the phenomenon is central to the study of <em>Information Retrieval,</em> playing a role in the models and measures that we employ. However, the current <em>de facto</em> assumption considers that searchers will examine <em>k</em> documents – examining up to a <em>fixed depth.</em></p>
                         
                         <p>In this thesis, we examine searcher stopping behaviours under a number of different search contexts. We conduct and report on two user studies, examining how result summary lengths and a variation of search tasks and goals affect such behaviours. Interaction data from these studies are then used to ground extensive <em>simulations of interaction,</em> exploring a number of different <em>stopping heuristics</em> (operationalised as twelve <em>stopping strategies</em>). We consider how well the proposed strategies perform and match up with real-world stopping behaviours. As part of our contribution, we also propose the <strong><a href="#csm">Complex Searcher Model</a></strong> (see below), a high-level conceptual searcher model that encodes stopping behaviours at different points throughout the search process. Within the Complex Searcher Model, we also propose a new results page stopping decision point. From this new stopping decision point, searchers can obtain an impression of the page before deciding to <em>enter</em> or <em>abandon</em> it.</p>
+                        
+                        <span class="image" id="csm">
+                            <img src="{% static 'img/thesis/csm.svg' %}" alt="The Complex Searcher Model"/>
+                            <span class="caption">The <strong>Complex Searcher Model</strong>, a key contribution of this thesis.</span>
+                        </span>
                         
                         <p>Results presented and discussed demonstrate that searchers employ a range of different stopping strategies, with no strategy standing out in terms of performance and approximations offered. Stopping behaviours are clearly not fixed, but are rather <em>adaptive</em> in nature. This complex picture reinforces the idea that modelling stopping behaviour is difficult. However, simplistic stopping strategies do offer good performance and approximations, such as the <em>frustration</em>-based stopping strategy. This strategy considers a searcher's tolerance to non-relevance. We also find that <em>combination</em> strategies – such as those combining a searcher's <em>satisfaction</em> with finding relevant material, and their frustration towards observing non-relevant material – also consistently offer good approximations and performance. In addition, we also demonstrate that the inclusion of the additional stopping decision point within the Complex Searcher Model provides significant improvements to performance over our baseline implementation. It also offers improvements to the approximations of real-world searcher stopping behaviours.</p>
                         

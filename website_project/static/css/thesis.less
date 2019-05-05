@@ -1,2 +1,49 @@
 @import 'global';
 
+span.thesis-header-twocol {
+    display: flex;
+    margin-top: 20px;
+}
+
+span.thesis-header-twocol span.crest {
+    flex: 0.3;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    max-width: 300px;
+}
+
+span.thesis-header-twocol span.crest img {
+    max-width: 100%;
+    height: auto;
+}
+
+span.thesis-header-twocol span.text {
+    flex: 0.7;
+    line-height: 28px;
+    font-family: 'Raleway', sans-serif;
+}
+
+span.thesis-header-twocol span.text a {
+    font-weight: normal;
+    color: #000;
+}
+
+@media screen and (max-width: 568px) {
+    span.thesis-header-twocol {
+        display: block;
+        text-align: center;
+    }
+    
+    span.thesis-header-twocol span.crest {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin-right: 0;
+    }
+    
+    span.thesis-header-twocol span.text {
+        display: block;
+        margin-top: 10px;
+    }
+}
