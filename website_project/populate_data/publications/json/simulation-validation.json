@@ -1,0 +1,20 @@
+{
+    "publication": {
+        "title": "Validating Simulated Interaction for Retrieval Evaluation",
+        "authors": "Teemu Pääkkönen, Jaana Kekäläinen, Heikki Keskustalo, Leif Azzopardi, David Maxwell, Kalervo Järvelin",
+        "published_date": "2017-05-06",
+        "doi": "10.1007/s10791-017-9301-2",
+        "published_in": "<a href=\"https://link.springer.com/journal/10791\" target=\"_blank\">Information Retrieval Journal</a>",
+        "publication_type": "J",
+        
+        "tagline": "Appeared in the <strong>IRJ</strong>",
+        "abstract": "../abstracts/simulation-validation.sgml",
+        
+        "slug": "simulation-validation",
+        "background": "../backgrounds/simulation-validation.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/simulation-validation.bib"
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "A Study of Snippet Length and Informativeness: Behaviour, Performance and User Experience",
+        "authors": "David Maxwell, Leif Azzopardi, Yashar Moshfeghi",
+        "published_date": "2017-08-08",
+        "doi": "10.1145/3077136.3080824",
+        "published_in": "Proceedings of <a href=\"https://sigir.org/sigir2017/\" target=\"_blank\">SIGIR 2017</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>SIGIR 2017</strong>",
+        "abstract": "../abstracts/sigir-snippet-lengths.sgml",
+        
+        "slug": "sigir-snippet-lengths",
+        "background": "../backgrounds/sigir-snippet-lengths.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/sigir-snippet-lengths.bib",
+        "PDF": "../pdf/sigir-snippet-lengths.pdf"
+    }
+}

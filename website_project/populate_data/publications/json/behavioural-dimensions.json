@@ -1,0 +1,20 @@
+{
+    "publication": {
+        "title": "Exploring Behavioral Dimensions in Session Effectiveness",
+        "authors": "Teemu Pääkkönen, Kalervo Järvelin, Jaana Kekäläinen, Heikki Keskustalo, Feza Baskaya, David Maxwell, Leif Azzopardi",
+        "published_date": "2015-09-08",
+        "doi": "10.1007/978-3-319-24027-5_15",
+        "published_in": "Proceedings of <a href=\"http://clef2015.clef-initiative.eu/\" target=\"_blank\">CLEF 2015</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>CLEF 2015</strong>",
+        "abstract": "../abstracts/behavioural-dimensions.sgml",
+        
+        "slug": "behavioural-dimensions",
+        "background": "../backgrounds/behavioural-dimensions.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/behavioural-dimensions.bib"
+    }
+}

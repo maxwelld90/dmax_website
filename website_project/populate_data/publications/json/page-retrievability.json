@@ -1,0 +1,20 @@
+{
+    "publication": {
+        "title": "Page Retrievability Calculator",
+        "authors": "Leif Azzopardi, Rosanne English, Colin Wilkie, David Maxwell",
+        "published_date": "2014-04-14",
+        "doi": "10.1007/978-3-319-06028-6_85",
+        "published_in": "Proceedings of <a href=\"https://ecir2014.org/\" target=\"_blank\">ECIR 2014</a>",
+        "publication_type": "D",
+        
+        "tagline": "Appeared at <strong>ECIR 2014</strong>",
+        "abstract": "../abstracts/page-retrievability.sgml",
+        
+        "slug": "page-retrievability",
+        "background": "../backgrounds/page-retrievability.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/page-retrievability.bib"
+    }
+}

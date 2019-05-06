@@ -1,0 +1,22 @@
+{
+    "publication": {
+        "title": "Personalised Search Time Prediction using Markov Chains",
+        "authors": "Vu Tran, David Maxwell, Norbert Fuhr, Leif Azzopardi",
+        "published_date": "2017-10-03",
+        "doi": "10.1145/3121050.3121085",
+        "published_in": "Proceedings of <a href=\"https://sigir.org/ictir2017/\" target=\"_blank\">ICTIR 2017</a>",
+        "publication_type": "SP",
+        
+        "tagline": "Appeared at <strong>ICTIR 2017</strong>",
+        "abstract": "../abstracts/markov-chains.sgml",
+        
+        "slug": "markov-chains",
+        "background": "../backgrounds/markov-chains.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/markov-chains.bib",
+        "PDF": "../pdf/markov-chains.pdf",
+        "SLI": "../slides/markov-chains.pdf"
+    }
+}

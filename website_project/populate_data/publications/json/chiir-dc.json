@@ -1,0 +1,20 @@
+{
+    "publication": {
+        "title": "Building Realistic Simulations for Interactive Information Retrieval",
+        "authors": "David Maxwell",
+        "published_date": "2016-03-13",
+        "doi": "10.1145/2854946.2854950",
+        "published_in": "Proceedings of <a href=\"http://sigir.org/chiir2016/\" target=\"_blank\">CHIIR 2016</a>",
+        "publication_type": "DC",
+        
+        "tagline": "Appeared at <strong>CHIIR 2016</strong>",
+        "abstract": "../abstracts/chiir-dc.sgml",
+        
+        "slug": "chiir-dc"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/chiir-dc.bib",
+        "PDF": "../pdf/chiir-dc.pdf"
+    }
+}

@@ -1,0 +1,7 @@
+<p>In this paper we investigate how query response delays and document download delays affect user interactions within a search system. Guided by <em>Information Foraging Theory</em> and <em>Search Economic Theory</em>, five competing hypotheses relating to the behaviours of searchers in the presence of delays are considered and examined in the context of ad-hoc topic retrieval.</p>
+
+<p>A between-subjects laboratory study with 48 undergraduate subjects was conducted. Subjects were randomly assigned to one of four conditions that varied the type of delay experienced.</p>
+
+<p>When faced with query response delays, subjects did not examine more documents per query as expected. However, when the total amount of time spent per query (a combination of delay and querying time) increased, subjects did examine more documents per query. When faced with document download delays, subjects did not spent more time within documents. Subjects however did spend longer within documents when subjected to both query and document delays. We found a strong and significant correlation between query time (independent of delay) and the interactions of subjects in terms of the number of queries posed, the number of documents examined, and the depth to which subjects went.</p>
+
+<p>These findings contrast with previous works on how delays affect search behaviour, and suggest that the theory needs to be refined to make more credible predictions relating to search behaviours.</p>

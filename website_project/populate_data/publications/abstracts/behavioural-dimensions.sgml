@@ -1,0 +1,3 @@
+<p>Studies in <em>interactive information retrieval (IIR)</em> indicate that expert searchers differ from novices in many ways.</p>
+
+<p>In the present paper, we identify a number of behavioral dimensions along which searchers differ (e.g. cost, gain and the accuracy of relevance assessment). We quantify these differences using simulated, multi-query search sessions. We then explore each dimension in turn to determine what differences are most effective in yielding superior retrieval performance. The more precise action probabilities in assessing snippets and documents contribute less to the overall cumulative gain during a session than gain and cost structures.</p>

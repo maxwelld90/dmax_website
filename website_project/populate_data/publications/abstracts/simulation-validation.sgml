@@ -1,0 +1,9 @@
+<p>A searcher’s interaction with a retrieval system consists of actions such as query formulation, search result list interaction and document interaction. The simulation of searcher interaction has recently gained momentum in the analysis and evaluation of <em>interactive information retrieval (IIR)</em>.</p>
+
+<p>However, a key issue that has not yet been adequately addressed is the validity of such IIR simulations and whether they reliably predict the performance obtained by a searcher across the session. The aim of this paper is to determine the validity of the common interaction model (CIM) typically used for simulating multi-query sessions. We focus on search result interactions, i.e., inspecting snippets, examining documents and deciding when to stop examining the results of a single query, or when to stop the whole session.</p>
+
+<p>To this end, we run a series of simulations grounded by real world behavioral data to show how accurate and responsive the model is to various experimental conditions under which the data were produced. We then validate on a second real world data set derived under similar experimental conditions. We seek to predict cumulated gain across the session.</p>
+
+<p>We find that the interaction model with a query-level stopping strategy based on consecutive non-relevant snippets leads to the highest prediction accuracy, and lowest deviation from ground truth, around 9 to 15% depending on the experimental conditions.</p>
+
+<p>To our knowledge, the present study is the first validation effort of the CIM that shows that the model’s acceptance and use is justified within IIR evaluations. We also identify and discuss ways to further improve the CIM and its behavioral parameters for more accurate simulations.</p>

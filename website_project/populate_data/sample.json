@@ -1,0 +1,26 @@
+{
+    "publication": {
+        "title": "Title of article",
+        "authors": "Authors, Separated, By Comma and Space",
+        "published_date": "2019-03-20",
+        "doi": "DOINUMBER",
+        "published_in": "PUBLISHED IN",
+        "publication_type": "FP",
+        
+        "tagline": "TAGLINE",
+        "abstract": "../abstracts/thesis.sgml",
+        
+        "slug": "thesis",
+        "background": "../backgrounds/thesis.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/thesis.bib",
+        "PDF": "../pdf/thesis.pdf",
+        "SLI": "../slides/thesis.pdf",
+        "URL": {
+            "url_text": "Placeholder text",
+            "external_url": "http://www.google.com"
+        }
+    }
+}

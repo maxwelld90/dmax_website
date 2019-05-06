@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Agents, Simulated Users and Humans: An Analysis of Performance and Behaviour",
+        "authors": "David Maxwell, Leif Azzopardi",
+        "published_date": "2016-10-26",
+        "doi": "10.1145/2983323.2983805",
+        "published_in": "Proceedings of <a href=\"https://cikm2016.cs.iupui.edu/\" target=\"_blank\">CIKM 2016</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>CIKM 2016</strong>",
+        "abstract": "../abstracts/cikm-agents.sgml",
+        
+        "slug": "cikm-agents",
+        "background": "../backgrounds/cikm-agents.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/cikm-agents.bib",
+        "PDF": "../pdf/cikm-agents.pdf"
+    }
+}

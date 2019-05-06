@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Investigating people: A Qualitative Analysis of the Search Behaviours of Open-Source Intelligence Analysts",
+        "authors": "Sean McKeown, David Maxwell, Leif Azzopardi, William Bradley Glisson",
+        "published_date": "2014-08-25",
+        "doi": "10.1145/2637002.2637023",
+        "published_in": "Proceedings of <a href=\"http://iiix2014.ur.de/\" target=\"_blank\">IIiX 2014</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>IIiX 2014</strong>",
+        "abstract": "../abstracts/osint.sgml",
+        
+        "slug": "osint",
+        "background": "../backgrounds/osint.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/osint.bib",
+        "PDF": "../pdf/osint.pdf"
+    }
+}

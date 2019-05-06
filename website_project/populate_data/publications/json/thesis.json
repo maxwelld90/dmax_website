@@ -5,7 +5,8 @@
         "published_date": "2019-04-29",
         "publication_type": "T",
         "slug": "thesis",
-        "external_url": "http://www.dmax.org.uk/thesis/"
+        "external_url": "http://www.dmax.org.uk/thesis/",
+        "tagline": "My <strong>PhD Thesis</strong>"
     },
     
     "resources": {

@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Searching and Stopping: An Analysis of Stopping Rules and Strategies",
+        "authors": "David Maxwell, Leif Azzopardi, Kalervo Järvelin, Heikki Keskustalo",
+        "published_date": "2015-10-20",
+        "doi": "10.1145/2806416.2806476",
+        "published_in": "Proceedings of <a href=\"http://www.cikm-2015.org/\" target=\"_blank\">CIKM 2015</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>CIKM 2015</strong>",
+        "abstract": "../abstracts/stopping-strategies.sgml",
+        
+        "slug": "stopping-strategies",
+        "background": "../backgrounds/stopping-strategies.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/stopping-strategies.bib",
+        "PDF": "../pdf/stopping-strategies.pdf"
+    }
+}

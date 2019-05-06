@@ -1,0 +1,25 @@
+{
+    "publication": {
+        "title": "Simulating Interactive Information Retrieval",
+        "authors": "David Maxwell, Leif Azzopardi",
+        "published_date": "2016-07-19",
+        "doi": "10.1145/2911451.2911469",
+        "published_in": "Proceedings of <a href=\"http://sigir.org/sigir2016/\" target=\"_blank\">SIGIR 2016</a>",
+        "publication_type": "D",
+        
+        "tagline": "Appeared at <strong>SIGIR 2016</strong>",
+        "abstract": "../abstracts/simiir.sgml",
+        
+        "slug": "simiir",
+        "background": "../backgrounds/simiir.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/simiir.bib",
+        "PDF": "../pdf/simiir.pdf",
+        "URL": {
+            "url_text": "SimIIR Source",
+            "external_url": "https://github.com/leifos/simiir/"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Stuck in Traffic: How Temporal Delays Affect Search Behaviour",
+        "authors": "David Maxwell, Leif Azzopardi",
+        "published_date": "2014-08-26",
+        "doi": "10.1145/2637002.2637021",
+        "published_in": "Proceedings of <a href=\"http://iiix2014.ur.de/\" target=\"_blank\">IIiX 2014</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>IIiX 2014</strong>",
+        "abstract": "../abstracts/temporal-delays.sgml",
+        
+        "slug": "temporal-delays",
+        "background": "../backgrounds/temporal-delays.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/temporal-delays.bib",
+        "PDF": "../pdf/temporal-delays.pdf"
+    }
+}

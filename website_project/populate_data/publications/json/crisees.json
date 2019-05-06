@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Crisees: Real-Time Monitoring of Social Media Streams to Support Crisis Management",
+        "authors": "David Maxwell, Stefan Raue, Leif Azzopardi, Chris Johnson, Sarah Oates",
+        "published_date": "2012-04-01",
+        "doi": "10.1007/978-3-642-28997-2_68",
+        "published_in": "Proceedings of <a href=\"https://dblp1.uni-trier.de/db/conf/ecir/ecir2012.html\" target=\"_blank\">ECIR 2012</a>",
+        "publication_type": "D",
+        
+        "tagline": "Appeared at <strong>ECIR 2012</strong>",
+        "abstract": "../abstracts/crisees.sgml",
+        
+        "slug": "crisees",
+        "background": "../backgrounds/crisees.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/crisees.bib",
+        "PDF": "../pdf/crisees.pdf"
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "publication": {
+        "title": "Tango with Django",
+        "authors": "Leif Azzopardi, David Maxwell",
+        "published_date": "2013-10-01",
+        "publication_type": "B",
+        "slug": "twd",
+        "external_url": "https://www.tangowithdjango.com/",
+        "tagline": "Online Learning Resource"
+    },
+    
+    "resources": {
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "publication": {
+        "title": "An Initial Investigation into Fixed and Adaptive Stopping Strategies",
+        "authors": "David Maxwell, Leif Azzopardi, Kalervo Järvelin, Heikki Keskustalo",
+        "published_date": "2015-08-09",
+        "doi": "10.1145/2766462.2767802",
+        "published_in": "Proceedings of <a href=\"https://dblp.org/db/conf/sigir/sigir2015\" target=\"_blank\">SIGIR 2015</a>",
+        "publication_type": "SP",
+        
+        "tagline": "Appeared at <strong>SIGIR 2015</strong>",
+        "abstract": "../abstracts/stopping-strategies-shortie.sgml",
+        
+        "slug": "stopping-strategies-shortie",
+        "background": "../backgrounds/stopping-strategies-shortie.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/stopping-strategies-shortie.bib",
+        "PDF": "../pdf/stopping-strategies-shortie.pdf",
+        "SLI": "../slides/stopping-strategies-shortie.pdf"
+    }
+}
