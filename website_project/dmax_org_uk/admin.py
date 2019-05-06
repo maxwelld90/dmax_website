@@ -15,4 +15,4 @@ class PublicationResourceAdmin(admin.ModelAdmin):
     """
     An admin interface class for the PublicationResource model.
     """
-    list_display = ['publication', 'resource_type']
+    list_display = ('publication', 'resource_type')

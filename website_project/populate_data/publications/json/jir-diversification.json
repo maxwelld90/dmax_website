@@ -1,0 +1,18 @@
+{
+    "publication": {
+        "title": "The Impact of Result Diversification on Search Behaviour and Performance",
+        "authors": "David Maxwell, Leif Azzopardi, Yashar Moshfeghi",
+        "published_date": "2019-12-31",
+        "published_in": "<a href=\"https://link.springer.com/journal/10791\" target=\"_blank\">Information Retrieval Journal</a>",
+        "publication_type": "J",
+        
+        "tagline": "To appear in the <strong>IRJ</strong>",
+        "abstract": "../abstracts/jir-diversification.sgml",
+        
+        "slug": "jir-diversification",
+        "background": "../backgrounds/jir-diversification.jpg"
+    },
+    
+    "resources": {
+    }
+}

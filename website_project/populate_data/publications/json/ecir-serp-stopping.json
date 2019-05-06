@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Information Scent, Searching and Stopping: Modelling SERP Level Stopping Behaviour",
+        "authors": "David Maxwell, Leif Azzopardi",
+        "published_date": "2018-03-27",
+        "doi": "10.1007/978-3-319-76941-7_16",
+        "published_in": "Proceedings of <a href=\"http://www.ecir2018.org/\" target=\"_blank\">ECIR 2018</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>ECIR 2018</strong>",
+        "abstract": "../abstracts/ecir-serp-stopping.sgml",
+        
+        "slug": "ecir-serp-stopping",
+        "background": "../backgrounds/ecir-serp-stopping.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/ecir-serp-stopping.bib",
+        "PDF": "../pdf/ecir-serp-stopping.pdf"
+    }
+}

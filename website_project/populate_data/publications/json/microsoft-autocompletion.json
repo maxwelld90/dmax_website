@@ -1,0 +1,21 @@
+{
+    "publication": {
+        "title": "Large-scale Generative Query Autocompletion",
+        "authors": "David Maxwell, Peter Bailey, David Hawking",
+        "published_date": "2017-12-07",
+        "doi": "10.1145/3166072.3166083",
+        "published_in": "Proceedings of <a href=\"http://adcs-conference.org/2017/\" target=\"_blank\">ADCS 2017</a>",
+        "publication_type": "FP",
+        
+        "tagline": "Appeared at <strong>ADCS 2017</strong>",
+        "abstract": "../abstracts/microsoft-autocompletion.sgml",
+        
+        "slug": "microsoft-autocompletion",
+        "background": "../backgrounds/microsoft-autocompletion.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/microsoft-autocompletion.bib",
+        "PDF": "../pdf/microsoft-autocompletion.pdf"
+    }
+}

@@ -1,0 +1,7 @@
+<p>Current models and measures of the <em>Interactive Information Retrieval (IIR)</em> process typically assume that a searcher will always examine the first snippet in a given <em>Search Engine Results Page (SERP)</em>, and then with some probability or cutoff, he or she will stop examining snippets and/or documents in the ranked list (snippet level stopping).</p>
+
+<p>Prior work has however shown that searchers will form an initial impression of the SERP, and will often abandon a page without clicking on or inspecting in detail any snippets or documents. That is, the <em>information scent</em> affects their decision to continue.</p>
+
+<p>In this work, we examine whether considering the information scent of a page leads to better predictions of stopping behaviour. In a simulated analysis, grounded with data from a prior user study, we show that introducing a SERP level stopping strategy can improve the performance attained by simulated users, resulting in an increase in gain across most snippet level stopping strategies.</p>
+
+<p>When compared to actual search and stopping behaviour, incorporating SERP level stopping offers a closer approximation than without. These findings show that models and measures that na&iuml;vely assume snippets and documents in a ranked list are actually examined in detail are less accurate, and that modelling SERP level stopping is required to create more realistic models of the search process.</p>

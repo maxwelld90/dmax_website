@@ -32,6 +32,9 @@ def publications_entry(request, publication_slug):
     except models.Publication.DoesNotExist:
         return redirect('dmax_org_uk:publications')
     
+    if publication.external_url:
+        return redirect('dmax_org_uk:publications')
+    
     context_dict['publication'] = publication
     
     if publication.background:

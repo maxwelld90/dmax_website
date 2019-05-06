@@ -1,0 +1,14 @@
+{
+    "publication": {
+        "title": "Modelling Search and Stopping in Interactive Information Retrieval",
+        "authors": "David Maxwell",
+        "published_date": "2019-04-29",
+        "publication_type": "T",
+        "slug": "thesis",
+        "external_url": "http://www.dmax.org.uk/thesis/"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/thesis.bib"
+    }
+}

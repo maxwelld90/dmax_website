@@ -163,7 +163,7 @@ class Publication(models.Model):
     ########
     # Meta #
     ########
-    def __unicode__(self):
+    def __str__(self):
         return '({0}) {1}'.format(self.publication_year(), self.title)
     
     class Meta:
@@ -183,7 +183,7 @@ class PublicationResource(models.Model):
     
     RESOURCE_TYPE_CHOICES = (
         (RESOURCE_TYPE_BIBTEX, 'BibTeX'),
-        (RESOURCE_TYPE_PDF, 'PDF of Publication'),
+        (RESOURCE_TYPE_PDF, 'PDF of publication'),
         (RESOURCE_TYPE_SLIDES, 'Slides'),
         (RESOURCE_TYPE_URL, 'Link to resource'),
     )
