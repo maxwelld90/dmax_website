@@ -23,11 +23,12 @@ header div.coloured-box {
 header div#header-logo-container {
     /* These styles need to be in the image, not the container! */
     position: relative;
-    top: 117px;
     z-index: (@header-zindex-base + 1);
 }
 
 header div#header-logo-container a img {
+    position: relative;
+    top: 117px;
     width: 100%;
     max-width: 389px;
     min-width: 280px;
@@ -39,7 +40,7 @@ header div#header-logo-container a img {
 }
 
 header div#header-logo-container a:hover {
-    opacity: @header-logo-opacity;
+    opacity: 1.0;
 }
 
 header div#header-links {
@@ -127,11 +128,8 @@ header ul#header-links-nav li a:hover {
         opacity: none;
     }
     
-    header div#header-logo-container {
-        top: 84px;
-    }
-    
     header div#header-logo-container a img {
+        top: 83px;
         max-width: 100px;
     }
     
@@ -186,7 +184,7 @@ header ul#header-links-nav li a:hover {
 @media screen and (max-width: 568px) {
     header {
         background: @dmax-lightblue;
-        padding-bottom: 50px;
+        padding-bottom: 40px;
     }
     
     header div#header-content-container {
@@ -198,7 +196,6 @@ header ul#header-links-nav li a:hover {
     }
     
     header div#header-logo-container {
-        top: 92px;
         text-align: center;
         -webkit-transform: translate(0%, 0%);
         -moz-transform: translate(0%, 0%);
@@ -213,7 +210,7 @@ header ul#header-links-nav li a:hover {
     }
     
     header div#header-links ul {
-        top: 40px;
+        top: 30px;
         text-align: center;
     }
     
