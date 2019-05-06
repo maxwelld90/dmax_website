@@ -4,3 +4,4 @@ db.sqlite3
 __pycache__/
 website_project/static/compiled/
 website_project/dmax_org_uk/migrations/[0-9]*.py
+website_project/uploads/*/
