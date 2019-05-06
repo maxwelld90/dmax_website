@@ -75,7 +75,7 @@ class Publication(models.Model):
     # Background image
     
     background = models.FileField(blank=True,
-                                  upload_to=lambda instance, filename: 'publications/backgrounds/{slug}.jpg'.format(slug=instance.slug),
+                                  upload_to='publications/backgrounds/',
                                   verbose_name='Background image',
                                   help_text="Select a JPG background image, typically 1500x500px.")
     
@@ -205,12 +205,12 @@ class PublicationResource(models.Model):
                               help_text="Enter the BiBTeX code for this publication.")
     
     pdf = models.FileField(blank=True,
-                           upload_to=lambda instance, filename: 'publications/pdf/{slug}.pdf'.format(slug=instance.publication.slug),
+                           upload_to='publications/pdf/',
                            verbose_name='PDF of Publication',
                            help_text="Select a PDF file to upload for this publication.")
     
     slides = models.FileField(blank=True,
-                              upload_to=lambda instance, filename: 'publications/slides/{slug}.pdf'.format(slug=instance.publication.slug),
+                              upload_to='publications/slides/',
                               verbose_name='Slides of Publication',
                               help_text="Select PDF slides for the publication. Make sure fonts are removed!")
     
@@ -222,3 +222,17 @@ class PublicationResource(models.Model):
                                 max_length=200,
                                 verbose_name='Hyperlink text',
                                 help_text="Enter text for the hyperlink. Leave blank to display the URL.")
+    
+    ########
+    # Meta #
+    ########
+    def __str__(self):
+        return '({0}) {1}'.format(self.publication, self.resource_type)
+    
+    class Meta:
+        """
+        Meta class for the admin interface.
+        """
+        ordering = ['publication']
+        verbose_name = 'resource'
+        verbose_name_plural = 'resources'
