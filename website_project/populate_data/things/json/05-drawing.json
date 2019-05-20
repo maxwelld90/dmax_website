@@ -19,7 +19,7 @@
     },
     
     "tags": [
-        {"classes": "orange", "text": "Active"},
+        {"classes": "green", "text": "Active"},
         {"classes": "", "text": "Drawing"},
         {"classes": "", "text": "Illustrator"}
     ]

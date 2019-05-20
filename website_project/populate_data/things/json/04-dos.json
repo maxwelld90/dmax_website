@@ -20,7 +20,7 @@
     },
     
     "tags": [
-        {"classes": "green", "text": "Paused"},
+        {"classes": "green", "text": "Active"},
         {"classes": "", "text": "Experiences"}
     ]
 }
