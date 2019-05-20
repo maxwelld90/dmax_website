@@ -9,7 +9,7 @@ urlpatterns = [
     path('publications/<slug:publication_slug>/', views.publications_entry, name='publications-entry'),
     path('publications/<slug:publication_slug>/bibtex/', views.publications_bibtex, name='publications-bibtex'),
     path('thesis/', views.thesis, name='thesis'),
-    path('projects/', views.projects, name='projects'),
-    path('projects/<slug:project_slug>/', views.projects_entry, name='projects-entry'),
+    path('things/', views.things, name='things'),
+    path('things/<slug:thing_slug>/', views.things_entry, name='things-entry'),
     path('', views.landing, name='landing'),
 ]
