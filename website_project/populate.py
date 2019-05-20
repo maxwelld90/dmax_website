@@ -24,6 +24,61 @@ def get_json_list(root_directory):
     return return_list
 
 
+def add_thing_to_grid(json_path):
+    """
+    Given an absolute path to a thing's JSON file, adds the thing to the database.
+    """
+    print(">> Adding thing '{0}'".format(json_path))
+    json_root = os.path.dirname(os.path.realpath(json_path))
+    
+    with open(json_path, 'r') as f:
+        json_data = json.load(f)
+        
+        new_thing = things_models.Thing()
+        already_exists = does_thing_exist(json_data['basics']['slug'])
+        
+        if already_exists:
+            print(">> Already exists, replacing!")
+            new_thing = already_exists
+        
+        new_thing.slug = json_data['basics']['slug']
+        new_thing.display_order = json_data['order']
+        
+        new_thing.header = json_data['basics']['header']
+        new_thing.blurb = json_data['blurb']
+        
+        new_thing.url_type = json_data['basics']['url_type']
+        
+        if new_thing.url_type == 'EXT':
+            new_thing.external_url = json_data['basics']['external_url']
+        
+        if 'background' in json_data['styling'].keys():
+            background_abs_path = os.path.abspath(os.path.join(json_root, json_data['styling']['background']))
+            background_filename, background_extension = os.path.splitext(background_abs_path)
+            background_filename = '{0}{1}'.format(json_data['basics']['slug'], background_extension)
+            
+            new_thing.background.save(background_filename, File(open(background_abs_path, 'rb')))
+        
+        new_thing.span_width = json_data['styling']['span_width']
+        new_thing.background_colour = json_data['styling']['background_colour']
+        new_thing.text_colour = json_data['styling']['text_colour']
+        new_thing.darken_title_background_by = json_data['styling']['darken_title_background_by']
+        
+        new_thing.background_blurb = False
+        
+        if 'background_blurb' in json_data['styling'].keys():
+            if json_data['styling']['background_blurb'] == 'True':
+                new_thing.background_blurb = True
+        
+        tags_str = ''
+        
+        for tag in json_data['tags']:
+            tags_str = "{0}<span class=\"{1}\">{2}</span>".format(tags_str, tag['classes'], tag['text'])
+        
+        new_thing.tags = tags_str
+        
+        new_thing.save()
+
 def add_publication(json_path):
     """
     Given an absolute path to a publication's JSON file, adds the publication to the database.
@@ -121,6 +176,18 @@ def does_publication_exist(slug):
     return publication
 
 
+def does_thing_exist(slug):
+    """
+    Checks whether a Thing already exists in the database.
+    If so, returns the object.
+    """
+    try:
+        thing = things_models.Thing.objects.all().get(slug=slug)
+    except things_models.Thing.DoesNotExist:
+        return False
+    
+    return thing
+
 def do_publications():
     """
     Populates the database with publications.
@@ -133,12 +200,24 @@ def do_publications():
         add_publication(json_file)
 
 
+def do_things_grid():
+    """
+    Populates the database with things.
+    """
+    print(">  Adding things to grid...")
+    json_directory = os.path.join(POPULATION_DATA_ROOT, 'things', 'json')
+    json_list = get_json_list(json_directory)
+    
+    for json_file in json_list:
+        add_thing_to_grid(json_file)
+
 def tidy_uploads():
     """
     Tidies up the uploads directory before beginning the population process.
     Avoids issues with the same file appearing multiple times in the uploads directory.
     """
     shutil.rmtree(os.path.join(UPLOADS_DIRECTORY, 'publications'), ignore_errors=True)
+    shutil.rmtree(os.path.join(UPLOADS_DIRECTORY, 'things', 'grid-backgrounds'), ignore_errors=True)
 
 
 def main():
@@ -147,12 +226,14 @@ def main():
     """
     tidy_uploads()
     do_publications()
+    do_things_grid()
     
 
 if __name__ == "__main__":
     print("Running dmax.org.uk population script...")
     
     from dmax_org_uk import models
+    from things import models as things_models
     from django.core.files import File
     
     main()

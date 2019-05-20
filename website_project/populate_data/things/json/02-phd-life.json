@@ -1,0 +1,25 @@
+{
+    "order": 2,
+    
+    "basics": {
+        "slug": "phd-life",
+        "header": "PhD Life",
+        
+        "url_type": "INT"
+    },
+    
+    "blurb": "Doing a PhD is hard. You only really hear of the success at the end &mdash; but what was involved to get to that point? There's plenty of positive (and negative) experiences that you'll go through. I'm trying to uncover the things you seldom hear about and explain things clearly.",
+    
+    "styling": {
+        "span_width": 1,
+        "background_colour": "#303F9F",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "green", "text": "Active"},
+        {"classes": "", "text": "Experiences"}
+    ]
+}

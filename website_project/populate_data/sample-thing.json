@@ -1,0 +1,26 @@
+{
+    "order": 1,
+    
+    "basics": {
+        "slug": "twd",
+        "header": "Tango with Django",
+        
+        "url_type": "INT",
+        "external_url": "https://www.google.com"
+    },
+    
+    "blurb": "This is some blurb, that is HTML formatted.",
+    
+    "styling": {
+        "span_width": 2,
+        "background": "../grid-backgrounds/twd.svg",
+        "background_colour": "#FF0000",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "green", "text": "Active"}
+    ]
+}

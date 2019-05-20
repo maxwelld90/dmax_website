@@ -1,0 +1,26 @@
+{
+    "order": 10,
+    
+    "basics": {
+        "slug": "pictures",
+        "header": "Photography",
+        
+        "url_type": "NO"
+    },
+    
+    "blurb": "I like to take pictures, so with my trusty digital camera, I like to photograph wherever I go in the world. It's fun!",
+    
+    "styling": {
+        "span_width": 2,
+        "background_colour": "#616161",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "green", "text": "Active"},
+        {"classes": "", "text": "Pictures"},
+        {"classes": "", "text": "Nature"}
+    ]
+}

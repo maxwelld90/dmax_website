@@ -1,0 +1,102 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/things.less' %}">
+        {% endcompress %}
+        
+        {% compress css %}
+        <style type="text/less">
+            /* THING COLOUR VARIABLES */
+            {% for thing in things %}
+            @thing-{{ thing.slug }}-colour: {{ thing.background_colour }};
+            @thing-{{ thing.slug }}-text: {{ thing.text_colour }};
+            @thing-{{ thing.slug }}-colour-dark: darken(@thing-{{ thing.slug }}-colour, {{ thing.darken_title_background_by }}%);
+            {% endfor %}
+            
+            /* THING STYLES */
+            {% for thing in things %}
+            #thing-{{ thing.slug }} {
+                grid-column: span {{ thing.span_width }};
+                {% if thing.background %}
+                background: url('{{ thing.background.url }}');
+                background-size: cover;
+                background-position: center center;
+                {% endif %}
+                background-color: {{ thing.background_colour }};
+            }
+            
+            #thing-{{ thing.slug }} h2 {
+                background-color: @thing-{{ thing.slug }}-colour-dark !important;
+                color: @thing-{{ thing.slug }}-text !important;
+                box-shadow: 5px 0 0 @thing-{{ thing.slug }}-colour-dark, -5px 0 0 @thing-{{ thing.slug }}-colour-dark !important;
+            }
+            
+            #thing-{{ thing.slug }} span.teaser-container span.teaser.background {
+                background-color: @thing-{{ thing.slug }}-colour-dark !important;
+                box-shadow: 5px 0 0 @thing-{{ thing.slug }}-colour-dark, -5px 0 0 @thing-{{ thing.slug }}-colour-dark !important;
+            }
+            
+            #thing-{{ thing.slug }} span.teaser-container span.teaser.background span {
+                background-color: @thing-{{ thing.slug }}-colour-dark !important;
+            }
+            {% endfor %}
+        </style>
+        {% endcompress %}
+        
+        
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item whole">
+                    <div class="headertag-container">
+                        <h1>Things</h1>
+                        <div id="subtitle">What am/have I been working on?</div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
+                    </div>
+                    
+                    <div id="wip-container">
+                        <strong>This page is a work in progress.</strong> Links will be added as new pages are completed.
+                    </div>
+                    
+                    <ul id="things-grid-container" class="grid-container">
+                        {% for thing in things %}
+                        <li id="thing-{{ thing.slug }}">
+                            {% if thing.url_type == 'INT' %}
+                            <a class="whole" href="{% url 'things:entry' thing.slug %}">
+                            {% elif thing.url_type == 'EXT' %}
+                            <a class="whole" href="{{ thing.external_url }}" target="_blank">
+                            {% endif %}
+                            
+                            <h2><span>{{ thing.header }}</span></h2>
+                            <span class="teaser-container">
+                            <span class="teaser{% if thing.background_blurb %} background{% endif %}">
+                                {% autoescape off %}
+                                <span>
+                                {{ thing.blurb }}
+                                </span>
+                                {% endautoescape %}
+                            </span>
+                            </span>
+                            
+                            <span class="tags">
+                                {% autoescape off %}
+                                {{ thing.tags }}
+                                {% endautoescape %}
+                            </span>
+                            
+                            {% if thing.url_type != 'NO' %}
+                            </a>
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+            </div>
+{% endblock %}

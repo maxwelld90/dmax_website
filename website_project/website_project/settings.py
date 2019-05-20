@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'dmax_org_uk',
+    'things',
     'compressor',
 ]
 

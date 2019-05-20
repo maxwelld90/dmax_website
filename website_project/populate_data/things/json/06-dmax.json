@@ -1,0 +1,25 @@
+{
+    "order": 6,
+    
+    "basics": {
+        "slug": "website",
+        "header": "dmax.org.uk",
+        
+        "url_type": "NO"
+    },
+    
+    "blurb": "This website is a little project in itself. I'm keeping my web development skills up to date by by redeveloping this website. And, by keeping things up to date, I can pretty much use this website as a sort of (nice looking) interactive CV. Win-win.",
+    
+    "styling": {
+        "span_width": 1,
+        "background_colour": "#F57C00",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "green", "text": "Active"},
+        {"classes": "", "text": "You're looking at it"}
+    ]
+}

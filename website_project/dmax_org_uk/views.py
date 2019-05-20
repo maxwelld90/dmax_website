@@ -60,12 +60,3 @@ def thesis(request):
     utils.apply_background_to_context(context_dict, 'lilybank')
     
     return render(request, template_name='dmax_org_uk/thesis.html', context=context_dict)
-
-def things(request):
-    context_dict = {}
-    utils.apply_background_to_context(context_dict, 'heraklion')
-    
-    return render(request, template_name='dmax_org_uk/things.html', context=context_dict)
-
-def things_entry(request, project_slug):
-    return HttpResponse("thing " + project_slug)

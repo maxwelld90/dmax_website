@@ -1,45 +1,123 @@
 @import 'global';
 
-ul#projects-grid-container {
-    grid-template-columns: repeat(2, 1fr);
+div#wip-container {
+    background: @dmax-red-dark;
+    margin-bottom: 15px;
+    padding: 10px;
+    color: @dmax-onbackground-text;
+    font-size: 14pt;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul#things-grid-container {
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 15px;
 }
 
 ul.grid-container li {
     position: relative;
     min-height: 300px;
+    color: @dmax-onbackground-text;
 }
 
-ul#projects-grid-container li h2 {
-    display: block;
-    padding: 0;
+ul#things-grid-container li h2 {
+    display: inline;
+    position: relative;
+    padding: 5px 0 5px 0;
+    left: 5px;
+    top: 5px;
     margin: 0;
     font-size: 30pt;
     font-weight: bold;
-    background-color: transparent;
-    color: @publications-grid-container-text;
+    background-color: @dmax-lightblue-85pc;
+    color: @htag-textcolour;
+    box-shadow: 5px 0 0 @dmax-lightblue-85pc, -5px 0 0 @dmax-lightblue-85pc;
+    box-decoration-break: clone;
 }
 
-ul#projects-grid-container li span.teaser {
+ul#things-grid-container li h2.noback {
+    padding: 0;
+    left: 0;
+    box-shadow: none;
+}
+
+ul#things-grid-container li h2 span {
+    position: relative;
+}
+
+ul#things-grid-container li span.teaser-container {
     display: block;
-    padding-top: 10px;
+    position: relative;
+    top: 20px;
+    padding-bottom: 70px;
+}
+
+ul#things-grid-container li span.teaser-container span.teaser {
+    display: inline;
+    padding-top: 20px;
     font-weight: normal;
     line-height: 25px;
 }
 
-ul#projects-grid-container li span.status {
+ul#things-grid-container li span.teaser-container span.teaser.background {
+    position: relative;
+    left: 5px;
+    padding: 5px 0 5px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 0 0 rgba(0, 0, 0, 0.8), -5px 0 0 rgba(0, 0, 0, 0.8);
+    box-decoration-break: clone;
+}
+
+ul#things-grid-container li span.teaser-container span.teaser.background span {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+ul#things-grid-container li span.tags {
+    display: block;
     position: absolute;
+    width: 100%;
     bottom: 10px;
     left: 10px;
-    font-size: 10pt;
+    font-size: 12pt;
     font-weight: normal;
     color: @publications-grid-container-text;
 }
-
-    ul#projects-grid-container li span.status.green {
+    
+    ul#things-grid-container li span.tags span {
+        display: inline-block;
         padding: 5px;
+        margin-right: 5px;
         -webkit-border-radius: 4px;
         -moz-border-radius: 4px;
         border-radius: 4px;
+        background-color: @dmax-darkblue;
+    }
+    
+    ul#things-grid-container li span.tags span:last-child {
+        margin-right: 0;
+    }
+    
+    ul#things-grid-container li span.tags span.green {
         background-color: @dmax-green-dark;
     }
+    
+    ul#things-grid-container li span.tags span.orange {
+        background-color: @dmax-orange;
+    }
+    
+    ul#things-grid-container li span.tags span.red {
+        background-color: @dmax-red;
+    }
+
+@media (max-width: 1130px) {
+    ul#things-grid-container li {
+        min-height: 0;
+        height: auto;
+    }
+    
+    ul#things-grid-container li span.teaser {
+        min-height: 0;
+        padding-bottom: 50px;
+    }
+}

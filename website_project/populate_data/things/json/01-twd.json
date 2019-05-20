@@ -1,0 +1,29 @@
+{
+    "order": 1,
+    
+    "basics": {
+        "slug": "twd",
+        "header": "Tango with Django",
+        
+        "url_type": "EXT",
+        "external_url": "https://www.tangowithdjango.com/"
+    },
+    
+    "blurb": "Ever wanted to learn how to develop your own web applications, but you've got no experience? Why not use Django? It's an awesome, modern framework &mdash; and this book will teach your the basics quickly so you'll be developing like a pro in no time. First released in 2013, thousands around the world have learnt how to develop web apps with our book. We are now working towards the book's second major release.",
+    
+    "styling": {
+        "span_width": 2,
+        "background": "../grid-backgrounds/twd.svg",
+        "background_colour": "#5D4037",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "True",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "green", "text": "Active"},
+        {"classes": "", "text": "Book"},
+        {"classes": "", "text": "Django"},
+        {"classes": "", "text": "Web Development"}
+    ]
+}
