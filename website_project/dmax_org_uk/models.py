@@ -9,6 +9,7 @@ class Publication(models.Model):
     PUBLICATION_TYPE_BOOK = 'B'
     PUBLICATION_TYPE_JOURNAL = 'J'
     PUBLICATION_TYPE_THESIS = 'T'
+    PUBLICATION_TYPE_PATENT = 'P'
     
     PUBLICATION_TYPE_CHOICES = (
         (PUBLICATION_TYPE_FULLPAPER, 'Full Paper'),
@@ -18,6 +19,7 @@ class Publication(models.Model):
         (PUBLICATION_TYPE_BOOK, 'Book'),
         (PUBLICATION_TYPE_JOURNAL, 'Journal Article'),
         (PUBLICATION_TYPE_THESIS, 'Thesis'),
+        (PUBLICATION_TYPE_PATENT, 'Patent'),
     )
     
     # Basic information
