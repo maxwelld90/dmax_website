@@ -1,0 +1,53 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/things.less' %}">
+        <link rel="stylesheet" type="text/less" href="{% static 'css/phd.less' %}">
+        {% endcompress %}
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item whole">
+                    <div class="headertag-container">
+                        <h1>The PhD Journey</h1>
+                        <div id="subtitle"><span>Doing a PhD is hard. Here are my thoughts.</span></div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
+                    </div>
+                    
+                    <!-- {% include 'dmax_org_uk/wip.html' %} -->
+                    
+                    <p id="intro-p">Doing a PhD is hard. On this part of my site, I outline my thoughts about the process and write about things honestly &mdash; both good and bad. Click or tap one of the sections below to get started.</p>
+                    
+                    <div id="landing-grid-container">
+                        <ul class="grid-container">
+                            <li>
+                                <a class="whole" href="http://bit.ly/phd-journey" target="_blank">
+                                    <span class="header">The Journey</span>
+                                    <span class="blurb">It's an incredibly long journey, and it's tough. But there's so many amazing people that I met along the way. Read the extract from my thesis here.</span>
+                                </a>
+                            </li>
+                            <li>
+                                    <span class="header">Experiences</span>
+                                    <span class="blurb">A more in-depth discussion about the experiences of doing my PhD &mdash; from the good to the not-so-good.</span>
+                                    <span class="tags">
+                                        <span class="red">Coming soon</span>
+                                    </span>
+                            </li>
+                            <li>
+                                <a class="whole" href="{% url 'things:phd-writing-up' %}">
+                                    <span class="header">Writing Up</span>
+                                    <span class="blurb">Writing up your thesis is probably one of the most intense, drawn out things you'll ever do. Read about my experience &mdash; and some of the things I learned along the way.</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+{% endblock %}

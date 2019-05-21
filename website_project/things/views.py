@@ -5,33 +5,32 @@ from . import models
 
 def landing(request):
     context_dict = {'things': models.Thing.objects.all().order_by('display_order')}
-    utils.apply_background_to_context(context_dict, 'jeir')
     
     return render(request, template_name='things/landing.html', context=context_dict)
 
-def phd_life(request):
+def phd(request):
     context_dict = {}
-    utils.apply_background_to_context(context_dict, 'jeir')
+    utils.apply_background_to_context(context_dict, 'diagram')
     
-    return render(request, template_name='things/phd-life/landing.html', context=context_dict)
+    return render(request, template_name='things/phd/landing.html', context=context_dict)
 
-def phd_life_experiences(request):
+def phd_experiences(request):
     context_dict = {}
     utils.apply_background_to_context(context_dict, 'jeir')
     
-    return render(request, template_name='things/phd-life/experiences.html', context=context_dict)
+    return render(request, template_name='things/phd/experiences.html', context=context_dict)
 
-def phd_life_journey(request):
+def phd_journey(request):
     context_dict = {}
     utils.apply_background_to_context(context_dict, 'jeir')
     
-    return render(request, template_name='things/phd-life/journey.html', context=context_dict)
+    return render(request, template_name='things/phd/journey.html', context=context_dict)
 
-def phd_life_writing_up(request):
+def phd_writing_up(request):
     context_dict = {}
     utils.apply_background_to_context(context_dict, 'jeir')
     
-    return render(request, template_name='things/phd-life/writing-up.html', context=context_dict)
+    return render(request, template_name='things/phd/writing-up.html', context=context_dict)
 
 def entry(request, thing_slug):
     """

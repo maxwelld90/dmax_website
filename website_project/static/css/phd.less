@@ -1,0 +1,117 @@
+@import 'global';
+
+@phd-life-green: #558B2F;
+@phd-life-green-dark: darken(@phd-life-green, 20%);
+
+@phd-life-green-faded: fadeout(@phd-life-green, 10%);
+
+h1 {
+    background-color: @phd-life-green;
+}
+
+#subtitle {
+    background-color: @phd-life-green;
+}
+
+div#landing-grid-container ul li {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    background-color: @phd-life-green;
+    padding: 0;
+    min-height: 190px;
+}
+
+div#landing-grid-container ul li span.header {
+    display: inline-block;
+    margin: 10px 0 10px 10px;
+    padding: 5px;
+    font-size: 30pt;
+    font-weight: bold;
+    background-color: @phd-life-green-dark;
+}
+
+div#landing-grid-container ul li span.blurb {
+    display: block;
+    margin: 0 10px 0 10px;
+    font-size: 12pt;
+    font-weight: normal;
+    line-height: 22px;
+}
+
+div#landing-grid-container ul li span.tags {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+    div#landing-grid-container ul li span.tags span {
+        background-color: rgba(0, 0, 0, 0.6);
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        padding: 5px;
+    }
+
+@media screen and (min-width: 1080px) and (min-height: 710px) {
+    div.headertag-container {
+        text-align: center;
+    }
+    
+    h1 {
+        position: relative;
+        z-index: @header-zindex-base;
+        font-size: 48pt;
+        padding: 10px;
+        background-color: @phd-life-green-faded;
+    }
+    
+    #subtitle {
+        position: relative;
+        top: 10px;
+        display: inline;
+        font-size: 22pt;
+        padding: 10px 0 10px 0;
+        background-color: @phd-life-green-faded;
+        box-shadow: 10px 0 0 @phd-life-green-faded, -10px 0 0 @phd-life-green-faded;
+        box-decoration-break: clone;
+    }
+    
+    p#intro-p {
+        display: none;
+    }
+    
+    div#main-image-background-identifier {
+        display: none;
+    }
+    
+    #subtitle span {
+        position: relative;
+    }
+    
+    #main-image-background {
+        min-height: 450px;
+        height: calc(75% - 30px);
+    }
+    
+    div#landing-grid-container {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 25%;
+        width: calc(100% - 50px);
+        margin: 0 25px 15px 25px;
+    }
+    
+    div#landing-grid-container ul {
+        height: 100%;
+    }
+    
+    div#landing-grid-container ul li {
+        min-height: 0;
+        height: 100%;
+        padding: 0;
+    }
+}

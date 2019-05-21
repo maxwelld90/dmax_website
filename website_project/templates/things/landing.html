@@ -57,12 +57,9 @@
                     <div class="headertag-container">
                         <h1>Things</h1>
                         <div id="subtitle">What am/have I been working on?</div>
-                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
                     </div>
                     
-                    <div id="wip-container">
-                        <strong>This page is a work in progress.</strong> Links will be added as new pages are completed.
-                    </div>
+                    {% include 'dmax_org_uk/wip.html' %}
                     
                     <ul id="things-grid-container" class="grid-container">
                         {% for thing in things %}

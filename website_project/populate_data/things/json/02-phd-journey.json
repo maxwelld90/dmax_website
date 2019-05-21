@@ -2,8 +2,8 @@
     "order": 2,
     
     "basics": {
-        "slug": "phd-life",
-        "header": "PhD Life",
+        "slug": "phd",
+        "header": "The PhD Journey",
         
         "url_type": "INT"
     },
@@ -12,7 +12,7 @@
     
     "styling": {
         "span_width": 1,
-        "background_colour": "#303F9F",
+        "background_colour": "#558B2F",
         "text_colour": "#FFFFFF",
         "background_blurb": "False",
         "darken_title_background_by": 20

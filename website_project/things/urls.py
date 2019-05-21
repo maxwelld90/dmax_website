@@ -4,10 +4,10 @@ from . import views
 app_name = 'things'
 
 urlpatterns = [
-    path('things/phd-life/', views.phd_life, name='phd-life'),
-    path('things/phd-life/journey/', views.phd_life_journey, name='phd-life-journey'),
-    path('things/phd-life/writing-up/', views.phd_life_writing_up, name='phd-life-writing-up'),
-    path('things/phd-life/experiences/', views.phd_life_experiences, name='phd-life-experiences'),
-    path('things/<slug:thing_slug>/', views.entry, name='entry'),
+    path('phd/', views.phd, name='phd-life'),
+    path('phd/journey/', views.phd_journey, name='phd-journey'),
+    path('phd/writing-up/', views.phd_writing_up, name='phd-writing-up'),
+    path('phd/experiences/', views.phd_experiences, name='phd-experiences'),
+    path('<slug:thing_slug>/', views.entry, name='entry'),
     path('', views.landing, name='landing'),
 ]

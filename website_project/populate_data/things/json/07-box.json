@@ -12,7 +12,7 @@
     
     "styling": {
         "span_width": 1,
-        "background_colour": "#455A64",
+        "background_colour": "#C2185B",
         "text_colour": "#FFFFFF",
         "background_blurb": "False",
         "darken_title_background_by": 20
