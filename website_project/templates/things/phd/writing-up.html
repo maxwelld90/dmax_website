@@ -6,7 +6,7 @@
 
 {% block includetags %}
         {% compress css %}
-        <link rel="stylesheet" type="text/less" href="{% static 'css/publications.less' %}">
+        <link rel="stylesheet" type="text/less" href="{% static 'css/phd.less' %}">
         {% endcompress %}
 {% endblock %}
 
@@ -17,9 +17,164 @@
                     <div class="headertag-container">
                         <h1>Writing Up</h1>
                         <div id="subtitle">The most drawn out thing you'll ever do?</div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
                     </div>
                     
-                    <p>Blah blah</p>
+                    <style type="text/css">
+                        
+                        div.mountain-block {
+                            height: 300px;
+                            background-color: red;
+                            background: url('/uploads/things/phd/mountain.svg');
+                            background-size: cover;
+                            background-position: bottom center;
+                        }
+                        
+                        div#writing {
+                            background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), url('/uploads/things/phd/writing.jpg');
+                            background-size: cover;
+                            background-position: bottom center;
+                        }
+
+                        
+
+                    
+                        
+                    </style>
+                    
+                    <ul id="writeup-contents-container" class="grid-container">
+                        <li><a class="whole" href="#about">What is this Page?</a></li>
+                        <li><a class="whole" href="#reminder">A Friendly Reminder</a></li>
+                        <li><a class="whole" href="#everest">Your Everest</a></li>
+                        <li><a class="whole" href="#survey">Doctor's Orders</a></li>
+                        <li><a class="whole" href="#before">Before you Start</a></li>
+                        <li><a class="whole" href="#admin">Keeping on top of Admin</a></li>
+                        <li><a class="whole" href="#time">Planning your Time</a></li>
+                        <li><a class="whole" href="#writing">Writing!</a></li>
+                        <li><a class="whole" href="#yourself">Looking after Yourself</a></li>
+                        <li><a class="whole" href="#relationships">Dealing with Others</a></li>
+                        <li><a class="whole" href="#viva">The Viva</a></li>
+                        <li><a class="whole" href="#reflecting">Taking Stock</a></li>
+                    </ul>
+                    
+                    <article>
+                    
+                    <div id="about" class="pwrapper">
+                    <p><strong>This page puts together different thoughts, tips and quotes from others to give you a better understanding about the PhD writeup process.</strong> I think it's fair to say that for most people, writing up a PhD thesis is probably one of the most intense, drawn out things that they will ever do. Because of the sheer size (and complexity!) of the document you have to write, it can induce a lot of pressure and stress on an individual. I hope that the advice (or just being able to freely acknowledge to you that the process is difficult and time consuming) can help someone, or provide some form of comfort. <strong>You are not alone, and you will be all the better off for having got through it.</strong></p>
+                    </div>
+                    
+                    <div class="pwrapper partial">
+                    <p>I was asked to put together a presentation about my experiences of writing up my own PhD thesis. <a href="https://twitter.com/iadh/status/1128604512510410752" target="_blank">I delivered the talk to PhD students</a> at the <a href="https://www.gla.ac.uk/" target="_blank">University of Glasgow</a>'s <a href="https://www.gla.ac.uk/schools/computing/" target="_blank">School of Computing Science</a> on May 15<sup>th</sup>, 2019. Those watching the talk said they appreciated the honesty &mdash; and also appreciated some of the advice that I gave. Of course, this was originally in presentation form &mdash; you can download a copy of my slides to the right of this paragraph, or underneath if you're looking on a smartphone. Interest from further afield made me think it might be handy to write up my thoughts on the writeup process, too!</p>
+                    <span class="sidenote">Download slide deck</span>
+                    </div>
+                    
+                    <div class="section-header" id="reminder">
+                        <h2>A Friendly Reminder</h2>
+                    </div>
+                    
+                    <p>
+                        Doing a PhD sometimes feels like a bit of a fight with yourself. Or maybe it's not sometimes &mdash; the fight consumes more time than you think! Many of my friends (and myself) admit to suffering from <a href="https://en.wikipedia.org/wiki/Impostor_syndrome" target="_blank">impostor syndrome</a>, where you continually think that your work is not good enough and that <em>you're a fraud.</em> <em>Yeah, it'll only be a matter of time before your supervisor realises that you're no good(!)</em>. Remember that it appears to be normal to think that way. I think (you can correct me if you think I'm wrong) that it's a sign of intelligence. The more you read, the more aware you are of how much you <em>haven't read, and thus don't know</em>. And because you realise that there is so much you don't know, you feel even more stupid. How ironic. But don't let that get you down. Keep pushing. Don't expect those feelings of inadequacy to fade away over time &mdash; senior academics have admitted to me that even after 20-30 years as a successful academic, they still feel like they're <a href="https://www.theguardian.com/news/oliver-burkeman-s-blog/2014/may/21/everyone-is-totally-just-winging-it" target="_blank">winging it</a> all (or most of) the time.
+                    </p>
+                    
+                    <p>
+                        <img src="/uploads/things/phd/supervisor-graph.svg" alt="Supervisor involvement over time" class="float-right" />
+                        <span class="highlight"><span>You're not Alone</span></span> Several of my friends who are early on in their PhD have expressed dissatisfaction and disappointment in themselves that they cannot write a research paper by themselves. They say that their supervisors are doing a bit of 'hand holding' &mdash; such as fleshing out sections of a paper they're working on with their student. That's normal, and it's their job (as long as you are involved)! By going through this process a couple of times, <em>you learn how to do it yourself!</em> By the end of your PhD, you'll have learned enough to be able to go through the motions by yourself. A good supervisor, like the graph shown here, will be heavily involved in your work at the beginning as you learn the ropes. He or she will become less and less directly involved over time. From my experience, I remember back in 2014 working with my supervisor everyday on the <a href="{% url 'dmax_org_uk:publications-entry' 'temporal-delays' %}" target="_blank">first full paper</a> I got published and presented. Towards the end of my PhD in early 2018, I thought of an idea, designed a methodology, ran the experiment and analysed the data all by myself. And <a href="{% url 'dmax_org_uk:publications-entry' 'ecir-serp-stopping' %}" target="_blank">that paper got published</a>, too. That's just the process. Don't feel bad that you'll need help at the start. You're a human, and you're learning every day.
+                    </p>
+                    
+                    <p><span class="highlight"><span>Keep Going!</span></span> Obtaining a PhD is a tough, gruelling process. Although intellect is important, one can argue it's more about showing that you have the strength, determination and depth to <em>keep going,</em> even when everything around you seems to be falling apart. Keep going through the tough times, and you'll be rewarded with some good times. And at the very end of the process, when you submit that document you've been working towards for <em>four-ish years</em> to your School or College for examination, it'll <em>feel so good.</em></p>
+                    
+                    <img src="/uploads/things/phd/mood.svg" alt="Your mood over time" class="full" />
+                    
+                    <div class="section-header" id="everest">
+                        <h2>Your Everest</h2>
+                    </div>
+                    
+                    <p>It's not easy. You'll find your mood swings up and down. But you'll get to the end. But you're not done yet!</p>
+                    
+                    <div class="section-header" id="survey">
+                        <h2>Doctor's Orders</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="before">
+                        <h2>Before you Start</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="admin">
+                        <h2>Keeping on top of Admin</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="time">
+                        <h2>Planning your Time</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="writing">
+                        <h2>Writing! (or typing)</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="yourself">
+                        <h2>Looking after Yourself</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="relationships">
+                        <h2>Dealing with Others</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="viva">
+                        <h2>The Viva</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <div class="section-header" id="reflecting">
+                        <h2>Taking Stock</h2>
+                    </div>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
+                    
+                    
+                    <blockquote cite="Some guy">I think that it's difficult to remember that the writeup phase of your PhD is probably going to be one of the longest, most drawn out things that you will ever do. It can be torture.</blockquote>
+                    
+                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
+                    
+                    <div class="mountain-block">
+                        <h2>Climbing the Mountain</h2>
+                    </div>
+                    
+                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
+                    
+                    <blockquote cite="Some guy">This is just a single line, you bastard!</blockquote>
+                    
+                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
+                    
+                    <ul class="standard">
+                        <li>Hello world</li>
+                        <li>Hello world</li>
+                        <li>Hello world</li>
+                        <li>Hello world</li>
+                        <li>Hello world</li>
+                    </ul>
+                    
+                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
+                    
+                </article>
                     
                 </div>
             </div>

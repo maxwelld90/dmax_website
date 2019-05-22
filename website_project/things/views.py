@@ -28,7 +28,7 @@ def phd_journey(request):
 
 def phd_writing_up(request):
     context_dict = {}
-    utils.apply_background_to_context(context_dict, 'jeir')
+    utils.apply_background_to_context(context_dict, 'diagram')
     
     return render(request, template_name='things/phd/writing-up.html', context=context_dict)
 

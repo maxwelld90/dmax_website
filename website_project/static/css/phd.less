@@ -3,16 +3,34 @@
 @phd-life-green: #558B2F;
 @phd-life-green-dark: darken(@phd-life-green, 20%);
 
+@phd-life-textonback: #FFFFFF;
+
 @phd-life-green-faded: fadeout(@phd-life-green, 10%);
 
-h1 {
+
+header div.coloured-box {
     background-color: @phd-life-green;
+}
+
+h1, h2 {
+    background-color: @phd-life-green !important;
+}
+
+article h2 {
+    box-shadow: 5px 0 0 @phd-life-green, -5px 0 0 @phd-life-green;
 }
 
 #subtitle {
     background-color: @phd-life-green;
 }
 
+span.highlight {
+    background-color: @phd-life-green;
+    color: @phd-life-textonback;
+    box-shadow: 5px 0 0 @phd-life-green, -5px 0 0 @phd-life-green;
+}
+
+/* Special landing grid container (positioned at the bottom of the screen) */
 div#landing-grid-container ul li {
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -54,6 +72,95 @@ div#landing-grid-container ul li span.tags {
         padding: 5px;
     }
 
+/* Changing quote styling for the different colour scheme */
+blockquote {
+    background-color: fade(@phd-life-green, 40%);
+}
+
+blockquote:before {
+    color: fade(@phd-life-green-dark, 80%);
+}
+
+blockquote:after {
+    color: fade(@phd-life-green-dark, 80%);
+}
+
+div.pwrapper.partial span.sidenote {
+    background-color: @phd-life-green-dark;
+}
+
+/* Section header blocks */
+div.section-header {
+    position: relative;
+    height: 280px;
+    text-align: center;
+    background-color: @phd-life-green-dark;
+}
+
+div.section-header h2 {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;;
+    font-size: 36pt;
+    line-height: 36pt;
+}
+
+@media screen and (max-width: 950px) {
+    div.section-header {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    div.section-header {
+        height: auto;
+    }
+    
+    div.section-header h2 {
+        display: block;
+        position: static;
+        background-color: @phd-life-green-dark;
+        padding: 10px;
+        box-shadow: none;
+    }
+}
+
+/* Writing up contents grid */
+ul#writeup-contents-container {
+    margin-bottom: 25px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+    ul#writeup-contents-container li {
+        min-height: 90px;
+        font-size: 22pt;
+        font-weight: bold;
+        font-family: 'Raleway', sans-serif;
+        background-color: @phd-life-green;
+        color: @phd-life-textonback;
+    }
+
+@media (max-width: 1130px) {
+    ul#writeup-contents-container {
+        text-align: center;
+    }
+    
+    ul#writeup-contents-container li {
+        display: inline-block;
+        margin-right: 5px;
+        font-size: 14pt;
+        line-height: 18pt;
+        min-height: 0;
+        height: auto;
+        padding: 3px;
+    }
+    
+    ul#writeup-contents-container li:last-child {
+        margin-right: 0;
+    }
+}
+
+/* Hero styling (largely chaning colours) */
 @media screen and (min-width: 1080px) and (min-height: 710px) {
     h1 {
         position: relative;
@@ -63,8 +170,6 @@ div#landing-grid-container ul li span.tags {
     
     #subtitle {
         background-color: @phd-life-green-faded;
-        box-shadow: 10px 0 0 @phd-life-green-faded, -10px 0 0 @phd-life-green-faded;
-        box-decoration-break: clone;
     }
     
     p#intro-p {
@@ -89,5 +194,12 @@ div#landing-grid-container ul li span.tags {
         min-height: 0;
         height: 100%;
         padding: 0;
+    }
+}
+
+/* Changing the header bar colour for small-screen devices */
+@media screen and (max-width: 568px) {
+    header {
+        background-color: @phd-life-green;
     }
 }
