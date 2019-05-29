@@ -39,9 +39,20 @@ img#roadsign {
     width: 380px;
 }
 
+img#duration, img#feelings {
+    margin-top: 15px;
+    width: 80%;
+}
+
 @media screen and (max-width: 900px) {
     img#phd-thesis-cover {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    img#duration, img#feelings {
+        width: 100%;
     }
 }
 
@@ -401,10 +412,20 @@ ul#writeup-stress-grid-container {
 }
 
 ul#writeup-stress-grid-container li {
-    min-height: 250px;
-    background: @phd-life-green-dark;
+    min-height: 280px;
+    background-color: @phd-life-green-dark;
     color: @phd-life-textonback;
 }
+
+    ul#writeup-stress-grid-container li span.header {
+        display: inline-block;
+        font-size: 24pt;
+        font-weight: bold;
+        padding: 5px;
+        margin: 10px;
+        background-color: @phd-life-green;
+        color: @phd-life-textonback;
+    }
 
 @media screen and (max-width: 1140px) {
     ul#writeup-stress-grid-container {
@@ -419,7 +440,7 @@ ul#writeup-stress-grid-container li {
     
     ul#writeup-stress-grid-container li {
         margin-bottom: 15px;
-        min-height: 0;
+        min-height: 250px;;
     }
     
     ul#writeup-stress-grid-container li:last-child {
