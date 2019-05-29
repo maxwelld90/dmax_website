@@ -440,13 +440,91 @@ ul#writeup-stress-grid-container li {
     
     ul#writeup-stress-grid-container li {
         margin-bottom: 15px;
-        min-height: 250px;;
+        min-height: 250px;
     }
     
     ul#writeup-stress-grid-container li:last-child {
         margin-bottom: 0;
     }
 }
+
+/* What you should have grid */
+ul#writeup-completed-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+}
+
+ul#writeup-completed-grid-container li {
+    min-height: 220px;
+    background-color: @phd-life-green-dark;
+    color: @phd-life-textonback;
+}
+
+ul#writeup-completed-grid-container li span.header {
+    display: block;
+    font-size: 24pt;
+    font-weight: bold;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul#writeup-completed-grid-container li span.blurb {
+    display: block;
+    font-size: 14pt;
+    padding: 0 10px 10px 10px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 19pt;
+}
+
+ul#writeup-completed-grid-container li.scope {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+ul#writeup-completed-grid-container li.rqs {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+}
+
+ul#writeup-completed-grid-container li.words {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    background-color: @phd-life-green !important;
+}
+
+ul#writeup-completed-grid-container li.plan {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+ul#writeup-completed-grid-container li.exps {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+}
+
+@media screen and (max-width: 1140px) {
+    ul#writeup-completed-grid-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    ul#writeup-completed-grid-container {
+        display: block;
+    }
+    
+    ul#writeup-completed-grid-container li {
+        margin-bottom: 15px;
+        min-height: 250px;
+    }
+    
+    ul#writeup-completed-grid-container li:last-child {
+        margin-bottom: 0;
+    }
+}
+
 
 /* Hero styling (largely chaning colours) */
 @media screen and (min-width: 1080px) and (min-height: 710px) {
