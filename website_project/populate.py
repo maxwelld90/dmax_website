@@ -226,7 +226,7 @@ def copy_directory(path):
     src_dir = os.path.join(POPULATION_DATA_ROOT, path)
     target_dir = os.path.join(UPLOADS_DIRECTORY, path)
     
-    shutil.copytree(src_dir, target_dir)
+    shutil.copytree(src_dir, target_dir, ignore=True)
 
 def main():
     """
