@@ -30,6 +30,21 @@ span.highlight {
     box-shadow: 5px 0 0 @phd-life-green, -5px 0 0 @phd-life-green;
 }
 
+img#phd-thesis-cover {
+    height: 450px;
+    width: auto;
+}
+
+img#roadsign {
+    width: 380px;
+}
+
+@media screen and (max-width: 900px) {
+    img#phd-thesis-cover {
+        display: none;
+    }
+}
+
 /* Special landing grid container (positioned at the bottom of the screen) */
 div#landing-grid-container ul li {
     position: relative;
@@ -93,14 +108,14 @@ div.pwrapper.partial span.sidenote {
 div.section-header {
     position: relative;
     height: 280px;
+    margin-top: 30px;
     text-align: center;
     background-color: @phd-life-green-dark;
 }
 
 div.section-header h2 {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;;
+    position: relative;
+    top: 104px;
     font-size: 36pt;
     line-height: 36pt;
 }
@@ -121,6 +136,7 @@ div.section-header h2 {
         position: static;
         background-color: @phd-life-green-dark;
         padding: 10px;
+        font-size: 24pt;
         box-shadow: none;
     }
 }
@@ -157,6 +173,257 @@ ul#writeup-contents-container {
     
     ul#writeup-contents-container li:last-child {
         margin-right: 0;
+    }
+}
+
+/* Writing up methodology grid */
+div#writeup-methodology-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    font-family: 'Raleway', sans-serif;
+    color: @phd-life-textonback;
+}
+
+div#writeup-methodology-grid-container span, div#writeup-methodology-grid-container div {
+    display: block;
+    background: @phd-life-green-dark;
+    padding: 10px;
+}
+
+div#writeup-methodology-grid-container div {
+    grid-column: 2 / span 3;
+    height: auto;
+    padding: 0;
+}
+
+div#writeup-methodology-grid-container div span {
+    display: block;
+}
+
+div#writeup-methodology-grid-container div img {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px 10px 10px;
+}
+
+span#writeup-methodology-samplesize {
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 2;
+    font-size: 48pt;
+    font-weight: bold;
+    background-repeat: no-repeat !important;
+    background-position: 120% 110% !important;
+    background-size: 70% !important;
+}
+
+span#writeup-methodology-beer {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 2;
+    font-size: 24pt;
+    font-weight: bold;
+    background-repeat: no-repeat !important;
+    background-position: 120% 100% !important;
+    background-size: 70% !important;
+}
+
+div#writeup-methodology-q1 {
+    grid-row: 1 / span 1;
+}
+
+div#writeup-methodology-q2 {
+    grid-row: 2 / span 1;
+}
+
+div#writeup-methodology-q3 {
+    grid-row: 3 / span 1;
+}
+
+div#writeup-methodology-q4 {
+    grid-row: 4 / span 1;
+}
+
+@media screen and (max-width: 1140px) {
+    div#writeup-methodology-grid-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    div#writeup-methodology-grid-container {
+        display: block;
+        height: auto;
+    }
+    
+    span#writeup-methodology-samplesize {
+        display: none !important;
+    }
+    
+    span#writeup-methodology-beer {
+        display: none !important;
+    }
+    
+    div#writeup-methodology-grid-container * {
+        margin-bottom: 15px;
+    }
+    
+    div#writeup-methodology-grid-container *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Writing up time planning grid */
+ul#writeup-planning-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+}
+
+ul#writeup-planning-grid-container li {
+    min-height: 200px;
+    background: @phd-life-green-dark;
+    color: @phd-life-textonback;
+}
+    
+    ul#writeup-planning-grid-container li span {
+        display: block;
+        padding: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    ul#writeup-planning-grid-container li span.header {
+        font-family: 'Raleway', sans-serif;
+        font-size: 26pt;
+        font-weight: bold;
+    }
+    
+    ul#writeup-planning-grid-container li span.header span.number {
+        display: inline-block;
+        padding: 5px 8px 5px 8px;
+        margin-right: 10px;
+        background-color: @phd-life-textonback;
+        color: @phd-life-green-dark;
+    }
+    
+    ul#writeup-planning-grid-container li span.blurb {
+        padding-top: 0;
+        font-size: 14pt;
+        line-height: 20pt;
+    }
+
+@media screen and (max-width: 1140px) {
+    ul#writeup-planning-grid-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    ul#writeup-planning-grid-container {
+        display: block;
+    }
+    
+    ul#writeup-planning-grid-container li {
+        margin-bottom: 15px;
+        min-height: 0;
+    }
+    
+    ul#writeup-planning-grid-container li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Flow grid */
+ul#writeup-flow-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    list-style-type: none;
+}
+
+ul#writeup-flow-grid-container li {
+    min-height: 200px;
+    background: @phd-life-green-dark;
+    color: @phd-life-textonback;
+}
+    
+    ul#writeup-flow-grid-container li.red {
+        background: @dmax-red;
+    }
+    
+    ul#writeup-flow-grid-container li span {
+        display: block;
+        padding: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    
+    ul#writeup-flow-grid-container li span.header {
+        font-family: 'Raleway', sans-serif;
+        font-size: 26pt;
+        font-weight: bold;
+    }
+    
+    ul#writeup-flow-grid-container li span.blurb {
+        padding-top: 0;
+        font-size: 14pt;
+        line-height: 20pt;
+    }
+
+@media screen and (max-width: 1140px) {
+    ul#writeup-flow-grid-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    ul#writeup-flow-grid-container {
+        display: block;
+    }
+    
+    ul#writeup-flow-grid-container li {
+        margin-bottom: 15px;
+        min-height: 0;
+    }
+    
+    ul#writeup-flow-grid-container li:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Stress grid */
+ul#writeup-stress-grid-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+}
+
+ul#writeup-stress-grid-container li {
+    min-height: 250px;
+    background: @phd-life-green-dark;
+    color: @phd-life-textonback;
+}
+
+@media screen and (max-width: 1140px) {
+    ul#writeup-stress-grid-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    ul#writeup-stress-grid-container {
+        display: block;
+    }
+    
+    ul#writeup-stress-grid-container li {
+        margin-bottom: 15px;
+        min-height: 0;
+    }
+    
+    ul#writeup-stress-grid-container li:last-child {
+        margin-bottom: 0;
     }
 }
 

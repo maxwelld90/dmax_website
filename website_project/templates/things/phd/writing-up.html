@@ -8,6 +8,68 @@
         {% compress css %}
         <link rel="stylesheet" type="text/less" href="{% static 'css/phd.less' %}">
         {% endcompress %}
+        
+        {% compress css %}
+        <style type="text/css">
+            /* Section header images */
+            div#writing {
+                background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), url('{% get_media_prefix %}things/phd/writing.jpg');
+                background-size: cover;
+                background-position: bottom center;
+            }
+
+            div#everest {
+                background: url('{% get_media_prefix %}things/phd/everest.svg');
+                background-size: cover;
+                background-position: top center;
+            }
+
+            div#survey {
+                background: url('{% get_media_prefix %}things/phd/doctor.svg');
+                background-size: cover;
+                background-position: center center;
+            }
+
+            div#before {
+                background: url('{% get_media_prefix %}things/phd/checklist.svg');
+                background-size: cover;
+                background-position: center center;
+            }
+
+            div#admin {
+                background: url('{% get_media_prefix %}things/phd/admin.jpg');
+                background-size: cover;
+                background-position: center center;
+            }
+
+            div#time {
+                background: url('{% get_media_prefix %}things/phd/gantt.svg');
+                background-size: cover;
+                background-position: top center;
+            }
+            
+            span#writeup-methodology-samplesize {
+                background-image: url('{% get_media_prefix %}things/phd/dude.svg') !important;
+            
+            }
+            
+            span#writeup-methodology-beer {
+                background-image: url('{% get_media_prefix %}things/phd/beer.svg') !important;
+            }
+            
+            li#writeup-short-term-stress {
+                background-image: url('{% get_media_prefix %}things/phd/short-term-stress.svg') !important;
+                background-size: cover !important;
+                background-position: bottom center !important;
+            }
+            
+            li#writeup-long-term-stress {
+                background-image: url('{% get_media_prefix %}things/phd/long-term-stress.svg') !important;
+                background-size: cover !important;
+                background-position: bottom center !important;
+            }
+        </style>
+        {% endcompress %}
 {% endblock %}
 
 {% block main %}
@@ -16,37 +78,15 @@
                 <div class="flex-item whole">
                     <div class="headertag-container">
                         <h1>Writing Up</h1>
-                        <div id="subtitle">The most drawn out thing you'll ever do?</div>
+                        <div id="subtitle">The most intense thing you'll ever do?</div>
                         <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
                     </div>
-                    
-                    <style type="text/css">
-                        
-                        div.mountain-block {
-                            height: 300px;
-                            background-color: red;
-                            background: url('/uploads/things/phd/mountain.svg');
-                            background-size: cover;
-                            background-position: bottom center;
-                        }
-                        
-                        div#writing {
-                            background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75)), url('/uploads/things/phd/writing.jpg');
-                            background-size: cover;
-                            background-position: bottom center;
-                        }
-
-                        
-
-                    
-                        
-                    </style>
                     
                     <ul id="writeup-contents-container" class="grid-container">
                         <li><a class="whole" href="#about">What is this Page?</a></li>
                         <li><a class="whole" href="#reminder">A Friendly Reminder</a></li>
-                        <li><a class="whole" href="#everest">Your Everest</a></li>
                         <li><a class="whole" href="#survey">Doctor's Orders</a></li>
+                        <li><a class="whole" href="#everest">Your Everest</a></li>
                         <li><a class="whole" href="#before">Before you Start</a></li>
                         <li><a class="whole" href="#admin">Keeping on top of Admin</a></li>
                         <li><a class="whole" href="#time">Planning your Time</a></li>
@@ -59,123 +99,496 @@
                     
                     <article>
                     
-                    <div id="about" class="pwrapper">
-                    <p><strong>This page puts together different thoughts, tips and quotes from others to give you a better understanding about the PhD writeup process.</strong> I think it's fair to say that for most people, writing up a PhD thesis is probably one of the most intense, drawn out things that they will ever do. Because of the sheer size (and complexity!) of the document you have to write, it can induce a lot of pressure and stress on an individual. I hope that the advice (or just being able to freely acknowledge to you that the process is difficult and time consuming) can help someone, or provide some form of comfort. <strong>You are not alone, and you will be all the better off for having got through it.</strong></p>
-                    </div>
+                        <div id="about" class="pwrapper partial">
+                        <p><strong>This page puts together different thoughts, tips and quotes from myself and others to give you a better understanding about the PhD writeup process.</strong> I think it's fair to say that for most people, writing up a PhD thesis is probably one of the most intense, drawn out things that they will ever do. Because of the sheer size (and complexity!) of the document you have to write, it can induce a lot of pressure and stress on an individual. I hope that the advice (or just being able to freely acknowledge to you that the process is difficult and time consuming) can help someone, or provide some form of comfort. <strong>You are not alone, and you will be all the better off for having got through it.</strong></p>
+                        </div>
                     
-                    <div class="pwrapper partial">
-                    <p>I was asked to put together a presentation about my experiences of writing up my own PhD thesis. <a href="https://twitter.com/iadh/status/1128604512510410752" target="_blank">I delivered the talk to PhD students</a> at the <a href="https://www.gla.ac.uk/" target="_blank">University of Glasgow</a>'s <a href="https://www.gla.ac.uk/schools/computing/" target="_blank">School of Computing Science</a> on May 15<sup>th</sup>, 2019. Those watching the talk said they appreciated the honesty &mdash; and also appreciated some of the advice that I gave. Of course, this was originally in presentation form &mdash; you can download a copy of my slides to the right of this paragraph, or underneath if you're looking on a smartphone. Interest from further afield made me think it might be handy to write up my thoughts on the writeup process, too!</p>
-                    <span class="sidenote">Download slide deck</span>
-                    </div>
+                        <div class="pwrapper partial">
+                        <p>I was asked to put together a presentation about my experiences of writing up my own PhD thesis. <a href="https://twitter.com/iadh/status/1128604512510410752" target="_blank">I delivered the talk to PhD students</a> at the <a href="https://www.gla.ac.uk/" target="_blank">University of Glasgow</a>'s <a href="https://www.gla.ac.uk/schools/computing/" target="_blank">School of Computing Science</a> on May 15<sup>th</sup>, 2019. Those watching the talk said they appreciated the honesty &mdash; and also appreciated some of the advice that I gave. Of course, this was originally in presentation form &mdash; you can download a copy of my slides to the right of this paragraph, or underneath if you're looking on a smartphone. Interest from further afield made me think it might be handy to write up my thoughts on the writeup process, too!</p>
+                        <span class="sidenote">Download slide deck</span>
+                        
+                        
+                        <p><span class="highlight">Please also be aware that this was made with a <strong>STEM PhD</strong> in mind. As I'm a former University of Glasgow student, this was also written with my experiences at Glasgow fresh in my mind. I also submitted and defended a PhD thesis that was hundreds of pages long; that takes a lot of time and effort to plan and write. Take the advice and what I write from here with a pinch of salt; your mileage will undoubtedly vary depending on what you're studying, where you're studying it, and...what you are looking to achieve!</span></p>
+                        </div>
                     
-                    <div class="section-header" id="reminder">
-                        <h2>A Friendly Reminder</h2>
-                    </div>
+                        <div class="section-header" id="reminder">
+                            <h2>A Friendly Reminder</h2>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>
+                            Doing a PhD sometimes feels like a bit of a fight with yourself. Or maybe it's not sometimes &mdash; the fight consumes more time than you think! Many of my friends (and myself) admit to suffering from <a href="https://en.wikipedia.org/wiki/Impostor_syndrome" target="_blank">impostor syndrome</a>, where you continually think that your work is not good enough and that <em>you're a fraud.</em> <em>Yeah, it'll only be a matter of time before your supervisor realises that you're no good(!)</em>. Remember that it appears to be normal to think that way. I think (you can correct me if you think I'm wrong) that it's a sign of intelligence. The more you read, the more aware you are of how much you <em>haven't read, and thus don't know</em>. And because you realise that there is so much you don't know, you feel even more stupid. How ironic. But don't let that get you down. Keep pushing. Don't expect those feelings of inadequacy to fade away over time &mdash; senior academics have admitted to me that even after 20-30 years as a successful academic, they still feel like they're <a href="https://www.theguardian.com/news/oliver-burkeman-s-blog/2014/may/21/everyone-is-totally-just-winging-it" target="_blank">winging it</a> all (or most of) the time.
+                        </p>
+                        </div>
+                        
+                        <img src="{% get_media_prefix %}things/phd/supervisor-graph.svg" alt="Supervisor involvement over time" class="float-right" />
+                        
+                        <div class="pwrapper partial">
+                        <p>
+                            <span class="highlight"><span>It's a Learning Process</span></span> Several of my friends who are early on in their PhD have expressed dissatisfaction and disappointment in themselves that they cannot write a research paper by themselves. They say that their supervisors are doing a bit of 'hand holding' &mdash; such as fleshing out sections of a paper they're working on with their student. That's normal, and it's their job (as long as you are involved)! By going through this process a couple of times, <em>you learn how to do it yourself!</em> By the end of your PhD, you'll have learned enough to be able to go through the motions by yourself. A good supervisor, like the graph shown here, will be heavily involved in your work at the beginning as you learn the ropes. He or she will become less and less directly involved over time. From my experience, I remember back in 2014 working with my supervisor everyday on the <a href="{% url 'dmax_org_uk:publications-entry' 'temporal-delays' %}" target="_blank">first full paper</a> I got published and presented. Towards the end of my PhD in early 2018, I thought of an idea, designed a methodology, ran the experiment and analysed the data all by myself. And <a href="{% url 'dmax_org_uk:publications-entry' 'ecir-serp-stopping' %}" target="_blank">that paper got published</a>, too. That's just the process. Don't feel bad that you'll need help at the start. You're a human, and you're learning every day.
+                        </p>
+                        
+                        <p><span class="highlight"><span>Keep Going!</span></span> Obtaining a PhD is a tough, gruelling process. Although intellect is important, one can argue it's more about showing that you have the strength, determination and depth to <em>keep going,</em> even when everything around you seems to be falling apart. Keep going through the tough times, and you'll be rewarded with some good times. And at the very end of the process, when you submit that document you've been working towards for <em>four-ish years</em> to your School or College for examination, it'll <em>feel so good.</em></p>
+                        </div>
                     
-                    <p>
-                        Doing a PhD sometimes feels like a bit of a fight with yourself. Or maybe it's not sometimes &mdash; the fight consumes more time than you think! Many of my friends (and myself) admit to suffering from <a href="https://en.wikipedia.org/wiki/Impostor_syndrome" target="_blank">impostor syndrome</a>, where you continually think that your work is not good enough and that <em>you're a fraud.</em> <em>Yeah, it'll only be a matter of time before your supervisor realises that you're no good(!)</em>. Remember that it appears to be normal to think that way. I think (you can correct me if you think I'm wrong) that it's a sign of intelligence. The more you read, the more aware you are of how much you <em>haven't read, and thus don't know</em>. And because you realise that there is so much you don't know, you feel even more stupid. How ironic. But don't let that get you down. Keep pushing. Don't expect those feelings of inadequacy to fade away over time &mdash; senior academics have admitted to me that even after 20-30 years as a successful academic, they still feel like they're <a href="https://www.theguardian.com/news/oliver-burkeman-s-blog/2014/may/21/everyone-is-totally-just-winging-it" target="_blank">winging it</a> all (or most of) the time.
-                    </p>
+                        <div class="section-header" id="survey">
+                            <h2>Doctor's Orders</h2>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>When I was preparing content for my original presentation, I was acutely aware that someone could put their hand up and say something along the lines of: <em>what you're saying is just your experience &mdash; how do we know it's not just you, or something that a lot of people experience, too?</em></p>
+                        
+                        <p>I was curious to see the answer to this, so I asked several of my &mdash; friends who themselves were former STEM PhD students &mdash; to answer a couple of very high-level questions. I was trying to solicit <em>their thoughts</em> about <em>their experiences</em> when they were writing their PhD theses. You can see the four questions that I asked below, and the number of respondents. Note that for some, I followed up with further questions. Most of the participants were repaid with a pint of beer at the <a href="https://www.brelbar.com/" target="_blank">Brel beer garden</a>.</p>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <div id="writeup-methodology-grid-container">
+                            <span id="writeup-methodology-samplesize">
+                                n=6
+                            </span>
+                            <span id="writeup-methodology-beer">Reward</span>
+                            <div id="writeup-methodology-q1"><span>How was your writeup experience?</span><img src="{% get_media_prefix %}things/phd/survey-q1.svg" alt="Question 1 responses" /></div>
+                            <div id="writeup-methodology-q2"><span>How could you have made it less stressful?</span><img src="{% get_media_prefix %}things/phd/survey-q2.svg" alt="Question 2 responses" /></div>
+                            <div id="writeup-methodology-q3"><span>Do you look back on writing up favourably?</span><img src="{% get_media_prefix %}things/phd/survey-q3.svg" alt="Question 3 responses" /></div>
+                            <div id="writeup-methodology-q4"><span>Did it change you &mdash; for better or for worse?</span><img src="{% get_media_prefix %}things/phd/survey-q4.svg" alt="Question 4 responses" /></div>
+                        </div>
+                        <span class="sidenote">Remember, this is wildly unscientific!</span>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>Interestingly, most of the respondents had a similar train of thought to me &mdash; <span class="highlight">they were stressed out while writing, but look back on the experience very favourably. They also consider the experience to be very worthwhile, as it 'toughened' them up for the working world.</span> I use quotes from the respondents throughout the rest of this page to backup my points, express an alternative point of view, and to generally demonstrate what others were thinking when they were in the middle of things.</p>
+                        
+                        <span class="sidenote">You'll likely hate life when you're writing up, but you'll look back on it favourably.</span>
+                        </div>
+                        
+                        <div class="section-header" id="everest">
+                            <h2>Your Everest</h2>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>Sitting down in front of my computer back in early 2018, I had Slack open. I was talking to my good friend who was in the same boat as me. We'd reached the ends of our respective PhD programmes, and the time had come to write up. I'm super grateful that I had my friend to talk to as we both went through the process together, finishing only a few weeks apart. I think having someone who knew exactly what the other was feeling about everything was super helpful. Nevertheless, I remember him saying to me:</p>
+                        </div>
+                        
+                        <blockquote>We've both got our own Everest here to climb, David...</blockquote>
+                            
+                        <div class="pwrapper partial">
+                            <p>It's a pretty good way of outlining the challenge you may be facing. <span class="highlight">Let's imagine that to get your PhD, you need to get from A to B on a map.</span> On your way, you'll find many different perils, cross rapids, climb mountains and scale back down the other side. Thinking about things literally, experiments may not produce the results you hope for. You will probably make mistakes at times which will mean having to do things again, and maybe again! Around six months before your final submission date, you'll be probably be feeling a little tired but hopeful. The hard work is almost over.</p>
+                        
+                        <p>Except it's really not. There's one more major challenge left, one that brings many folk to their knees. <span class="highlight">It's the writeup. It's your Everest.</span> As I'll talk about shortly, you should have been writing things as you go along, and you should have a heap of content which you can shape into something that resembles a thesis. But that's not an easy process. Staring before you is 8,848 metres that you need to ascend and descend before you reach the finishing line. And trust me, you can't take a shortcut round the side of this obstacle. There's no way round it. You have to climb, you have to <em>write</em>.</span></p>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>Towards the start of my writeup phase, I was feeling the pressure already. I remember thinking things along the lines of <em>"I have so much to do, I need to get on with the writing now."</em> I sometimes woke up in the middle of the night, finding the cogs in my brain turning rapidly. I was thinking about things like how I could structure that chapter, what I could say in response to this criticism of my work, and so on and so forth. With hindsight, that nervous energy was a blessing in disguise: it gave me the kick up the backside I needed to get on with the planning and exploring that I needed to do before I properly began writing properly. From my experience (and others who have talked to me), <span class="highlight">it's crucial that you properly plan and test the waters before you begin the full-on writeup effort.</span></p>
+                        
+                        <span class="sidenote">Start thinking about your writeup early!</span>
+                        </div>
+                        
+                        <div class="section-header" id="before">
+                            <h2>Before you Start</h2>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>You should roughly know when to start writing. I guess this varies hugely depending on how long your thesis should be, where you're studying it, and how fast you can write. For students at the University of Glasgow, you should really be thinking about starting to write up your thesis after your <span class="highlight">third year progress review (if you haven't already).</span> To those studying elsewhere, this roughly translates into <span class="highlight">one year before your final submission date.</span> That's what I did &mdash; and while I had not totally finished my experimental work by that point, I was glad that my mind had started to think about bringing all the different pieces of work I had done together. <span class="highlight">It takes a very long time to get it right.</span></p>
+                        <span class="sidenote">Ideally, start to think about writing up around one year before your submission date.</span>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        <p>Everyone arrives at <em>t-minus one year</em> in a different position. Someone that I know had already completed his or her PhD thesis one year before they absolutely had to submit! I think that's an amazing achievement, but it seems like a rarity, rather than the norm. This individual had done a lot of their experimental work <em>before</em> they became a PhD student, which probably isn't allowed in most places &mdash; and is probably a little unfair on others. For me (along with many of the individuals that I talked to), I started my final year as a PhD student with the following components (almost) completely nailed.</p>
+                        
+                        <span class="sidenote">You should pretty much know what you're going to be writing about by the start of your final year...</span>
+                        
+                        <ul class="standard">
+                            <li style="color:red;">Project scope</li>
+                            
+                            <li>Research questions</li>
+                            
+                            <li>Decent chapter plan</li>
+                            <li>Series of coherent experiments</li>
+                            <li>Experimental reports, or better still, research publications</li>
+                        </ul>
+                        
+                        <p>While these don't have to be perfect, it's good to know that they're pretty much done and you are confident that your project's scope is good, and not too broad. Your research questions should however just about be there. Without these questions, structuring and writing up a thesis would be pretty difficult to do! <span class="highlight">If you are still unsure about these with one year to go, you should really have a conversation with your supervisor about them. If you chop and change the scope of your project and the questions you are looking to address while you write up, <em>you're going to go round and round in circles.</em></span> This is exactly what happened to one of my friends.</p>
+                        
+                        <blockquote>
+                            I should have defined my thesis topic earlier in my PhD. And I should have stayed on that topic a bit more closely. I should also have looked at the thesis structure more earlier on in the PhD to better understand the expected deliverable... This lack of understanding drew out the process by months, and made life so much more stressful.
+                        </blockquote>
+                        
+                        <p>What should you produce, though? What is the deliverable? This again heavily depends upon where you're studying. In the <a href="https://www.gla.ac.uk/media/media_167493_en.pdf#page=4" target="_blank">College of Science and Engineering at the University of Glasgow</a>, you need to write a PhD thesis that provides a clear narrative &mdash; and ideally will demonstrate an advancement of your methodology as you progress through your thesis. Each chapter needs to flow nicely onto the next, rather than individual chapters sitting independently from one another. Working out what story to tell is probably one of the most difficult things to get right for your thesis, especially if you have a lot of disjointed experiments. <a href="#writing">More on this later.</a></p>
+                        
+                        <p>At a minimum, you should consider your <strong>thesis chapter plan</strong>, your <strong>thesis template</strong> and your <strong>backup plan</strong>. I take some time discussing these below.</p>
+                        
+                        <p class="big-gap"><span class="highlight"><strong>Your Chapter Plan</strong></span> Having a chapter plan to work with &mdash; even a draft &mdash; was probably one of the most useful tools that I had at my disposal during my writeup, as <a href="#writing">I'll discuss later on</a>. Being able to produce one of these for your progress reviews (if you have them) is probably going to also be a very useful way of showing your supervisor/examiners that you know what you want to do. A rough chapter plan was useful for helping me to sort out my thoughts for what I wanted to write. I think I went through four iterations of rough plans before arriving at one I felt comfortable to discuss with my supervisor. <em>Four!</em> I had so many ideas and there were so many ways to present what I had done that it was a major challenge to work out the best way to do it. When starting with a blank slate, you'll probably panic a bit, too. Just stay calm. You've done a lot of work, and with a calm mind, you'll be able to start lifting things from your previous work.</p>
+                        
+                        <p>Start with the basic five chapters, and expand from there.</p>
+                        
+                        <ul class="standard">
+                            <li><strong>Chapter 1</strong> <span class="highlight">Introduction</span> &mdash; introducing the problem area, your research questions and thesis statement.</li>
+                            <li><strong>Chapter 2</strong> <span class="highlight">Background/Prior Work</span> &mdash; discussing previous work related to what you want to solve, along with a discussion of the limitations of prior work which helps you further cement the credibility of what you want to do.</li>
+                            <li><strong>Chapter 3</strong> <span class="highlight">Your Approach</span> &mdash; or your methodology. How did you run your experiments? Why did you do this over that?</li>
+                            <li><strong>Chapter 4</strong> <span class="highlight">Your Experiments</span> &mdash; presenting your experimental results, perhaps over multiple chapters for each experiment. A consistent approach to your presentation and analysis will only count in your favour.</li>
+                            <li><strong>Chapter 5</strong> <span class="highlight">Conclusions</span> &mdash; an important chapter where you must bring all your findings together, discussing the implications for the future.</li>
+                        </ul>
+                        
+                        <p>Apologies if that seems obvious, but starting with those five chapters helped me (with a little inspiration from prior theses, as I'll mention below) get a much better idea for how to structure my thesis. The conclusion chapter, by the way, is where I think you earn the <em>philosophy</em> part of your <em>Doctor of Philosophy</em> degree &mdash; you need to have a proper philosophical discussion about what you've found in your work, and where it's going to lead the field you've contributed to.</p>
+                        
+                        <p>To give you a concrete example, here's my final chapter plan. Over the four iterations, I also decided that I could split the chapters into four parts that closely mirror the basic structure above. Note that Part I munges together the introduction and background chapters.</p>
+                        
+                        <ul class="standard">
+                            
+                            <li><strong>Part I</strong> <span class="highlight">Introduction and Background</span> &mdash; bringing together the first two chapters above</li>
+                            
+                            <ul class="standard">
+                                <li><strong>Chapter 1</strong> <span class="highlight">Introduction</span></li>
+                                <li><strong>Chapter 2</strong> <span class="highlight">IR Background</span> &mdash; covering the basics of my broad field of study.</li>
+                                <li><strong>Chapter 3</strong> <span class="highlight">Stopping Background</span> &mdash; a more detailed examination of the main focus for my thesis.</li>
+                            </ul>
+                            
+                            <li><strong>Part II</strong> <span class="highlight">Model and Methodology</span></li>
+                            
+                            <ul class="standard">
+                                <li><strong>Chapter 4</strong> <span class="highlight">My Model</span> &mdash; introducing the model that is core to my thesis.</li>
+                                <li><strong>Chapter 5</strong> <span class="highlight">My Strategies</span> &mdash; discussing the different (stopping) strategies that I trialled in my work.</li>
+                                <li><strong>Chapter 6</strong> <span class="highlight">My General Methodology</span> &mdash; a pretty neat idea that I discuss more below.</li>
+                            </ul>
+                            
+                            <li><strong>Part III</strong> <span class="highlight">Experiments</span> &mdash; where all the results and analysis belong. I did three main experiments, each of which merited their own chapter.</li>
+                            
+                            <ul class="standard">
+                                <li><strong>Chapter 7</strong> <span class="highlight">Experiment 1</span></li>
+                                <li><strong>Chapter 8</strong> <span class="highlight">Experiment 2</span></li>
+                                <li><strong>Chapter 9</strong> <span class="highlight">Experiment 3</span></li>
+                            </ul>
+                            
+                            <li><strong>Part IV</strong> <span class="highlight">Conclusions</span></li>
+                            
+                            <ul class="standard">
+                                <li><strong>Chapter 10</strong> <span class="highlight">Conclusions</span> &mdash; where I <em>philosophised</em>.</li>
+                            </ul>
+                        </ul>
+                        
+                        </div>
+                        
+                        <div class="partial pwrapper">
+                        
+                        <p>Again, notice the similarity in the basic structure: I just found that I certain things became so big and/or important that they <em>felt</em> like they deserved to be in their own chapter. You can only know that as you go through and write the damn thing! <span class="highlight">But you have the freedom to structure your thesis as you see fit.</span> For example, I found that splitting my background into two chapters &mdash; one about the broad area of Information Retrieval and one more focused on my specialist area, stopping behaviours &mdash; worked pretty well. And the effort I put into making everything consistent meant I could write a <em>general methodology</em> chapter, an abstracted methodology for the experiment chapters. And the abstracted parts to my methodology (i.e. the things that were varied) were filled in in each experiment chapter. That was neat, and it saved a lot of duplication!</p>
+                        
+                        <span class="sidenote">Every thesis is different &mdash; but remember, you have relative freedom in terms of how you structure your own!</span>
+                        
+                        <p>As I alluded to earlier, you can find inspiration from other prior PhD theses &mdash; it's worth checking your university's library for prior examples. For example, the University of Glasgow Library has <a href="http://theses.gla.ac.uk/" target="_blank">Enlighten</a> that allows you to search for prior Glasgow PhD theses. Go have a look at some in your field, and draw inspiration from them.</p>
+                        
+                        </div>
+                        
+                        <div class="partial pwrapper">
+                        
+                        <p><span class="highlight">Remember though, you're working with a draft chapter plan until you submit. Don't be disappointed with yourself if you find if your chapter plan has to change during the writeup. <em>It most likely will!</em></span> I didn't think of the abstracted methodology approach until much later on in the process, for example. However, with proper preparation and a thorough discussion about it with your supervisor, any changes will hopefully be minor &mdash; and will result in less work to readjust things later on. <span class="highlight">If you don't invest the time preparing <em>early on</em>, it'll be more painful for you <em>later on</em>.</span></p>
+                        
+                        <span class="sidenote">It takes time to get this right. Make sure you nail a rough chapter plan early on. It's crucial for your success.</span>
+                        
+                        <img src="{% get_media_prefix %}things/phd/thesis-cover.svg" alt="My PhD thesis cover" class="float-right" id="phd-thesis-cover" />
+                        
+                        <p class="big-gap"><span class="highlight"><strong>Prepare your Template</strong></span> You should take steps before you start writing seriously to make sure the template for your thesis is prepared and ready to go. Try and think ahead, although that is admittedly easier said than done. What bits and pieces you going to include? Here's a list of things that you will probably want to include.</p>
+                        
+                        <ul class="standard">
+                            <li><span class="highlight">Title page</span> &mdash; with, er, your thesis title and your name. And submission date. And whatever your university requires you to add.</li>
+                            <li><span class="highlight">Abstract</span></li>
+                            <li><span class="highlight">Declaration of Originality</span> &mdash; an important requirement at Glasgow, where you state that the work is original and the result of your studies.</li>
+                            <li><span class="highlight">Acknowledgements</span> &mdash; a nice section to include to show your appreciation for those who helped you get to the point you are at now!</li>
+                            <li><span class="highlight">Table of Contents</span></li>
+                            <li><span class="highlight">List of Figures/Tables</span></li>
+                            <li><span class="highlight">List of Abbreviations/Glossary</span> &mdash; optional, really. Do you have a lot of abbreviations that you use throughout your work? Consider including something like this. There's a brilliant, well documented LaTeX package called <a href="https://ctan.org/pkg/glossaries?lang=en" target="_blank"><code>glossaries</code></a> that can help you out here.</li>
+                            <li><span class="highlight">Bibliography</span> &mdash; guidelines here vary. Consult your School/College for more information on what bibliography style you should use. It seems as though you can use whatever style you like at Glasgow; guidelines here are pretty much non-existent (from my observations).</li>
+                        </ul>
+                        
+                        <p>Of course, what is required can be dictated by your university, too. You will want to check with them to make sure that everything you require is present. At Glasgow, the College of Science and Engineering have a <a href="https://www.gla.ac.uk/media/media_167493_en.pdf#page=4" target="_blank">document that tells you what you must include</a>.
+                            
+                        </div>
+                        <div class="pwrapper partial">
+                        
+                        <p>If you know how to use a typesetting system such as <a href="https://www.latex-project.org/" target="_blank">LaTeX</a>, please, please, please use that. If you don't know how to use it, now may be the time to <a href="https://www.latex-tutorial.com/tutorials/" target="_blank">get used to it</a>. This is what such systems are designed for! Using a WYSIWYG editor such as Microsoft Word can prove to be a nuisance for such a large document &mdash; especially a STEM PhD thesis, highly likely to be full of illustrations, tables and so forth. We all know what happens when you try to move an image in Word...</p>
+                        
+                        <span class="sidenote">Please consider using a typesetting system. They are there for a reason!</span>
+                        
+                        <p>Your university will also likely offer a template that you can use for your thesis. <a href="https://www.gla.ac.uk/media/media_513134_en.zip" target="_blank">Glasgow offers one</a>; you'll want to check with your university and obtain their template if you study elsewhere. The advantage of using such a template is that you know it complies with all the rules set out by your university on aspects such as margins, page numbering and so forth.</p>
+                        
+                        <p class="big-gap"><span class="highlight"><strong>Going the Extra Mile</strong></span> You can of course, if your university permits, work on your own template. I call this <em>going the extra mile</em> because if you are prepared to invest the extra time in preparing your own template that complies with all the rules your university imposes, you can make something that really stands out from the rest. I'm not ashamed to admit that I did this, and am really proud of the <a href="http://bit.ly/modelling-search-and-stopping" target="_blank">outcome</a>! There's also several people I know who spent considerable effort making their thesis look really pretty, too &mdash; either by designing their own template, or by drawing their own beautiful illustrations to visualise parts of their work. You might not be convinced with the extra investment required in order to do this &mdash; it's not for everyone &mdash; but trust me, <em>people will notice</em>.</p>
+                        
+                        </div>
+                        <div class="pwrapper partial">
+                        
+                        <p>However, be wary that going down this path can eat up your time. <span class="highlight">If you're a perfectionist, you'll find that you can invest ridiculous amounts of times for very little (if any) return.</span> I probably spent a month on and off during my third year playing around with LaTeX and developing my own template. Some people will question my sanity here: but I digress. I learnt a lot about how the typesetting system works, and feel it was quite a valuable experience. It didn't overly impeded in my studies, so I consider it to be a good thing to have done.</p>
+                        
+                        <span class="sidenote">Under time pressure? Just write. Don't worry about this. Just get the thesis written.</span>
+                        
+                        <p class="big-gap"><span class="highlight"><strong>The Backup Plan</strong></span> This is obvious, right? As a final thing to consider before you start writing, <span class="highlight"><strong>back your stuff up.</strong></span> You never know what's going to happen. Use a version control system to keep track of changes you make to your thesis. If you know how to use Git, make a private repository on <a href="https://www.github.com" target="_blank">GitHub</a> and commit to that. Since <a href="https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/" target="_blank">Microsoft bought GitHub</a>, you can make free private repositories &mdash; so there's no excuse here.</p>
+                        
+                        <p>Your experiment data should also be backed up, too. Or at the very least, configuration files (if your apparatus is just computer programs). These data can add up quickly, and committing gigabytes to your Git repository is not a great idea. Consider cloud storage &mdash; or if that's still not enough or really viable, back things up physically with external hard disks.</p>
+                        
+                        </div>
+                        <div class="pwrapper partial">
+                        
+                        <p>I didn't want to lose anything, so my strategy was to set up my Git repository, and commit my changes to that whenever a section was drafted. At the end of each day, I'd back up my complete PhD directory to an external hard drive, and two USB flash storage drives. These would be stored at home in different places. That's probably a little excessive, but I'd be very happy to have alternative copies of my work if something bad were to happen and my laptop <em>and</em> external hard disk!</p>
+                        
+                        <span class="sidenote"><strong>Back. Your. Stuff. Up. Daily.</strong> Don't leave things to chance.</span>
+                        
+                        </div>
+                        
+                        
                     
-                    <p>
-                        <img src="/uploads/things/phd/supervisor-graph.svg" alt="Supervisor involvement over time" class="float-right" />
-                        <span class="highlight"><span>You're not Alone</span></span> Several of my friends who are early on in their PhD have expressed dissatisfaction and disappointment in themselves that they cannot write a research paper by themselves. They say that their supervisors are doing a bit of 'hand holding' &mdash; such as fleshing out sections of a paper they're working on with their student. That's normal, and it's their job (as long as you are involved)! By going through this process a couple of times, <em>you learn how to do it yourself!</em> By the end of your PhD, you'll have learned enough to be able to go through the motions by yourself. A good supervisor, like the graph shown here, will be heavily involved in your work at the beginning as you learn the ropes. He or she will become less and less directly involved over time. From my experience, I remember back in 2014 working with my supervisor everyday on the <a href="{% url 'dmax_org_uk:publications-entry' 'temporal-delays' %}" target="_blank">first full paper</a> I got published and presented. Towards the end of my PhD in early 2018, I thought of an idea, designed a methodology, ran the experiment and analysed the data all by myself. And <a href="{% url 'dmax_org_uk:publications-entry' 'ecir-serp-stopping' %}" target="_blank">that paper got published</a>, too. That's just the process. Don't feel bad that you'll need help at the start. You're a human, and you're learning every day.
-                    </p>
-                    
-                    <p><span class="highlight"><span>Keep Going!</span></span> Obtaining a PhD is a tough, gruelling process. Although intellect is important, one can argue it's more about showing that you have the strength, determination and depth to <em>keep going,</em> even when everything around you seems to be falling apart. Keep going through the tough times, and you'll be rewarded with some good times. And at the very end of the process, when you submit that document you've been working towards for <em>four-ish years</em> to your School or College for examination, it'll <em>feel so good.</em></p>
-                    
-                    <img src="/uploads/things/phd/mood.svg" alt="Your mood over time" class="full" />
-                    
-                    <div class="section-header" id="everest">
-                        <h2>Your Everest</h2>
-                    </div>
-                    
-                    <p>It's not easy. You'll find your mood swings up and down. But you'll get to the end. But you're not done yet!</p>
-                    
-                    <div class="section-header" id="survey">
-                        <h2>Doctor's Orders</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="before">
-                        <h2>Before you Start</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="admin">
-                        <h2>Keeping on top of Admin</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="time">
-                        <h2>Planning your Time</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="writing">
-                        <h2>Writing! (or typing)</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="yourself">
-                        <h2>Looking after Yourself</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="relationships">
-                        <h2>Dealing with Others</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="viva">
-                        <h2>The Viva</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <div class="section-header" id="reflecting">
-                        <h2>Taking Stock</h2>
-                    </div>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    <p>Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus.</p>
-                    
-                    
-                    <blockquote cite="Some guy">I think that it's difficult to remember that the writeup phase of your PhD is probably going to be one of the longest, most drawn out things that you will ever do. It can be torture.</blockquote>
-                    
-                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
-                    
-                    <div class="mountain-block">
-                        <h2>Climbing the Mountain</h2>
-                    </div>
-                    
-                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
-                    
-                    <blockquote cite="Some guy">This is just a single line, you bastard!</blockquote>
-                    
-                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
-                    
-                    <ul class="standard">
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                        <li>Hello world</li>
-                    </ul>
-                    
-                    <p class="partial">Proin malesuada sed turpis nec mattis. Quisque facilisis auctor erat et fringilla. Vestibulum congue sed mi in fermentum. In id tortor ut justo fringilla convallis a nec nisi. Nulla et venenatis massa. Phasellus varius suscipit turpis, in condimentum urna pretium quis. Donec a lectus eu mauris sodales dapibus in vel tellus. Nulla facilisi. Integer consequat scelerisque dolor, id cursus diam vulputate a. Vivamus sollicitudin, lacus quis efficitur tempor, nisl enim rhoncus nibh, sed efficitur sem urna ut neque. Morbi magna dolor, venenatis id nibh ac, suscipit hendrerit augue. Proin id elit eu nunc aliquet porttitor eget sed ligula. Vestibulum placerat purus non odio mollis commodo.</p>
-                    
-                </article>
-                    
+                        <div class="section-header" id="admin">
+                            <h2>Keeping on top of Admin</h2>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                            
+                        <p><span class="highlight">This section is hugely dependent upon where you study.</span> In Glasgow's College of Science and Engineering, there are several forms that you need to fill out towards the end of your PhD programme. They are important; they keep the Graduate School in the loop with your progress, and they also facilitate the organisation of your final viva once everything has been submitted. If you don't submit forms on time, there could be repercussions for you &mdash; so make sure you know what to submit, and when!</p>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>It's also important to remind you that it is <span class="highlight">your PhD, and therefore your responsibility to fill out paperwork.</span> If you don't, it may well be that nobody will come chasing after you for that elusive form. When you realise that the form needs to be completed, it may be too late &mdash; or significantly delay your final viva date. The College of Science and Engineering at Glasgow don't seem to remind you when forms need to be submitted, so make sure you know. I'll come back to that shortly.</p>
+                        
+                        <span class="sidenote">Filling out paperwork is your responsibility. It's your PhD, after all.</span>
+                        
+                        <p>Making sure that you keep on top of your forms may seem like a blindingly obvious piece of advice to give, but you'd be surprised how difficult it can be to motivate yourself when you're neck deep in writing your thesis. You'll probably be frustrated that you have to deviate away from writing up and spending time filling out paperwork. This is a mentality that I unfortunately developed; and I know I was not alone. Hence why I think it's important to tell you: <span class="highlight">don't feel tempted to let your paperwork slide. It'll come back to bite you if you do.</span> For me (and several others that I know), <span class="highlight">dealing with admin was one of the biggest contributors to stress and anxiety that I faced during my writeup period.</span> Here's a quote from my friend that backs this point up perfectly.</p>
+                        
+                        <blockquote>
+                            The actual writeup wasn't stressful. The main cause of stress: feeling obliged to hit some arbitrary deadline (e.g. the four year limit). Think in advance: are you going to hit or not. If you are not 100&#37; confident, you probably won't. 
+                        </blockquote>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>Kind of a bit deflating, but probably true. As I said, this hits the nail on the head perfectly for me: <span class="highlight">I was hesitant to fill out forms because I was so worried that I wouldn't be able to hit the deadline, given the mountain of work I had to do at the time.</span> Filling out forms saying you're going to hit a deadline six months down the road is a very difficult thing to do because it's just so damn hard to grasp whether or not it's doable. It's like national politicians talking about spending billions here and billions there; the scale of spend at that level is just so large you can't really comprehend it. So too with your PhD writeup: it's unlike anything you've probably done before, so being able to confidently predict how long it'll take &mdash; and whether you'll be able to finish everything in time &mdash; is hard. <a href="#time">More on this later.</a></p>
+                        
+                        <span class="sidenote">Don't repeat the mishtake I made here. You can't afford to be hesitant; take a deep breath, and go for it.</span>
+                        
+                        <p>The <em>"arbitrary deadline"</em> is the four year limit imposed on students studying a PhD in the UK. I believe this was imposed because in the past, many people were taking way too long to complete their PhDs. To try and curb students perhaps overstaying their welcome, <a href="https://www.ukri.org/about-us/our-councils/" target="_blank">research councils</a> imposed a four year limit on students. This is why at Glasgow (and elsewhere in the UK) it's such a strict rule &mdash; bad things can happen if you go over this time period. And it's probably why most scholarships are three and half years long. Going the final six months unfunded is a strong incentive to finish up early!</p>
+                        
+                        <p><span class="highlight">This is why my advice to start writing up as soon as you can is so important &mdash; please don't cross that four year barrier if you're in the UK.</span> If you genuinely don't think you can submit before four years are up, you need to have a chat with your Graduate School as soon as possible. If you start writing early, you can get a better idea earlier on how long it'll take to do things, and thus avoid disaster at the end. <a href="#time">I'll write about this more later.</a></p>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>One way you can mitigate stress and anxiety about this is to be <span class="highlight">absolutely clear and upfront with your Graduate School about <em>when exactly your four year deadline is.</em></span> I wish I had done this earlier! After your third year progress review (or whenever you enter your final year of study), work out your four year deadline from the point at which you commenced your PhD studies. This is straightforward if you didn't go away anywhere (e.g. to do an internship). If you did however, you'll need the paperwork you filled out when you left, and you'll be looking to add the time you were away to your original finishing date. Work out the date, e-mail it to your Graduate School, and reach an agreement as to when exactly it is. The sooner you do this, the better &mdash; you'll feel a little less stressed knowing that you have a concrete date to aim for. And having that date in the back of your mind will push you along to get stuff done.</p>
+                        
+                        <span class="sidenote">Work out when your four year deadline is &mdash; at least one year in advance. You can thank me later.</span>
+                        
+                        <img src="{% get_media_prefix %}things/phd/cose-deadlines.svg" alt="Glasgow College of Science and Engineering deadlines" class="float-right" />
+                        
+                        <p>As a final thought here, I put together a graphic showing when Glasgow students studying in the College of Science and Engineering need to fill out and submit forms &mdash; along with the basic series of events that happen in the final six(ish) months. This was originally a slide in my presentation and was well received. There's some bullet points underneath that provide additional information. Note that the details are correct as of May, 2019!</p>
+                        
+                        <p>Starting from your third year viva...</p>
+                        
+                        <ul class="standard">
+                            <li>You enter your final year. At this point, you should have the basics ready to go, and know <em>exactly</em> when your final finishing date (or <span class="highlight">submission day</span> on the graphic) is. You could submit your thesis at this point &mdash; if it's ready!</li>
+                            <li>No later than six months before submission day, you need to hand in your <span class="highlight">thesis pending</span> form. This tells the College you no longer need to pay tuition fees, because you are now writing up your thesis. Get writing seriously if you have not already! Note that you should have completed all of your major experiments by this point &mdash; but that doesn't mean to say you're out of the woods. You may still have to re-run some things in order to get things nice and consistent for <em>telling your story.</em></li>
+                            <li>Three months before your submission day, hand in your <span class="highlight">intention to submit</span> form. This form commits you to submitting within three months of handing the form in. This is important because a lot of things start happening in the background, mostly to do with your viva date. The College and your supervisor start actively looking for an external examiner for you. If you fail to submit within three months of this date, you'll have a major headache to deal with.</li>
+                            <li><span class="highlight">Submission day</span> is a good day in your life, although very anticlimactic. As most things in life are. But when you get there, you should feel rightly proud of your achievement.</li>
+                            <li>You then have your final <span class="highlight">viva</span>. Congratulations, I know you'll pass!</li>
+                            <li>It's likely you will have some things to correct. Hopefully your examiners will give you no more than a month to fix everything. Your <span class="highlight">corrections day</span> (as I call it) is the date your examiners tell you to submit everything for re-evaluation. Hopefully, all will be fine.</li>
+                            <li>You then need to get your thesis printed off. Take it to a <a href="http://www.dadbookbinders.com/" target="_blank">book binders</a>. Submit one physical copy to the College. <a href="https://www.gla.ac.uk/myglasgow/research/enlighten/theses/" target="_blank">Deposit</a> your thesis online, too. When submitting your physical copy to the College, you will also need to hand in your <span class="highlight">thesis access declaration</span> form. This will only be an issue if you make use of copyrighted material, or material that may require an embargo. Talk to your supervisor about that.</li>
+                            <li>Once everything has been satisfied, you will receive an <span class="highlight">award letter</span> in the post. <strong>Congratulations!</strong> You can now graduate. Easy peasy, right?</li>
+                        </ul>
+                        
+                        </div>
+                        
+                        <div class="section-header" id="time">
+                            <h2>Planning your Time</h2>
+                        </div>
+                        
+                        <div class="partial pwrapper">
+                        
+                        <p><span class="highlight">This is tricky.</span> Time planning is really important, primarily because you are very much time limited! I started my writeup with several publications under my belt. From each of those publications, I had learned a little bit more about how to plan my research projects out properly. Writing my thesis however was a different ballgame &mdash; it's much more drawn out, and given the increased size of chapters (when compared to sections of a research paper), these require much more time to write, too. Indeed, even if you are basing a chapter on something you've already written up, it can take <em>an age</em> to shape the narrative to fit the story of your theis. That's something I had not done beforehand &mdash; and so I was in the dark regarding how long it could take.</p>
+                        
+                        <p>You also need to remember that you'll have other commitments that you need to deal with, too. Maybe working another job, or dealing with children. You need to remember that you have to sleep, eat, and occasionally relax, too. Not doing these things well can lead to burnout, <a href="#yourself">as I'll talk about later</a>. I was incredibly fortunate not to have to worry about financial issues as I was writing. I know that makes my experience perhaps somewhat different from others. I was lucky. I freely admit that now.</p>
+                        
+                        <p>Regardless, if there's anything you take away from this section, please let it be this: <span class="highlight">however long you think it will take you, it will almost certainly <em>take longer than that.</em></span> This is something that I learned &mdash; not only through writing up, but in life generally. <em>If there's something worth doing right, it'll take time to get it right.</em> Let that be your mantra, here: do not leave things until the last minute. That is why I keep repeating <span class="highlight">start writing as soon as possible!</span></p>
+                        
+                        <p>The sooner you start writing, the more time you afford yourself with to make mistakes with your planning. Through mistakes, you learn. I found that my ability to plan the time I had available for my writeup went through two distinct phases.</p>
+                        
+                        <ul id="writeup-planning-grid-container">
+                            <li>
+                                <span class="header"><strong><span class="number">1</span>Learn the Ropes</strong></span>
+                                <span class="blurb">Investing the time and effort to see how long it takes to get things to an acceptable level &mdash; like, <em>how long does it take to write a chapter?</em></span>
+                            </li>
+                            <li>
+                                <span class="header"><strong><span class="number">2</span>Plan like a Pro</strong></span>
+                                <span class="blurb">Using the knowledge you obtain from developing your understanding of how long things take to do, make a more realistic plan &mdash; make a Gantt chart!</span>
+                            </li>
+                        </ul>
+                        
+                        <p>Annoying as it is, I think it's vitally important to get a feel for how long it takes to get things done. Experiments should broadly be written up by your writeup phase, and analysis should really be done too; this is more about investing time and effort to figure out how long it takes to shape things up into a thesis.</p>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>At the start of your writeup phase, spend some time writing up a chapter &mdash; or at least a few sections of one &mdash; and be conscious of how long it's taking you to get <em>to a completed draft.</em> You can then begin to make more precise extrapolations as to how long it'll take you to get the next chunk of work completed, and so forth. I'm sure that you will find it much easier to work out how long things will take to plan.</p>
+                        
+                        <span class="sidenote">A word of warning: background chapters may take longer!</span>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>I always thought that I hated the idea of Gantt charts. I realised during the writeup that I don't hate Gantt charts per se, but I hate being told to make one when I'm really unsure as to how long each activity will take. Be kind to yourself. Give yourself the time and flexibility to play around with figuring out how long things will take, then go make yourself a detailed Gantt chart based upon your experiences. You need time to develop that feeling or intuition. And this is something that people have told me has served them well in their careers since finishing up their PhD. Time management is crucial in any walk of life, let alone writing up a PhD thesis!</p>
+                        
+                        <span class="sidenote">Play around with how long it takes to do things, then make a proper plan.</span>
+                        
+                        <p class="big-gap"><span class="highlight">Increasing your Resilience</span> However, your best estimates &mdash; even with some prior knowledge &mdash; may let you down. You may encounter a stumbling block that means you have to spend a few weeks running an experiment again, for example. This happened to me twice. I realised that although my experiments were originally sound, <em>they really didn't fit well together and tell a coherent story.</em> Getting sidetracked like this is incredibly frustrating and upsetting, but you can again plan in a means to mitigate these unfortunate scenarios: <span class="highlight">slack time.</span></p>
+                        
+                        <p><span class="highlight">This is another reason why I have said so many times you should get writing as soon as you can. <strong>Things can (and probably will) happen that are very difficult to foresee.</strong></span> Cue a quote from one of my friends:</p>
+                        
+                        <blockquote>
+                            You know what it's like! You think it'll take you a day, but at the end of the week you're still writing the same section. It's so frustrating. It just goes on and on. The one thing that I think we both learnt is that you slack time the hell out of things!
+                        </blockquote>
+                        
+                        <p>Yeah &mdash; we (being my friend and I) both learnt this. If you think it's going to take you a day, give yourself an extra day of slack time. If you think it will take you a week, give yourself half a week slack time for that activity. That may be overly generous; it's better to have a safety net than to not. Realistically however, you probably cannot (and don't) want to schedule such generous slack time. But be wary of this. From your learning the ropes phase, you should also be aware of how long you <em>think</em> something will take, and how long it <em>actually</em> took to do.</p>
+                        
+                        <p>Factor some slack time into your plan. My final Gantt chart had a full month of slack time for the final three chapters of my thesis. I used one and a half weeks of it. Again, better to have it than to not.</p>
+                        
+                        </div>
+                        
+                        <!---- PROGRESS ---->
+                        
+                        <div class="section-header" id="writing">
+                            <h2>Writing! (or Typing)</h2>
+                        </div>
+                        
+                        <div class="partial pwrapper">
+                        <p>When you've got a rough chapter plan, get into writing. I always find it takes a very long time to get into the frame of mind to write well. But when I do, it kind of feels like a state of hypnosis. I just wanted to keep going, and the section I was writing was always on my mind. Even walking home in the evenings when I felt like I needed some downtime, I'd find my brain would still be thinking about it; still thinking about those little details that show you've really thought about what you are writing.</p>
+                        
+                        <img src="{% get_media_prefix %}things/phd/roadsign.svg" alt="Roadsign" class="float-right" id="roadsign" />
+                        
+                        <p>It was all consuming; and this is definitely not something that was unique to me. Plenty of people who went through the experience expressed the same basic sentiment. As I'll talk about later, you'll probably change a bit as you work through your thesis, and if you have friends who are going their writeup, you will likely notice a change in their behaviour, too. It's tough. Think back to the message I had about <a href="#admin">keeping on top of admin</a>. Sounds obvious; when you're so engrossed in your writing, you probably don't even care about it (even though you <em>really</em> should).</p>
+                        
+                        <p>Don't forget to take breaks and remember to exercise, even though sometimes you'll just want to sit down and keep going. You do need to eat, socialise and sleep. That stuff can't stop, although it may mean that you will have to get away with doing less of the fun stuff you are used to.</p>
+                        
+                        <p><span class="highlight"><strong>It won't Stop!</strong></span> But by far the biggest thing that floored me and others who have talked to me about their experiences is <em>how long it takes to write your thesis up.</em> <span class="highlight">It's highly likely it will be unlike anything that you have ever done before,</span> both in terms of the volume of things you have to do, and the limited time you have to do it in. It's been likened to <span class="highlight">mental torture</span> by one of my close friends. By my own admission (and those of others), it can be hard to get out of bed in the morning when all you have planned for the day ahead is <em>writing</em> &mdash; especially when that's all you've been doing for, say, the past two months.</p>
+                        
+                        <blockquote>
+                            You just want it to stop. But the finish line seems so far away, and you simply cannot afford to stop!
+                        </blockquote>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>Given that I have admittedly set a pretty negative tone about the writeup experience so far, how can you make it more bearable? Apart from giving yourself breaks and allowing yourself a little downtime here and there, there are a few tricks that I learnt as I went along the process that definitely helped. When you finish drafting a section and/or a chapter, stop. Compile your PDF. And just sit there for a few minutes and <em>scroll through what you have done so far.</em> This sounds ridiculous! But it actually really helped and made me realise that <em>even though I feel like I am buried up to my eyeballs in work, I am making progress.</em> Remember the mountain analogy from the beginning? It's like stopping for breath and looking back at how far up you've climbed. Small goals. It's satisfying. It'll inspire you to keep going; to keep climbing. Challenge yourself to write another section! And another. And another. And another...</p>
+                        
+                        <span class="sidenote">
+                            When you finish a section, stop, and scroll back through what you have done. It's satisfying feeling to see how far you have come.
+                        </span>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>The above is pretty useful because it attempts to compartmentalise the huge taks of writing up a PhD thesis. <span class="highlight">I think that is what makes your writeup more manageable &mdash; splitting it up into a series of small(er) chunks.</span> This is why I think that having a chapter plan drafted up at the beginning of my writeup phase was so useful. I used a printed out copy of my chapter plan to keep track of my progress, and it went with me wherever I wrote.</p>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p>At the start of each day, don't fall out your bed in a depressed state and go <em>"oh crap, this is never going to end!"</em> Instead, I recommend that you sit down and highlight on your chapter plan a section that you're going to spend the day tackling. You might want to even invest some time (like I did) in writing a series of todo's for the section you will be tackling. <em>"I need to write the introduction to this section. I know I have this data, but I need to regenerate the graph I had from before to include the standard errors here, because I didn't have them before. That'll involve opening up the script I had before and doing some modifications. Then I'll need to take the narrative from my existing paper and move things around to make it fit with the flow of my thesis."</em> Something like that. Make bullet points out of that, and stick to completing that activity.</p>
+                        
+                        <span class="sidenote">Use your chapter plan to check off each section, one at a time. Turn the mountain into lots of little molehills! 💪</span>
+                        
+                        <p>Again, with some prior expertise on seeing how long things to do, you should get better and better at working out how many sections you can write in a day. <span class="highlight">You will feel super satisfied with yourself when you complete the day's activities.</span> Trust me. And that spurs you on to do more the following day. It works; trust me.</p>
+                        
+                        <p>By the end of my writeup, I had a mess of paper that was originally my chapter plan &mdash; but with heaps of additional other todo lists, all scrawled down, but importantly ticked off. Looking back on it now, it's quite an important document to me. It shows that I climbed my mountain, one checkbox at at time. And you can do it, too.</p>
+                        
+                        <p class="big-gap"><span class="highlight">Iterate your Writing</span> Don't fool yourself here. Just because you have got something written up and published at a conference in a journal doesn't mean that it'll fit perfectly the first time around in your thesis. I fell down this trap when writing my first chapter: I quickly began to realise <em>"oh no, this is going to take several stabs to get it right!"</em> With hindsight, I don't know why I didn't immediately think this, but whatever. It's done now. Don't repeat that mistake!</p>
+                        
+                        <blockquote>
+                            At the start of my writeup, what really struck me is that it takes an age to get each chapter to a standard that's acceptable. Probably a fortnight more than I had originally planned.
+                        </blockquote>
+                        
+                        </div>
+                        <div class="partial pwrapper">
+                        
+                        <p><span class="highlight">It will take at least <strong>two iterations</strong> to get a chapter to a good standard: your first draft, and a second draft taking into account feedback from your supervisor.</span> And two iterations is for content that was pretty much already there beforehand. If, for example, you base a chapter on published work, two should be sufficient (it was for me, at least). If the work you base a chapter on was a rough draft, expect more iterations to bring it up to scratch. If you don't, be prepared for a lot of questions and interrogation on this work in your final viva. And please make sure your supervisor reads what you have written. <span class="highlight">If your supervisor does not read your thesis as you along and give feedback, I really do not think that they are doing their job &mdash; they would be letting you down.</span></p>
+                        
+                        <span class="sidenote">
+                            Plan for a minimum of two iterations per chapter. Make sure your supervisor reads your first draft.
+                        </span>
+                        
+                        <p class="big-gap"><span class="highlight">Making it Flow</span> I've already written this several times, but I'll dig a bit deeper here as to what I think this really means. It's one of the most difficult things to do in the entire writeup process. One individual that I know submitted their thesis without making it flow well, and had a hard time in their viva because of it. Take what you want from that. Here's some things for you to consider.</p>
+                        
+                        <ul id="writeup-flow-grid-container">
+                            <li>
+                                <span class="header"><strong>Flow!</strong></span>
+                                <span class="blurb">Each chapter brings you neatly onto the next, or segues onto the next without much effort.</span>
+                            </li>
+                            <li>
+                                <span class="header"><strong>Exploit Structure</strong></span>
+                                <span class="blurb">Make use of the structure of your thesis &mdash; build on things that you have explained previously. Don't keep repeating yourself unless absolutely necessary.</span>
+                            </li>
+                            <li class="red">
+                                <span class="header"><strong>Prevent Isolation</strong></span>
+                                <span class="blurb">Do not leave a chapter hanging alone by itself in isolation. They need a purpose, and a link to the rest of your work.</span>
+                            </li>
+                        </ul>
+                        
+                        <p>To reiterate, the idea of making a thesis flow means that everything you discuss has a purpose, and is linked to other components. You can help this by presenting a similar set of experiments where you change as few variables as possible &mdash; or build up the complexity of your experiments as you progress through the chapters of your thesis. Consistent reporting of results (e.g. consistent colour schemes and other presentational aspects) will help you, too, and gives the effect of a highly polished piece of work. Maybe you'll even want to go further than you did before and compare results from one chapter to another. If you base your chapters on prior studies, it's unlikely you will have done this before, so this would require a lot of time and effort to do.</p>
+                        
+                        <p><span class="highlight">Don't simply copy and paste in your papers</span> &mdash; it is highly unlikely they will fit perfectly from the very beginning. They will require work to make them fit. For example, you might find the background section from one paper would belong as a (expanded) section in your background chapter(s), rather than sitting awkwardly in an experiment chapter. It takes time to shape things, as one of my friends found out.
+                        
+                        <blockquote>
+                            Thankfully I had a lot of published work that made some of the writing up easier, however, making everything coherent required considerable rewriting and reorganisation.
+                        </blockquote>
+                        
+                        <p>Also, make sure that every chapter serves a purpose. Don't leave a chapter hanging by itself in isolation. Don't have a chapter in your thesis talking about something totally different from the main narrative of your work. If you want to include it, find an argument to include it. You may find that you could be better served just dropping it. Not everything that I worked on during my time as a PhD student made it it in my final thesis!</p>
+                        
+                        <p class="big-gap"><span class="highlight">On Reflection</span> It might seem horrible &mdash; and for the most part, it kind of is horrible. It's relentless, backbreaking work that will most likely push you to the edge. Remember the <a href="#survey">unscientific survey</a> that I conducted back at the start. Most people I asked hated the experience at the time. However, the experience is also incredibly rewarding &mdash; and everybody looked back on it favourably (including me!). One of my friends who is now an academic thought that the experience was more beneficial to him now than it was three years prior when he was writing.</p>
+                        
+                        <blockquote>
+                            I think the writeup experience was valuable for me to construct a holistic picture of my work over the last couple of years which has been influential for my career since. To look back and find a way to describe your quite different pieces of work as a single consistent and convincing story has been very important for my understanding of what I truly find interesting.
+                        </blockquote>
+                        
+                        <p>I cannot agree with the first part as my career hasn't advanced much in the short time since I've finished my PhD. However, I do agree with the second part entirely &mdash; one could go so far as to say the writeup is really when you do the philosophising, where you try and fit everything together. <span class="highlight">It can be a tremendous challenge, but ultimately one that is super rewarding.</span></p>
+                        
+                        <p class="big-gap"><span class="highlight">Why Invest all this Effort?</span> You may well be asking something along these lines: <em>is it really that difficult? Do I really need to invest all of this time in making to flow, and so forth?</em> Someone once remarked that they wanted to get away with doing as little as possible to get their PhD. My response to someone like that would be to say <em>"enjoy your difficult viva, then."</em> If you submit a thesis that is poorly structured, or definitely does not have a nice, flowing narrative, it shows to your examiner(s) you haven't put enough thought into it.</p>
+                        
+                        <p>If your examiner(s) think that, then it's a pretty sure thing you'll be squirming in your viva. You'll probably end up with some major corrections to work on, or worse still, be asked to resubmit at a later date. This is nightmare scenario territory. <span class="highlight">My argument here is that if you invest the time now, you'll reap the rewards later. If you don't invest the time now, you'll have to fix it up properly post-viva. Either way, I don't think you can get away with doing a half-assed job. Even doing "the minimum", whatever that is, would probably set you in for a more challenging viva.</span> You need to invest the required time and effort at some point. You might as well do things properly and do everything to the best of your abilities <em>before</em> your viva!</p>
+                        
+                        <p class="big-gap"><span class="highlight">Don't Stop</span> Finally, whatever you do, <em>do not give up.</em> Think about how far you have come just to get to this point. Why stop now? If you really feel you are struggling, please go and talk to someone. If you don't want to talk to your supervisor about it, it is important you find someone in your School or College who can help you.</p>
+                        
+                        </div>
+                        
+                        <div class="section-header" id="yourself">
+                            <h2>Looking after Yourself</h2>
+                        </div>
+                        
+                        <div class="pwrapper partial">
+                        
+                        <p>Looking after yourself is important in any challenging scenario. Writing up is no exception. Although I have already have highlighted several really important things you should continue to do &mdash; such as taking breaks and exercising &mdash; I think that this is an important issue that is perhaps worth discussing in a bit more detail. Specifically, what I (and others) felt during the writeup phase. If I can elegantly describe the feelings and emotions that I went though, I hope it'll make it less scary for someone else when they read this &mdash; to know they are not alone in thinking whatever thoughts they have about their work and themselves.</p>
+                        
+                        <ul id="writeup-stress-grid-container">
+                            <li id="writeup-short-term-stress"><span class="header">Short-Term Stress</span></li>
+                            
+                            <li id="writeup-long-term-stress"><span class="header">Long-Term Stress</span></li>
+                        </div>
+                        
+                        
+                        
+                        <div class="section-header" id="relationships">
+                            <h2>Dealing with Others</h2>
+                        </div>
+                        
+                        <div class="section-header" id="viva">
+                            <h2>The Viva</h2>
+                        </div>
+                        
+                        
+                        <div class="section-header" id="reflecting">
+                            <h2>Taking Stock</h2>
+                        </div>
+                        
+                        <ul class="standard">
+                            <li>Hello world</li>
+                            <li>Hello world</li>
+                            <li>Hello world</li>
+                            <li>Hello world</li>
+                            <li>Hello world</li>
+                        </ul>
+                        
+                    </article>
                 </div>
             </div>
 {% endblock %}

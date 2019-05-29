@@ -24,6 +24,10 @@ p {
     p:last-child {
         margin-bottom: 0;
     }
+    
+    p.big-gap {
+        margin-top: 2em;
+    }
 
 div.pwrapper {
     position: relative;
@@ -31,7 +35,7 @@ div.pwrapper {
     margin: 1em 0 1em 0;
 }
 
-    div.pwrapper.partial p {
+    div.pwrapper.partial p, div.pwrapper.partial ul {
         width: 80%;
     }
 
@@ -52,6 +56,10 @@ div.pwrapper {
 @media screen and (max-width: 1140px) {
     div.pwrapper.partial p {
         width: 100%;
+    }
+    
+    div.pwrapper.partial ul {
+        width: 90%;
     }
     
     div.pwrapper.partial span.sidenote {
