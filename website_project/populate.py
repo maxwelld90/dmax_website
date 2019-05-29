@@ -219,6 +219,14 @@ def tidy_uploads():
     shutil.rmtree(os.path.join(UPLOADS_DIRECTORY, 'publications'), ignore_errors=True)
     shutil.rmtree(os.path.join(UPLOADS_DIRECTORY, 'things', 'grid-backgrounds'), ignore_errors=True)
 
+def copy_directory(path):
+    """
+    Copies a directory of files over to the uploads directory.
+    """
+    src_dir = os.path.join(POPULATION_DATA_ROOT, path)
+    target_dir = os.path.join(UPLOADS_DIRECTORY, path)
+    
+    shutil.copytree(src_dir, target_dir)
 
 def main():
     """
@@ -228,6 +236,8 @@ def main():
     do_publications()
     do_things_grid()
     
+    copy_directory('things/grid-backgrounds/')
+    copy_directory('things/phd/')
 
 if __name__ == "__main__":
     print("Running dmax.org.uk population script...")
