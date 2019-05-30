@@ -30,13 +30,17 @@ span.highlight {
     box-shadow: 5px 0 0 @phd-life-green, -5px 0 0 @phd-life-green;
 }
 
+span.highlight a {
+    color: @phd-life-textonback;
+}
+
 img#phd-thesis-cover {
     height: 450px;
     width: auto;
 }
 
 img#roadsign {
-    width: 380px;
+    width: 30%;
 }
 
 img#duration, img#feelings {
@@ -54,6 +58,12 @@ img#duration, img#feelings {
     img#duration, img#feelings {
         width: 100%;
     }
+}
+
+p.acknowledgements {
+    font-size: 8pt;
+    border-top: 1px solid #000000;
+    font-style: italic;
 }
 
 /* Special landing grid container (positioned at the bottom of the screen) */
@@ -466,7 +476,7 @@ ul#writeup-completed-grid-container li span.header {
     display: block;
     font-size: 24pt;
     font-weight: bold;
-    padding: 10px;
+    padding: 10px 10px 7px 10px;
     font-family: 'Raleway', sans-serif;
 }
 
