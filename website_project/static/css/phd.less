@@ -52,6 +52,10 @@ img#duration, img#feelings {
     img#phd-thesis-cover {
         display: none;
     }
+    
+    img#roadsign {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1140px) {
@@ -64,6 +68,7 @@ p.acknowledgements {
     font-size: 8pt;
     border-top: 1px solid #000000;
     font-style: italic;
+    line-height: 12pt;
 }
 
 /* Special landing grid container (positioned at the bottom of the screen) */
@@ -535,6 +540,64 @@ ul#writeup-completed-grid-container li.exps {
     }
 }
 
+/* Final reminder */
+ul#writeup-final-reminder-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    list-style-type: none;
+}
+
+ul#writeup-final-reminder-container li {
+    display: block;
+    min-height: 220px;
+    background-color: @phd-life-green-dark;
+    color: @phd-life-textonback;
+    font-size: 22pt;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+ul#writeup-final-reminder-container li:last-child {
+    margin-bottom: 0;
+}
+
+ul#writeup-final-reminder-container li span {
+    display: inline;
+    font-size: 24pt;
+    font-weight: bold;
+    background-color: @phd-life-green;
+    color: @phd-life-textonback;
+    padding: 5px 0 5px 0;
+    box-shadow: 5px 0 0 @phd-life-green, -5px 0 0 @phd-life-green;
+    box-decoration-break: clone;
+}
+
+ul#writeup-final-reminder-container li span strong {
+    position: relative;
+}
+
+@media screen and (max-width: 1140px) {
+    ul#writeup-final-reminder-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    ul#writeup-final-reminder-container {
+        display: block;
+    }
+    
+    ul#writeup-final-reminder-container li {
+        margin-bottom: 15px;
+        min-height: 220px;
+    }
+
+    ul#writeup-final-reminder-container li:last-child {
+        margin-bottom: 0;
+    }
+}
 
 /* Hero styling (largely chaning colours) */
 @media screen and (min-width: 1080px) and (min-height: 710px) {
