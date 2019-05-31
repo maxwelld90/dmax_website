@@ -104,6 +104,12 @@
                 background-size: cover !important;
                 background-position: bottom center !important;
             }
+            
+            li#git {
+                background-image: url('{% get_media_prefix %}things/phd/git.jpg') !important;
+                background-size: cover !important;
+                background-position: bottom left !important;
+            }
         </style>
         {% endcompress %}
 {% endblock %}
@@ -839,7 +845,7 @@
                         
                         <ul id="writeup-final-reminder-container">
                             <li id="river"><span><strong>Your thesis does not define you; it's a stepping stone</strong></span></li>
-                            <li><span><strong>There will be a final <code>git add</code>, <code>git commit</code> and <code>git push</code></strong>!</span></li>
+                            <li id="git"><span><strong>There will be a final <code>git add</code>, <code>git commit</code> and <code>git push</code></strong>!</span></li>
                         </ul>
                         
                         </div>
