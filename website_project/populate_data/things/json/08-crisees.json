@@ -5,7 +5,8 @@
         "slug": "crisees",
         "header": "Crisees",
         
-        "url_type": "NO"
+        "url_type": "EXT",
+        "external_url": "http://bit.ly/maxwell-honours-pdf"
     },
     
     "blurb": "This one was cool, and my undergraduate project! I made a really nice prototype called Crisees that sucked content from social media platforms (e.g. Twitter), and spat it out in an intuitive web-based interface.",
