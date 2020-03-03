@@ -8,6 +8,7 @@ BACKGROUND_MAPPINGS = {
     'sandwood': 'Sandwood Bay, Highland, Scotland - July 2014',
     'shinjuku': 'Shinjuku, Tokyo, Japan - August 2017',
     'whitelee': 'Whitelee Windfarm, East Renfrewshire, Scotland - April 2015',
+    'delft': 'Trompetstraat, Delft, Zuid Holland, Nederland - March 2020',
 }
 
 def apply_background_to_context(context_dict, background):
