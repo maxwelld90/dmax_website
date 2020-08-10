@@ -27,7 +27,7 @@ SECRET_KEY = '=@e+9i6*7z8p^x4m8++gv*lz$hj+-#gk)2te+ynu&(3sw++eye'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.dmax.org.uk', 'maxwelld90.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['www.dmax.org.uk', 'www.dmax.scot', 'maxwelld90.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
