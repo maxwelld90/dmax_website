@@ -8,10 +8,11 @@
         "url_type": "NO"
     },
     
-    "blurb": "I like to take pictures, so with my trusty digital camera, I like to photograph wherever I go in the world. It's fun!",
+    "blurb": "",
     
     "styling": {
         "span_width": 2,
+        "background": "../grid-backgrounds/pictures.jpg",
         "background_colour": "#616161",
         "text_colour": "#FFFFFF",
         "background_blurb": "False",
@@ -20,7 +21,6 @@
     
     "tags": [
         {"classes": "green", "text": "Active"},
-        {"classes": "", "text": "Pictures"},
-        {"classes": "", "text": "Nature"}
+        {"classes": "", "text": "Pictures"}
     ]
 }

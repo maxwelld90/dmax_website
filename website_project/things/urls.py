@@ -8,6 +8,10 @@ urlpatterns = [
     # path('phd/journey/', views.phd_journey, name='phd-journey'),
     path('phd/writing-up/', views.phd_writing_up, name='phd-writing-up'),
     # path('phd/experiences/', views.phd_experiences, name='phd-experiences'),
+
+    path('thoughts/', views.thoughts, name='thoughts'),
+    path('thoughts/corona-times/', views.thoughts_corona, name='thoughts-corona'),
+
     path('<slug:thing_slug>/', views.entry, name='entry'),
     path('', views.landing, name='landing'),
 ]

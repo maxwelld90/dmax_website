@@ -1,0 +1,26 @@
+{
+    "order": 3,
+    
+    "basics": {
+        "slug": "486",
+        "header": "The 486",
+        
+        "url_type": "NO"
+    },
+    
+    "blurb": "I've always had an interest in low-level programming. To make things a bit more exciting, I've purchased an old 486 computer with an enormous 16MB RAM. Apart from the nostalgia trip, it is teaching me how low-level systems work.",
+    
+    "styling": {
+        "span_width": 1,
+        "background": "../grid-backgrounds/486.jpg",
+        "background_colour": "#7B1FA2",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "True",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "green", "text": "Active"},
+        {"classes": "", "text": "Experiences"}
+    ]
+}

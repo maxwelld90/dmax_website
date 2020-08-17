@@ -32,6 +32,16 @@ def phd_writing_up(request):
     
     return render(request, template_name='things/phd/writing-up.html', context=context_dict)
 
+def thoughts(request):
+    context_dict = {}
+    
+    return render(request, template_name='things/thoughts/landing.html', context=context_dict)
+
+def thoughts_corona(request):
+    context_dict = {}
+    
+    return render(request, template_name='things/thoughts/01-corona.html', context=context_dict)
+
 def entry(request, thing_slug):
     """
     Default fallback view for viewing a particular slug.

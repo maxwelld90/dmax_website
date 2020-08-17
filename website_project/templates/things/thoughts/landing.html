@@ -1,0 +1,27 @@
+{% extends 'dmax_org_uk/base.html' %}
+
+{% load static %}
+{% load compress %}
+
+{% block includetags %}
+        {% compress css %}
+        <link rel="stylesheet" type="text/less" href="{% static 'css/things.less' %}">
+        <link rel="stylesheet" type="text/less" href="{% static 'css/hero.less' %}">
+        {% endcompress %}
+{% endblock %}
+
+{% block main %}
+            <div class="flex-container variable-height">
+                
+                <div class="flex-item whole">
+                    <div class="headertag-container">
+                        <h1>Thoughts</h1>
+                        <div id="subtitle"><span>What is on my mind?</span></div>
+                        <div id="main-image-background-identifier" class="left">{{ background_identifier }}</div>
+                    </div>
+                    
+                    More here.
+                </div>
+
+            </div>
+{% endblock %}

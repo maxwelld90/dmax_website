@@ -8,10 +8,11 @@
         "url_type": "NO"
     },
     
-    "blurb": "I like to draw. And I like making computers do things. How do I combine these two interests together? With computer artwork, of course! I'm teaching myself how to make lovely computer illustrations &mdash; and I've already got quite a bit of experience doing so. With my graphics tablet in hand, I'm leaning as I go.",
+    "blurb": "",
     
     "styling": {
-        "span_width": 2,
+        "span_width": 3,
+        "background": "../grid-backgrounds/graphics.jpg",
         "background_colour": "#0288D1",
         "text_colour": "#FFFFFF",
         "background_blurb": "False",

@@ -1,0 +1,23 @@
+{
+    "order": 4,
+    
+    "basics": {
+        "slug": "thoughts",
+        "header": "Thoughts",
+        
+        "url_type": "NO"
+    },
+    
+    "blurb": "What's on my mind? Occasionally I may be tempted to write about something. You can read what is on my mind here.",
+    
+    "styling": {
+        "span_width": 2,
+        "background_colour": "#558B2F",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+    ]
+}

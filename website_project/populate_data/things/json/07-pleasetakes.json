@@ -1,0 +1,26 @@
+{
+    "order": 7,
+    
+    "basics": {
+        "slug": "pleasetakes",
+        "header": "PleaseTakes",
+        
+        "url_type": "EXT",
+        "external_url": "http://github.com/maxwelld90/pleasetakes2/"
+    },
+    
+    "blurb": "During my high school years, I was hired by my high school to write them software. My favourite project was PleaseTakes, a web application that allowed individuals to schedule class cover for teachers who were away.",
+    
+    "styling": {
+        "span_width": 1,
+        "background_colour": "#D32F2F",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "red", "text": "Archived"},
+        {"classes": "", "text": "Software"}
+    ]
+}

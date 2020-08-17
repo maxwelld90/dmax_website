@@ -1,0 +1,26 @@
+{
+    "order": 8,
+    
+    "basics": {
+        "slug": "simiir",
+        "header": "SimIIR",
+        
+        "url_type": "EXT",
+        "external_url": "http://github.com/leifos/simiir/"
+    },
+    
+    "blurb": "One of the main contributions of my PhD, SimIIR is a pure-Python framework that allows you to conduct <em>simulations of interaction</em> (simulating humans using search engines). It's been used for a number of different publications, and I hope to work on revising it for a future release.",
+    
+    "styling": {
+        "span_width": 1,
+        "background_colour": "#0097A7",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "orange", "text": "Paused"},
+        {"classes": "", "text": "Experiences"}
+    ]
+}

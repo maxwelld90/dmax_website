@@ -1,0 +1,27 @@
+{
+    "order": 9,
+    
+    "basics": {
+        "slug": "crisees",
+        "header": "Crisees",
+        
+        "url_type": "EXT",
+        "external_url": "http://bit.ly/maxwell-honours-pdf"
+    },
+    
+    "blurb": "This one was cool, and my undergraduate project! I made a really nice prototype called Crisees that sucked content from social media platforms (e.g. Twitter), and spat it out in an intuitive web-based interface.",
+    
+    "styling": {
+        "span_width": 1,
+        "background_colour": "#455A64",
+        "text_colour": "#FFFFFF",
+        "background_blurb": "False",
+        "darken_title_background_by": 20
+    },
+    
+    "tags": [
+        {"classes": "red", "text": "Archived"},
+        {"classes": "", "text": "Software"},
+        {"classes": "", "text": "Social Media"}
+    ]
+}
