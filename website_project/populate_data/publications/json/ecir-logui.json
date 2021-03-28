@@ -1,0 +1,20 @@
+{
+    "publication": {
+        "title": "LogUI: Contemporary Logging Infrastructure for Web-Based Experiments",
+        "authors": "David Maxwell, Claudia Hauff",
+        "published_date": "2021-03-29",
+        "published_in": "Proceedings of <a href=\"https://www.ecir2021.eu/\" target=\"_blank\">ECIR 2021</a>",
+        "publication_type": "D",
+        
+        "tagline": "Appeared at <strong>ECIR 2021</strong>",
+        "abstract": "../abstracts/ecir-logui.sgml",
+        
+        "slug": "ecir-logui",
+        "background": "../backgrounds/ecir-logui.jpg"
+    },
+    
+    "resources": {
+        "BIB": "../bibtex/ecir-logui.bib",
+        "PDF": "../pdf/ecir-logui.pdf"
+    }
+}
