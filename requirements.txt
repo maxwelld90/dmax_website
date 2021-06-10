@@ -1,6 +1,6 @@
 aadict==0.2.3
 asset==0.6.12
-Django==2.2
+Django==2.2.24
 django-appconf==1.0.3
 django-compressor==2.2
 globre==0.1.5
